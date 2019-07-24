@@ -47,3 +47,4 @@ set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name BDF_FILE calculadora_binaria.bdf
 set_global_assignment -name BDF_FILE multiplexador.bdf
+set_global_assignment -name BDF_FILE divisor_de_clock.bdf
