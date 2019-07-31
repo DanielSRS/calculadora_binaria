@@ -633,28 +633,6 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 592 592 744 688)
-	(text "divisor_de_clock" (rect 5 0 100 14)(font "Arial" (font_size 8)))
-	(text "inst4" (rect 8 80 31 92)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "CLK" (rect 0 0 23 14)(font "Arial" (font_size 8)))
-		(text "CLK" (rect 21 27 44 41)(font "Arial" (font_size 8)))
-		(line (pt 0 32)(pt 16 32)(line_width 1))
-	)
-	(port
-		(pt 152 32)
-		(output)
-		(text "CLK_Dividido" (rect 0 0 74 14)(font "Arial" (font_size 8)))
-		(text "CLK_Dividido" (rect 57 27 131 41)(font "Arial" (font_size 8)))
-		(line (pt 152 32)(pt 136 32)(line_width 1))
-	)
-	(drawing
-		(rectangle (rect 16 16 136 80)(line_width 1))
-	)
-)
-(symbol
 	(rect 1672 -168 1856 440)
 	(text "multiplexador" (rect 5 0 79 14)(font "Arial" (font_size 8)))
 	(text "inst5" (rect 8 592 31 604)(font "Arial" ))
@@ -1503,6 +1481,28 @@ applicable agreement for further details.
 		(line (pt 8 8)(pt 24 8)(line_width 1))
 	)
 )
+(symbol
+	(rect 592 592 744 688)
+	(text "divisor_de_clock" (rect 5 0 100 14)(font "Arial" (font_size 8)))
+	(text "inst13" (rect 8 80 37 92)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "CLK" (rect 0 0 23 14)(font "Arial" (font_size 8)))
+		(text "CLK" (rect 21 27 44 41)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32)(line_width 1))
+	)
+	(port
+		(pt 152 32)
+		(output)
+		(text "CLK_Dividido" (rect 0 0 74 14)(font "Arial" (font_size 8)))
+		(text "CLK_Dividido" (rect 57 27 131 41)(font "Arial" (font_size 8)))
+		(line (pt 152 32)(pt 136 32)(line_width 1))
+	)
+	(drawing
+		(rectangle (rect 16 16 136 80)(line_width 1))
+	)
+)
 (connector
 	(pt 168 352)
 	(pt 320 352)
@@ -1744,10 +1744,6 @@ applicable agreement for further details.
 	(pt 720 56)
 )
 (connector
-	(pt 744 624)
-	(pt 912 624)
-)
-(connector
 	(pt 1672 392)
 	(pt 1656 392)
 )
@@ -1786,10 +1782,6 @@ applicable agreement for further details.
 (connector
 	(pt 1656 568)
 	(pt 1656 392)
-)
-(connector
-	(pt 488 624)
-	(pt 592 624)
 )
 (connector
 	(pt 1864 552)
@@ -2426,6 +2418,14 @@ applicable agreement for further details.
 (connector
 	(pt 1440 48)
 	(pt 1456 48)
+)
+(connector
+	(pt 488 624)
+	(pt 592 624)
+)
+(connector
+	(pt 744 624)
+	(pt 912 624)
 )
 (junction (pt 320 232))
 (junction (pt 560 8))
