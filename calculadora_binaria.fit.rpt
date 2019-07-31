@@ -1,5 +1,5 @@
 Fitter report for calculadora_binaria
-Wed Jul 31 03:19:54 2019
+Wed Jul 31 01:38:16 2019
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -55,14 +55,14 @@ applicable agreement for further details.
 +----------------------------------------------------------------------+
 ; Fitter Summary                                                       ;
 +-----------------------+----------------------------------------------+
-; Fitter Status         ; Successful - Wed Jul 31 03:19:54 2019        ;
+; Fitter Status         ; Successful - Wed Jul 31 01:38:16 2019        ;
 ; Quartus II Version    ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
 ; Revision Name         ; calculadora_binaria                          ;
 ; Top-level Entity Name ; calculadora_binaria                          ;
 ; Family                ; ACEX1K                                       ;
 ; Device                ; EP1K100QC208-3                               ;
 ; Timing Models         ; Final                                        ;
-; Total logic elements  ; 59 / 4,992 ( 1 % )                           ;
+; Total logic elements  ; 68 / 4,992 ( 1 % )                           ;
 ; Total pins            ; 24 / 147 ( 16 % )                            ;
 ; Total memory bits     ; 0 / 49,152 ( 0 % )                           ;
 ; Total PLLs            ; 0                                            ;
@@ -135,18 +135,18 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-----------+-------+-----+------+---------+--------+--------------+-------------------------+---------------+-----------------+---------------+--------------+
 ; Name      ; Pin # ; Row ; Col. ; Fan-Out ; Global ; I/O Register ; Use Local Routing Input ; Power Up High ; PCI I/O Enabled ; Single-Pin CE ; I/O Standard ;
 +-----------+-------+-----+------+---------+--------+--------------+-------------------------+---------------+-----------------+---------------+--------------+
-; pin_name5 ; 182   ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; pin_name5 ; 80    ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
 ; BH1       ; 79    ; --  ; --   ; 8       ; yes    ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
-; MSB2      ; 78    ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
-; LSB2      ; 80    ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
-; pin_name6 ; 202   ; --  ; 47   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
-; pin_name1 ; 71    ; --  ; 30   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
-; MSB       ; 115   ;  J  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
-; LSB       ; 75    ; --  ; 27   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
-; pin_name2 ; 54    ; --  ; 51   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
-; pin_name  ; 183   ; --  ; --   ; 1       ; yes    ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
-; Operacao  ; 28    ;  G  ; --   ; 0       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
-; BH2       ; 140   ;  C  ; --   ; 0       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; MSB2      ; 141   ;  C  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; LSB2      ; 53    ; --  ; 52   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; pin_name6 ; 197   ; --  ; 43   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; pin_name1 ; 166   ; --  ; 15   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; MSB       ; 47    ;  L  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; LSB       ; 191   ; --  ; 35   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; pin_name2 ; 116   ;  I  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; Operacao  ; 78    ; --  ; --   ; 7       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; BH2       ; 183   ; --  ; --   ; 5       ; yes    ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; pin_name  ; 184   ; --  ; --   ; 1       ; yes    ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
 +-----------+-------+-----+------+---------+--------+--------------+-------------------------+---------------+-----------------+---------------+--------------+
 
 
@@ -155,18 +155,18 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------+-------+-----+------+--------------+--------------------------+---------------+----------------+-----------------+---------------+---------------+------------+---------------+--------------+
 ; Name ; Pin # ; Row ; Col. ; I/O Register ; Use Local Routing Output ; Power Up High ; Slow Slew Rate ; PCI I/O Enabled ; Single-Pin OE ; Single-Pin CE ; Open Drain ; TRI Primitive ; I/O Standard ;
 +------+-------+-----+------+--------------+--------------------------+---------------+----------------+-----------------+---------------+---------------+------------+---------------+--------------+
-; A    ; 206   ; --  ; 50   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
-; b    ; 39    ;  J  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
-; c    ; 45    ;  L  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
-; d    ; 67    ; --  ; 33   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
-; e    ; 189   ; --  ; 30   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
-; f    ; 73    ; --  ; 29   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
-; g    ; 41    ;  K  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
-; dp   ; 40    ;  J  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
-; d1   ; 13    ;  B  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
-; d2   ; 205   ; --  ; 50   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
-; d3   ; 46    ;  L  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
-; d4   ; 204   ; --  ; 49   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; A    ; 38    ;  I  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; b    ; 68    ; --  ; 33   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; c    ; 67    ; --  ; 33   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; d    ; 16    ;  D  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; e    ; 199   ; --  ; 45   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; f    ; 56    ; --  ; 45   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; g    ; 65    ; --  ; 34   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; dp   ; 25    ;  E  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; d1   ; 37    ;  I  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; d2   ; 24    ;  E  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; d3   ; 190   ; --  ; 33   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; d4   ; 44    ;  K  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
 +------+-------+-----+------+--------------+--------------------------+---------------+----------------+-----------------+---------------+---------------+------------+---------------+--------------+
 
 
@@ -187,10 +187,10 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; 10    ; GND*       ;              ;
 ; 11    ; GND*       ;              ;
 ; 12    ; GND*       ;              ;
-; 13    ; d1         ; LVTTL/LVCMOS ;
+; 13    ; GND*       ;              ;
 ; 14    ; GND*       ;              ;
 ; 15    ; GND*       ;              ;
-; 16    ; GND*       ;              ;
+; 16    ; d          ; LVTTL/LVCMOS ;
 ; 17    ; GND*       ;              ;
 ; 18    ; GND*       ;              ;
 ; 19    ; GND*       ;              ;
@@ -198,11 +198,11 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; 21    ; VCC_INT    ;              ;
 ; 22    ; VCC_IO     ;              ;
 ; 23    ; GND        ;              ;
-; 24    ; GND*       ;              ;
-; 25    ; GND*       ;              ;
+; 24    ; d2         ; LVTTL/LVCMOS ;
+; 25    ; dp         ; LVTTL/LVCMOS ;
 ; 26    ; GND*       ;              ;
 ; 27    ; GND*       ;              ;
-; 28    ; Operacao   ; LVTTL/LVCMOS ;
+; 28    ; GND*       ;              ;
 ; 29    ; GND*       ;              ;
 ; 30    ; GND*       ;              ;
 ; 31    ; GND*       ;              ;
@@ -211,26 +211,26 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; 34    ; VCC_IO     ;              ;
 ; 35    ; GND        ;              ;
 ; 36    ; GND*       ;              ;
-; 37    ; GND*       ;              ;
-; 38    ; GND*       ;              ;
-; 39    ; b          ; LVTTL/LVCMOS ;
-; 40    ; dp         ; LVTTL/LVCMOS ;
-; 41    ; g          ; LVTTL/LVCMOS ;
+; 37    ; d1         ; LVTTL/LVCMOS ;
+; 38    ; A          ; LVTTL/LVCMOS ;
+; 39    ; GND*       ;              ;
+; 40    ; GND*       ;              ;
+; 41    ; GND*       ;              ;
 ; 42    ; VCC_IO     ;              ;
 ; 43    ; GND        ;              ;
-; 44    ; GND*       ;              ;
-; 45    ; c          ; LVTTL/LVCMOS ;
-; 46    ; d3         ; LVTTL/LVCMOS ;
-; 47    ; GND*       ;              ;
+; 44    ; d4         ; LVTTL/LVCMOS ;
+; 45    ; GND*       ;              ;
+; 46    ; GND*       ;              ;
+; 47    ; MSB        ; LVTTL/LVCMOS ;
 ; 48    ; VCC_INT    ;              ;
 ; 49    ; GND        ;              ;
 ; 50    ; #TMS       ;              ;
 ; 51    ; #TRST      ;              ;
 ; 52    ; ^nSTATUS   ;              ;
-; 53    ; GND*       ;              ;
-; 54    ; pin_name2  ; LVTTL/LVCMOS ;
+; 53    ; LSB2       ; LVTTL/LVCMOS ;
+; 54    ; GND*       ;              ;
 ; 55    ; GND*       ;              ;
-; 56    ; GND*       ;              ;
+; 56    ; f          ; LVTTL/LVCMOS ;
 ; 57    ; GND*       ;              ;
 ; 58    ; GND*       ;              ;
 ; 59    ; GND        ;              ;
@@ -239,22 +239,22 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; 62    ; GND*       ;              ;
 ; 63    ; GND*       ;              ;
 ; 64    ; GND*       ;              ;
-; 65    ; GND*       ;              ;
+; 65    ; g          ; LVTTL/LVCMOS ;
 ; 66    ; VCC_IO     ;              ;
-; 67    ; d          ; LVTTL/LVCMOS ;
-; 68    ; GND*       ;              ;
+; 67    ; c          ; LVTTL/LVCMOS ;
+; 68    ; b          ; LVTTL/LVCMOS ;
 ; 69    ; GND*       ;              ;
 ; 70    ; GND*       ;              ;
-; 71    ; pin_name1  ; LVTTL/LVCMOS ;
+; 71    ; GND*       ;              ;
 ; 72    ; VCC_INT    ;              ;
-; 73    ; f          ; LVTTL/LVCMOS ;
+; 73    ; GND*       ;              ;
 ; 74    ; GND*       ;              ;
-; 75    ; LSB        ; LVTTL/LVCMOS ;
+; 75    ; GND*       ;              ;
 ; 76    ; GND        ;              ;
 ; 77    ; VCC_CKLK   ;              ;
-; 78    ; MSB2       ; LVTTL/LVCMOS ;
+; 78    ; Operacao   ; LVTTL/LVCMOS ;
 ; 79    ; BH1        ; LVTTL/LVCMOS ;
-; 80    ; LSB2       ; LVTTL/LVCMOS ;
+; 80    ; pin_name5  ; LVTTL/LVCMOS ;
 ; 81    ; GND_CKLK   ;              ;
 ; 82    ; GND        ;              ;
 ; 83    ; GND*       ;              ;
@@ -289,8 +289,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; 112   ; GND*       ;              ;
 ; 113   ; GND*       ;              ;
 ; 114   ; GND*       ;              ;
-; 115   ; MSB        ; LVTTL/LVCMOS ;
-; 116   ; GND*       ;              ;
+; 115   ; GND*       ;              ;
+; 116   ; pin_name2  ; LVTTL/LVCMOS ;
 ; 117   ; GND        ;              ;
 ; 118   ; VCC_IO     ;              ;
 ; 119   ; GND*       ;              ;
@@ -314,8 +314,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; 137   ; GND        ;              ;
 ; 138   ; VCC_IO     ;              ;
 ; 139   ; GND*       ;              ;
-; 140   ; BH2        ; LVTTL/LVCMOS ;
-; 141   ; GND*       ;              ;
+; 140   ; GND*       ;              ;
+; 141   ; MSB2       ; LVTTL/LVCMOS ;
 ; 142   ; GND*       ;              ;
 ; 143   ; GND*       ;              ;
 ; 144   ; GND*       ;              ;
@@ -340,7 +340,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; 163   ; GND*       ;              ;
 ; 164   ; GND*       ;              ;
 ; 165   ; VCC_IO     ;              ;
-; 166   ; GND*       ;              ;
+; 166   ; pin_name1  ; LVTTL/LVCMOS ;
 ; 167   ; GND*       ;              ;
 ; 168   ; GND*       ;              ;
 ; 169   ; GND*       ;              ;
@@ -356,31 +356,31 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; 179   ; GND*       ;              ;
 ; 180   ; GND*       ;              ;
 ; 181   ; GND        ;              ;
-; 182   ; pin_name5  ; LVTTL/LVCMOS ;
-; 183   ; pin_name   ; LVTTL/LVCMOS ;
-; 184   ; GND+       ;              ;
+; 182   ; GND+       ;              ;
+; 183   ; BH2        ; LVTTL/LVCMOS ;
+; 184   ; pin_name   ; LVTTL/LVCMOS ;
 ; 185   ; VCC_INT    ;              ;
 ; 186   ; GND*       ;              ;
 ; 187   ; GND*       ;              ;
 ; 188   ; GND        ;              ;
-; 189   ; e          ; LVTTL/LVCMOS ;
-; 190   ; GND*       ;              ;
-; 191   ; GND*       ;              ;
+; 189   ; GND*       ;              ;
+; 190   ; d3         ; LVTTL/LVCMOS ;
+; 191   ; LSB        ; LVTTL/LVCMOS ;
 ; 192   ; GND*       ;              ;
 ; 193   ; GND*       ;              ;
 ; 194   ; VCC_IO     ;              ;
 ; 195   ; GND*       ;              ;
 ; 196   ; GND*       ;              ;
-; 197   ; GND*       ;              ;
+; 197   ; pin_name6  ; LVTTL/LVCMOS ;
 ; 198   ; GND*       ;              ;
-; 199   ; GND*       ;              ;
+; 199   ; e          ; LVTTL/LVCMOS ;
 ; 200   ; GND*       ;              ;
 ; 201   ; VCC_INT    ;              ;
-; 202   ; pin_name6  ; LVTTL/LVCMOS ;
+; 202   ; GND*       ;              ;
 ; 203   ; GND*       ;              ;
-; 204   ; d4         ; LVTTL/LVCMOS ;
-; 205   ; d2         ; LVTTL/LVCMOS ;
-; 206   ; A          ; LVTTL/LVCMOS ;
+; 204   ; GND*       ;              ;
+; 205   ; GND*       ;              ;
+; 206   ; GND*       ;              ;
 ; 207   ; GND*       ;              ;
 ; 208   ; GND*       ;              ;
 +-------+------------+--------------+
@@ -392,26 +392,27 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Name                          ; Pin #   ; Fan-Out ; Usage ; Global Usage ;
 +-------------------------------+---------+---------+-------+--------------+
 ; BH1                           ; 79      ; 8       ; Clock ; Pin          ;
-; pin_name                      ; 183     ; 1       ; Clock ; Pin          ;
-; divisor_de_clock:inst4|inst   ; LC1_I10 ; 2       ; Clock ; Non-global   ;
-; contador:inst1|inst           ; LC1_B14 ; 15      ; Clock ; Internal     ;
-; divisor_de_clock:inst4|inst13 ; LC3_B14 ; 2       ; Clock ; Non-global   ;
-; divisor_de_clock:inst4|inst14 ; LC1_B22 ; 2       ; Clock ; Non-global   ;
-; divisor_de_clock:inst4|inst17 ; LC1_B18 ; 2       ; Clock ; Non-global   ;
-; divisor_de_clock:inst4|inst12 ; LC1_B2  ; 2       ; Clock ; Non-global   ;
-; divisor_de_clock:inst4|inst16 ; LC1_B20 ; 2       ; Clock ; Non-global   ;
-; divisor_de_clock:inst4|inst15 ; LC2_B2  ; 2       ; Clock ; Non-global   ;
-; divisor_de_clock:inst4|inst11 ; LC1_B10 ; 2       ; Clock ; Non-global   ;
-; divisor_de_clock:inst4|inst10 ; LC1_B24 ; 2       ; Clock ; Non-global   ;
-; divisor_de_clock:inst4|inst9  ; LC1_I20 ; 2       ; Clock ; Non-global   ;
-; divisor_de_clock:inst4|inst8  ; LC1_I26 ; 2       ; Clock ; Non-global   ;
-; divisor_de_clock:inst4|inst7  ; LC1_I7  ; 2       ; Clock ; Non-global   ;
-; divisor_de_clock:inst4|inst6  ; LC1_I12 ; 2       ; Clock ; Non-global   ;
-; divisor_de_clock:inst4|inst5  ; LC1_I17 ; 2       ; Clock ; Non-global   ;
-; divisor_de_clock:inst4|inst3  ; LC2_I17 ; 2       ; Clock ; Non-global   ;
-; divisor_de_clock:inst4|inst4  ; LC1_I16 ; 2       ; Clock ; Non-global   ;
-; divisor_de_clock:inst4|inst2  ; LC1_I14 ; 2       ; Clock ; Non-global   ;
-; divisor_de_clock:inst4|inst1  ; LC1_I25 ; 2       ; Clock ; Non-global   ;
+; BH2                           ; 183     ; 5       ; Clock ; Pin          ;
+; pin_name                      ; 184     ; 1       ; Clock ; Pin          ;
+; divisor_de_clock:inst4|inst   ; LC1_H31 ; 2       ; Clock ; Non-global   ;
+; contador:inst1|inst           ; LC1_J38 ; 14      ; Clock ; Internal     ;
+; divisor_de_clock:inst4|inst17 ; LC1_J39 ; 2       ; Clock ; Non-global   ;
+; divisor_de_clock:inst4|inst16 ; LC1_J47 ; 2       ; Clock ; Non-global   ;
+; divisor_de_clock:inst4|inst15 ; LC1_J49 ; 2       ; Clock ; Non-global   ;
+; divisor_de_clock:inst4|inst14 ; LC1_K36 ; 2       ; Clock ; Non-global   ;
+; divisor_de_clock:inst4|inst13 ; LC1_K30 ; 2       ; Clock ; Non-global   ;
+; divisor_de_clock:inst4|inst12 ; LC1_K29 ; 2       ; Clock ; Non-global   ;
+; divisor_de_clock:inst4|inst11 ; LC1_K52 ; 2       ; Clock ; Non-global   ;
+; divisor_de_clock:inst4|inst10 ; LC4_H27 ; 2       ; Clock ; Non-global   ;
+; divisor_de_clock:inst4|inst4  ; LC1_H27 ; 2       ; Clock ; Non-global   ;
+; divisor_de_clock:inst4|inst5  ; LC1_H3  ; 2       ; Clock ; Non-global   ;
+; divisor_de_clock:inst4|inst9  ; LC1_H2  ; 2       ; Clock ; Non-global   ;
+; divisor_de_clock:inst4|inst3  ; LC1_H39 ; 2       ; Clock ; Non-global   ;
+; divisor_de_clock:inst4|inst8  ; LC1_H22 ; 2       ; Clock ; Non-global   ;
+; divisor_de_clock:inst4|inst7  ; LC1_H19 ; 2       ; Clock ; Non-global   ;
+; divisor_de_clock:inst4|inst6  ; LC1_H14 ; 2       ; Clock ; Non-global   ;
+; divisor_de_clock:inst4|inst2  ; LC1_H34 ; 2       ; Clock ; Non-global   ;
+; divisor_de_clock:inst4|inst1  ; LC1_H42 ; 2       ; Clock ; Non-global   ;
 +-------------------------------+---------+---------+-------+--------------+
 
 
@@ -420,12 +421,12 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------+---------+---------+--------+
 ; Name                ; Pin #   ; Fan-Out ; Global ;
 +---------------------+---------+---------+--------+
-; pin_name5           ; 182     ; 1       ; no     ;
+; pin_name5           ; 80      ; 1       ; no     ;
 ; BH1                 ; 79      ; 8       ; yes    ;
-; MSB2                ; 78      ; 1       ; no     ;
-; LSB2                ; 80      ; 1       ; no     ;
-; pin_name            ; 183     ; 1       ; yes    ;
-; contador:inst1|inst ; LC1_B14 ; 15      ; yes    ;
+; Operacao            ; 78      ; 7       ; no     ;
+; BH2                 ; 183     ; 5       ; yes    ;
+; pin_name            ; 184     ; 1       ; yes    ;
+; contador:inst1|inst ; LC1_J38 ; 14      ; yes    ;
 +---------------------+---------+---------+--------+
 
 
@@ -438,62 +439,62 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------+-------+
 
 
-+-------------------------------------------+
-; Non-Global High Fan-Out Signals           ;
-+---------------------------------+---------+
-; Name                            ; Fan-Out ;
-+---------------------------------+---------+
-; contador:inst1|inst1~4          ; 15      ;
-; registrador:inst10|inst~1       ; 9       ;
-; registrador:inst|inst~1         ; 9       ;
-; registrador:inst|inst6~1        ; 8       ;
-; registrador:inst|inst5~1        ; 8       ;
-; registrador:inst10|inst6~1      ; 8       ;
-; registrador:inst10|inst5~1      ; 8       ;
-; registrador:inst10|inst4~1      ; 7       ;
-; registrador:inst|inst4~1        ; 7       ;
-; demultiplexador:inst3|inst~2    ; 2       ;
-; divisor_de_clock:inst4|inst7~4  ; 2       ;
-; divisor_de_clock:inst4|inst5~4  ; 2       ;
-; divisor_de_clock:inst4|inst6~4  ; 2       ;
-; divisor_de_clock:inst4|inst10~4 ; 2       ;
-; divisor_de_clock:inst4|inst~4   ; 2       ;
-; divisor_de_clock:inst4|inst9~4  ; 2       ;
-; divisor_de_clock:inst4|inst15~4 ; 2       ;
-; divisor_de_clock:inst4|inst11~4 ; 2       ;
-; divisor_de_clock:inst4|inst13~4 ; 2       ;
-; divisor_de_clock:inst4|inst17~4 ; 2       ;
-; divisor_de_clock:inst4|inst16~4 ; 2       ;
-; divisor_de_clock:inst4|inst12~4 ; 2       ;
-; divisor_de_clock:inst4|inst14~4 ; 2       ;
-; divisor_de_clock:inst4|inst3~4  ; 2       ;
-; demultiplexador:inst3|inst~3    ; 2       ;
-; divisor_de_clock:inst4|inst4~4  ; 2       ;
-; divisor_de_clock:inst4|inst1~4  ; 2       ;
-; divisor_de_clock:inst4|inst8~4  ; 2       ;
-; divisor_de_clock:inst4|inst2~4  ; 2       ;
-; multiplexador:inst5|inst6~3     ; 1       ;
-; pin_name2                       ; 1       ;
-; multiplexador:inst5|inst42~1    ; 1       ;
-; multiplexador:inst5|inst33~11   ; 1       ;
-; multiplexador:inst5|inst28~12   ; 1       ;
-; multiplexador:inst5|inst33~15   ; 1       ;
-; multiplexador:inst5|inst10~12   ; 1       ;
-; multiplexador:inst5|inst38~3    ; 1       ;
-; multiplexador:inst5|inst28~10   ; 1       ;
-; multiplexador:inst5|inst6~4     ; 1       ;
-; multiplexador:inst5|inst38~5    ; 1       ;
-; multiplexador:inst5|inst43~1    ; 1       ;
-; MSB                             ; 1       ;
-; pin_name5                       ; 1       ;
-; multiplexador:inst5|inst38~4    ; 1       ;
-; multiplexador:inst5|inst10~11   ; 1       ;
-; multiplexador:inst5|inst23~3    ; 1       ;
-; pin_name6                       ; 1       ;
-; multiplexador:inst5|inst28~14   ; 1       ;
-; MSB2                            ; 1       ;
-; multiplexador:inst5|inst18~4    ; 1       ;
-+---------------------------------+---------+
++-------------------------------------------------------------------+
+; Non-Global High Fan-Out Signals                                   ;
++---------------------------------------------------------+---------+
+; Name                                                    ; Fan-Out ;
++---------------------------------------------------------+---------+
+; contador:inst1|inst1~4                                  ; 12      ;
+; registrador:inst10|inst~1                               ; 10      ;
+; registrador:inst|inst~1                                 ; 10      ;
+; registrador:inst10|inst4~1                              ; 9       ;
+; registrador:inst|inst4~1                                ; 9       ;
+; registrador:inst|inst6~1                                ; 9       ;
+; registrador:inst|inst5~1                                ; 9       ;
+; registrador:inst10|inst6~1                              ; 9       ;
+; registrador:inst10|inst5~1                              ; 9       ;
+; Operacao                                                ; 7       ;
+; demultiplexador:inst3|inst~3                            ; 3       ;
+; multiplexador:inst5|inst42~1                            ; 3       ;
+; demultiplexador:inst3|inst~2                            ; 3       ;
+; multiplexador:inst5|inst39~1                            ; 3       ;
+; registrador:inst11|inst~0                               ; 3       ;
+; divisor_de_clock:inst4|inst15~4                         ; 2       ;
+; divisor_de_clock:inst4|inst14~4                         ; 2       ;
+; divisor_de_clock:inst4|inst10~4                         ; 2       ;
+; divisor_de_clock:inst4|inst12~4                         ; 2       ;
+; divisor_de_clock:inst4|inst16~4                         ; 2       ;
+; multiplexador:inst5|inst7~10                            ; 2       ;
+; divisor_de_clock:inst4|inst17~4                         ; 2       ;
+; divisor_de_clock:inst4|inst1~4                          ; 2       ;
+; divisor_de_clock:inst4|inst2~4                          ; 2       ;
+; divisor_de_clock:inst4|inst~4                           ; 2       ;
+; divisor_de_clock:inst4|inst7~4                          ; 2       ;
+; soma_e_subtracao:inst27|somador_completo:inst12|inst6~1 ; 2       ;
+; divisor_de_clock:inst4|inst3~4                          ; 2       ;
+; divisor_de_clock:inst4|inst9~4                          ; 2       ;
+; registrador:inst9|inst5~0                               ; 2       ;
+; divisor_de_clock:inst4|inst6~4                          ; 2       ;
+; divisor_de_clock:inst4|inst8~4                          ; 2       ;
+; soma_e_subtracao:inst27|somador_completo:inst14|inst6~1 ; 2       ;
+; registrador:inst9|inst4~0                               ; 2       ;
+; divisor_de_clock:inst4|inst5~4                          ; 2       ;
+; divisor_de_clock:inst4|inst4~4                          ; 2       ;
+; soma_e_subtracao:inst27|somador_completo:inst13|inst6~1 ; 2       ;
+; divisor_de_clock:inst4|inst11~4                         ; 2       ;
+; divisor_de_clock:inst4|inst13~4                         ; 2       ;
+; pin_name5                                               ; 1       ;
+; pin_name2                                               ; 1       ;
+; multiplexador:inst5|inst28~13                           ; 1       ;
+; multiplexador:inst5|inst38~6                            ; 1       ;
+; multiplexador:inst5|inst43~1                            ; 1       ;
+; multiplexador:inst5|inst38~5                            ; 1       ;
+; LSB2                                                    ; 1       ;
+; multiplexador:inst5|inst10~7                            ; 1       ;
+; multiplexador:inst5|inst33~3                            ; 1       ;
+; multiplexador:inst5|inst28~10                           ; 1       ;
+; multiplexador:inst5|inst7~9                             ; 1       ;
++---------------------------------------------------------+---------+
 
 
 +------------------------------------------------------------------------------------------------+
@@ -501,7 +502,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------+---------+-------+-----------------+---------------------------+----------+
 ; Peripheral Signal   ; Source  ; Usage ; Dedicated Clock ; Peripheral Control Signal ; Polarity ;
 +---------------------+---------+-------+-----------------+---------------------------+----------+
-; contador:inst1|inst ; LC1_B14 ; Clock ; no              ; yes                       ; +ve      ;
+; contador:inst1|inst ; LC1_J38 ; Clock ; no              ; yes                       ; +ve      ;
 +---------------------+---------+-------+-----------------+---------------------------+----------+
 
 
@@ -510,15 +511,15 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------+----------------+
 ; Number of Logic Elements ; Number of LABs ;
 +--------------------------+----------------+
-; 0                        ; 595            ;
-; 1                        ; 22             ;
-; 2                        ; 3              ;
+; 0                        ; 592            ;
+; 1                        ; 25             ;
+; 2                        ; 2              ;
 ; 3                        ; 0              ;
 ; 4                        ; 0              ;
 ; 5                        ; 0              ;
 ; 6                        ; 0              ;
 ; 7                        ; 1              ;
-; 8                        ; 3              ;
+; 8                        ; 4              ;
 +--------------------------+----------------+
 
 
@@ -527,11 +528,13 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-----------------------------+----------------+
 ; Local Routing Interconnects ; Number of LABs ;
 +-----------------------------+----------------+
-; 0                           ; 604            ;
-; 1                           ; 16             ;
-; 2                           ; 3              ;
+; 0                           ; 601            ;
+; 1                           ; 19             ;
+; 2                           ; 2              ;
 ; 3                           ; 0              ;
 ; 4                           ; 1              ;
+; 5                           ; 0              ;
+; 6                           ; 1              ;
 +-----------------------------+----------------+
 
 
@@ -540,44 +543,39 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+----------------+
 ; LAB External Interconnects ; Number of LABs ;
 +----------------------------+----------------+
-; 0                          ; 597            ;
-; 1                          ; 19             ;
-; 2                          ; 3              ;
+; 0                          ; 593            ;
+; 1                          ; 22             ;
+; 2                          ; 2              ;
 ; 3                          ; 0              ;
 ; 4                          ; 2              ;
-; 5                          ; 1              ;
-; 6                          ; 1              ;
-; 7                          ; 0              ;
+; 5                          ; 0              ;
+; 6                          ; 0              ;
+; 7                          ; 2              ;
 ; 8                          ; 0              ;
-; 9                          ; 0              ;
-; 10                         ; 0              ;
-; 11                         ; 0              ;
-; 12                         ; 0              ;
-; 13                         ; 0              ;
-; 14                         ; 0              ;
-; 15                         ; 1              ;
+; 9                          ; 1              ;
+; 10                         ; 2              ;
 +----------------------------+----------------+
 
 
-+------------------------------------------------------------------------------------------+
-; Row Interconnect                                                                         ;
-+-------+---------------------+-----------------------------+------------------------------+
-; Row   ; Interconnect Used   ; Left Half Interconnect Used ; Right Half Interconnect Used ;
-+-------+---------------------+-----------------------------+------------------------------+
-;  A    ;  0 / 208 ( 0 % )    ;  0 / 104 ( 0 % )            ;  0 / 104 ( 0 % )             ;
-;  B    ;  2 / 208 ( < 1 % )  ;  7 / 104 ( 7 % )            ;  1 / 104 ( < 1 % )           ;
-;  C    ;  0 / 208 ( 0 % )    ;  0 / 104 ( 0 % )            ;  0 / 104 ( 0 % )             ;
-;  D    ;  0 / 208 ( 0 % )    ;  0 / 104 ( 0 % )            ;  0 / 104 ( 0 % )             ;
-;  E    ;  0 / 208 ( 0 % )    ;  0 / 104 ( 0 % )            ;  0 / 104 ( 0 % )             ;
-;  F    ;  1 / 208 ( < 1 % )  ;  0 / 104 ( 0 % )            ;  0 / 104 ( 0 % )             ;
-;  G    ;  0 / 208 ( 0 % )    ;  0 / 104 ( 0 % )            ;  0 / 104 ( 0 % )             ;
-;  H    ;  0 / 208 ( 0 % )    ;  0 / 104 ( 0 % )            ;  0 / 104 ( 0 % )             ;
-;  I    ;  1 / 208 ( < 1 % )  ;  8 / 104 ( 8 % )            ;  0 / 104 ( 0 % )             ;
-;  J    ;  4 / 208 ( 2 % )    ;  0 / 104 ( 0 % )            ;  26 / 104 ( 25 % )           ;
-;  K    ;  0 / 208 ( 0 % )    ;  0 / 104 ( 0 % )            ;  1 / 104 ( < 1 % )           ;
-;  L    ;  0 / 208 ( 0 % )    ;  0 / 104 ( 0 % )            ;  2 / 104 ( 2 % )             ;
-; Total ;  8 / 2496 ( < 1 % ) ;  15 / 1248 ( 1 % )          ;  30 / 1248 ( 2 % )           ;
-+-------+---------------------+-----------------------------+------------------------------+
++-------------------------------------------------------------------------------------------+
+; Row Interconnect                                                                          ;
++-------+----------------------+-----------------------------+------------------------------+
+; Row   ; Interconnect Used    ; Left Half Interconnect Used ; Right Half Interconnect Used ;
++-------+----------------------+-----------------------------+------------------------------+
+;  A    ;  0 / 208 ( 0 % )     ;  0 / 104 ( 0 % )            ;  0 / 104 ( 0 % )             ;
+;  B    ;  0 / 208 ( 0 % )     ;  0 / 104 ( 0 % )            ;  0 / 104 ( 0 % )             ;
+;  C    ;  1 / 208 ( < 1 % )   ;  0 / 104 ( 0 % )            ;  0 / 104 ( 0 % )             ;
+;  D    ;  1 / 208 ( < 1 % )   ;  0 / 104 ( 0 % )            ;  1 / 104 ( < 1 % )           ;
+;  E    ;  0 / 208 ( 0 % )     ;  0 / 104 ( 0 % )            ;  2 / 104 ( 2 % )             ;
+;  F    ;  0 / 208 ( 0 % )     ;  0 / 104 ( 0 % )            ;  0 / 104 ( 0 % )             ;
+;  G    ;  0 / 208 ( 0 % )     ;  0 / 104 ( 0 % )            ;  0 / 104 ( 0 % )             ;
+;  H    ;  2 / 208 ( < 1 % )   ;  4 / 104 ( 4 % )            ;  4 / 104 ( 4 % )             ;
+;  I    ;  6 / 208 ( 3 % )     ;  0 / 104 ( 0 % )            ;  28 / 104 ( 27 % )           ;
+;  J    ;  0 / 208 ( 0 % )     ;  0 / 104 ( 0 % )            ;  4 / 104 ( 4 % )             ;
+;  K    ;  0 / 208 ( 0 % )     ;  0 / 104 ( 0 % )            ;  5 / 104 ( 5 % )             ;
+;  L    ;  1 / 208 ( < 1 % )   ;  0 / 104 ( 0 % )            ;  0 / 104 ( 0 % )             ;
+; Total ;  11 / 2496 ( < 1 % ) ;  4 / 1248 ( < 1 % )         ;  44 / 1248 ( 4 % )           ;
++-------+----------------------+-----------------------------+------------------------------+
 
 
 +----------------------------+
@@ -598,46 +596,46 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; 11    ;  0 / 24 ( 0 % )    ;
 ; 12    ;  0 / 24 ( 0 % )    ;
 ; 13    ;  0 / 24 ( 0 % )    ;
-; 14    ;  1 / 24 ( 4 % )    ;
-; 15    ;  0 / 24 ( 0 % )    ;
+; 14    ;  0 / 24 ( 0 % )    ;
+; 15    ;  1 / 24 ( 4 % )    ;
 ; 16    ;  0 / 24 ( 0 % )    ;
 ; 17    ;  0 / 24 ( 0 % )    ;
 ; 18    ;  0 / 24 ( 0 % )    ;
 ; 19    ;  0 / 24 ( 0 % )    ;
-; 20    ;  1 / 24 ( 4 % )    ;
+; 20    ;  0 / 24 ( 0 % )    ;
 ; 21    ;  0 / 24 ( 0 % )    ;
 ; 22    ;  0 / 24 ( 0 % )    ;
 ; 23    ;  0 / 24 ( 0 % )    ;
 ; 24    ;  0 / 24 ( 0 % )    ;
 ; 25    ;  0 / 24 ( 0 % )    ;
 ; 26    ;  0 / 24 ( 0 % )    ;
-; 27    ;  1 / 24 ( 4 % )    ;
+; 27    ;  2 / 24 ( 8 % )    ;
 ; 28    ;  0 / 24 ( 0 % )    ;
-; 29    ;  2 / 24 ( 8 % )    ;
-; 30    ;  4 / 24 ( 17 % )   ;
+; 29    ;  0 / 24 ( 0 % )    ;
+; 30    ;  0 / 24 ( 0 % )    ;
 ; 31    ;  0 / 24 ( 0 % )    ;
-; 32    ;  0 / 24 ( 0 % )    ;
-; 33    ;  1 / 24 ( 4 % )    ;
-; 34    ;  0 / 24 ( 0 % )    ;
-; 35    ;  0 / 24 ( 0 % )    ;
-; 36    ;  0 / 24 ( 0 % )    ;
+; 32    ;  1 / 24 ( 4 % )    ;
+; 33    ;  4 / 24 ( 17 % )   ;
+; 34    ;  1 / 24 ( 4 % )    ;
+; 35    ;  1 / 24 ( 4 % )    ;
+; 36    ;  1 / 24 ( 4 % )    ;
 ; 37    ;  0 / 24 ( 0 % )    ;
-; 38    ;  0 / 24 ( 0 % )    ;
+; 38    ;  1 / 24 ( 4 % )    ;
 ; 39    ;  0 / 24 ( 0 % )    ;
 ; 40    ;  0 / 24 ( 0 % )    ;
 ; 41    ;  0 / 24 ( 0 % )    ;
-; 42    ;  0 / 24 ( 0 % )    ;
-; 43    ;  0 / 24 ( 0 % )    ;
+; 42    ;  1 / 24 ( 4 % )    ;
+; 43    ;  1 / 24 ( 4 % )    ;
 ; 44    ;  0 / 24 ( 0 % )    ;
-; 45    ;  0 / 24 ( 0 % )    ;
+; 45    ;  3 / 24 ( 13 % )   ;
 ; 46    ;  0 / 24 ( 0 % )    ;
-; 47    ;  1 / 24 ( 4 % )    ;
-; 48    ;  0 / 24 ( 0 % )    ;
-; 49    ;  1 / 24 ( 4 % )    ;
-; 50    ;  3 / 24 ( 13 % )   ;
-; 51    ;  1 / 24 ( 4 % )    ;
-; 52    ;  0 / 24 ( 0 % )    ;
-; Total ;  16 / 1248 ( 1 % ) ;
+; 47    ;  0 / 24 ( 0 % )    ;
+; 48    ;  1 / 24 ( 4 % )    ;
+; 49    ;  0 / 24 ( 0 % )    ;
+; 50    ;  0 / 24 ( 0 % )    ;
+; 51    ;  0 / 24 ( 0 % )    ;
+; 52    ;  1 / 24 ( 4 % )    ;
+; Total ;  19 / 1248 ( 2 % ) ;
 +-------+--------------------+
 
 
@@ -656,39 +654,45 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-----------------------------------+----------------------+
 ; Resource                          ; Usage                ;
 +-----------------------------------+----------------------+
-; Total logic elements              ; 59 / 4,992 ( 1 % )   ;
-; Registers                         ; 28 / 4,992 ( < 1 % ) ;
+; Total logic elements              ; 68 / 4,992 ( 1 % )   ;
+; Registers                         ; 33 / 4,992 ( < 1 % ) ;
 ; Logic elements in carry chains    ; 0                    ;
 ; User inserted logic elements      ; 0                    ;
 ; I/O pins                          ; 24 / 147 ( 16 % )    ;
 ;     -- Clock pins                 ; 2 / 2 ( 100 % )      ;
 ;     -- Dedicated input pins       ; 3 / 4 ( 75 % )       ;
-; Global signals                    ; 3                    ;
+; Global signals                    ; 4                    ;
 ; EABs                              ; 0 / 12 ( 0 % )       ;
 ; Total memory bits                 ; 0 / 49,152 ( 0 % )   ;
 ; Total RAM block bits              ; 0 / 49,152 ( 0 % )   ;
-; Maximum fan-out node              ; contador:inst1|inst1 ;
-; Maximum fan-out                   ; 15                   ;
+; Maximum fan-out node              ; contador:inst1|inst  ;
+; Maximum fan-out                   ; 14                   ;
 ; Highest non-global fan-out signal ; contador:inst1|inst1 ;
-; Highest non-global fan-out        ; 15                   ;
-; Total fan-out                     ; 180                  ;
-; Average fan-out                   ; 2.17                 ;
+; Highest non-global fan-out        ; 12                   ;
+; Total fan-out                     ; 221                  ;
+; Average fan-out                   ; 2.40                 ;
 +-----------------------------------+----------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Resource Utilization by Entity                                                                                                                                                                                           ;
-+-----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------+--------------+
-; Compilation Hierarchy Node  ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                         ; Library Name ;
-+-----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------+--------------+
-; |calculadora_binaria        ; 59 (0)      ; 28           ; 0           ; 24   ; 31 (0)       ; 8 (0)             ; 20 (0)           ; 0 (0)           ; 0 (0)      ; |calculadora_binaria                        ; work         ;
-;    |contador:inst1|         ; 2 (2)       ; 2            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |calculadora_binaria|contador:inst1         ; work         ;
-;    |demultiplexador:inst3|  ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |calculadora_binaria|demultiplexador:inst3  ; work         ;
-;    |divisor_de_clock:inst4| ; 18 (18)     ; 18           ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 18 (18)          ; 0 (0)           ; 0 (0)      ; |calculadora_binaria|divisor_de_clock:inst4 ; work         ;
-;    |multiplexador:inst5|    ; 29 (29)     ; 0            ; 0           ; 0    ; 29 (29)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |calculadora_binaria|multiplexador:inst5    ; work         ;
-;    |registrador:inst10|     ; 4 (4)       ; 4            ; 0           ; 0    ; 0 (0)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |calculadora_binaria|registrador:inst10     ; work         ;
-;    |registrador:inst|       ; 4 (4)       ; 4            ; 0           ; 0    ; 0 (0)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |calculadora_binaria|registrador:inst       ; work         ;
-+-----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                        ;
++---------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node      ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                  ; Library Name ;
++---------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------------+--------------+
+; |calculadora_binaria            ; 68 (0)      ; 33           ; 0           ; 24   ; 35 (0)       ; 8 (0)             ; 25 (0)           ; 0 (0)           ; 0 (0)      ; |calculadora_binaria                                                 ; work         ;
+;    |contador:inst1|             ; 2 (2)       ; 2            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |calculadora_binaria|contador:inst1                                  ; work         ;
+;    |demultiplexador:inst3|      ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |calculadora_binaria|demultiplexador:inst3                           ; work         ;
+;    |divisor_de_clock:inst4|     ; 18 (18)     ; 18           ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 18 (18)          ; 0 (0)           ; 0 (0)      ; |calculadora_binaria|divisor_de_clock:inst4                          ; work         ;
+;    |multiplexador:inst5|        ; 30 (30)     ; 0            ; 0           ; 0    ; 30 (30)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |calculadora_binaria|multiplexador:inst5                             ; work         ;
+;    |registrador:inst10|         ; 4 (4)       ; 4            ; 0           ; 0    ; 0 (0)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |calculadora_binaria|registrador:inst10                              ; work         ;
+;    |registrador:inst11|         ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |calculadora_binaria|registrador:inst11                              ; work         ;
+;    |registrador:inst9|          ; 4 (4)       ; 4            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |calculadora_binaria|registrador:inst9                               ; work         ;
+;    |registrador:inst|           ; 4 (4)       ; 4            ; 0           ; 0    ; 0 (0)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |calculadora_binaria|registrador:inst                                ; work         ;
+;    |soma_e_subtracao:inst27|    ; 3 (0)       ; 0            ; 0           ; 0    ; 3 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |calculadora_binaria|soma_e_subtracao:inst27                         ; work         ;
+;       |somador_completo:inst12| ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |calculadora_binaria|soma_e_subtracao:inst27|somador_completo:inst12 ; work         ;
+;       |somador_completo:inst13| ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |calculadora_binaria|soma_e_subtracao:inst27|somador_completo:inst13 ; work         ;
+;       |somador_completo:inst14| ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |calculadora_binaria|soma_e_subtracao:inst27|somador_completo:inst14 ; work         ;
++---------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -697,17 +701,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------+----------+-------------+
 ; Name      ; Pin Type ; Pad to Core ;
 +-----------+----------+-------------+
-; Operacao  ; Input    ; OFF         ;
-; BH2       ; Input    ; OFF         ;
 ; pin_name5 ; Input    ; OFF         ;
 ; BH1       ; Input    ; OFF         ;
-; MSB2      ; Input    ; OFF         ;
-; LSB2      ; Input    ; OFF         ;
+; MSB2      ; Input    ; ON          ;
+; LSB2      ; Input    ; ON          ;
 ; pin_name6 ; Input    ; ON          ;
 ; pin_name1 ; Input    ; ON          ;
 ; MSB       ; Input    ; ON          ;
 ; LSB       ; Input    ; ON          ;
 ; pin_name2 ; Input    ; ON          ;
+; Operacao  ; Input    ; OFF         ;
+; BH2       ; Input    ; OFF         ;
 ; pin_name  ; Input    ; OFF         ;
 ; A         ; Output   ; OFF         ;
 ; b         ; Output   ; OFF         ;
@@ -736,7 +740,7 @@ The pin-out file can be found in C:/Users/danie/Pictures/calculadora_binaria/cal
 Info: *******************************************************************
 Info: Running Quartus II Fitter
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Wed Jul 31 03:19:46 2019
+    Info: Processing started: Wed Jul 31 01:38:08 2019
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off calculadora_binaria -c calculadora_binaria
 Info: Selected device EP1K100QC208-3 for design "calculadora_binaria"
 Warning: Feature SignalProbe is not available with your current license
@@ -747,7 +751,7 @@ Info: Timing requirements not specified -- optimizing circuit to achieve the fol
     Info: Not setting a global tco requirement
     Info: Not setting a global tpd requirement
 Info: Inserted 0 logic cells in first fitting attempt
-Info: Started fitting attempt 1 on Wed Jul 31 2019 at 03:19:47
+Info: Started fitting attempt 1 on Wed Jul 31 2019 at 01:38:09
 Info: Fitter placement preparation operations beginning
 Info: Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info: Fitter placement operations beginning
@@ -756,7 +760,7 @@ Info: Fitter routing operations beginning
 Info: Fitter routing operations ending: elapsed time is 00:00:00
 Info: Quartus II Fitter was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 231 megabytes
-    Info: Processing ended: Wed Jul 31 03:19:54 2019
+    Info: Processing ended: Wed Jul 31 01:38:16 2019
     Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:07
 

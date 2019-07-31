@@ -54,3 +54,4 @@ set_global_assignment -name BDF_FILE decodificador_parcela.bdf
 set_global_assignment -name BDF_FILE contador.bdf
 set_global_assignment -name BDF_FILE somador_completo.bdf
 set_global_assignment -name BDF_FILE soma_e_subtracao.bdf
+set_global_assignment -name BDF_FILE dec_result_dezena.bdf

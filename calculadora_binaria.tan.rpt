@@ -1,5 +1,5 @@
 Classic Timing Analyzer report for calculadora_binaria
-Wed Jul 31 03:19:58 2019
+Wed Jul 31 01:38:22 2019
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -43,8 +43,8 @@ applicable agreement for further details.
 +------------------------------+-------+---------------+------------------------------------------------+-----------------------------+-----------------------------+------------+----------+--------------+
 ; Type                         ; Slack ; Required Time ; Actual Time                                    ; From                        ; To                          ; From Clock ; To Clock ; Failed Paths ;
 +------------------------------+-------+---------------+------------------------------------------------+-----------------------------+-----------------------------+------------+----------+--------------+
-; Worst-case tsu               ; N/A   ; None          ; 7.500 ns                                       ; pin_name6                   ; registrador:inst10|inst5    ; --         ; BH1      ; 0            ;
-; Worst-case tco               ; N/A   ; None          ; 80.000 ns                                      ; contador:inst1|inst1        ; d1                          ; pin_name   ; --       ; 0            ;
+; Worst-case tsu               ; N/A   ; None          ; 9.800 ns                                       ; Operacao                    ; registrador:inst9|inst      ; --         ; BH2      ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 88.800 ns                                      ; contador:inst1|inst1        ; c                           ; pin_name   ; --       ; 0            ;
 ; Worst-case th                ; N/A   ; None          ; -0.100 ns                                      ; pin_name5                   ; registrador:inst10|inst4    ; --         ; BH1      ; 0            ;
 ; Clock Setup: 'pin_name'      ; N/A   ; None          ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; divisor_de_clock:inst4|inst ; divisor_de_clock:inst4|inst ; pin_name   ; pin_name ; 0            ;
 ; Total number of failed paths ;       ;               ;                                                ;                             ;                             ;            ;          ; 0            ;
@@ -90,6 +90,7 @@ applicable agreement for further details.
 +-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
 ; BH1             ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
 ; pin_name        ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; BH2             ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
 +-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
 
 
@@ -137,13 +138,17 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------+--------------+------------+-----------+--------------------------+----------+
 ; Slack ; Required tsu ; Actual tsu ; From      ; To                       ; To Clock ;
 +-------+--------------+------------+-----------+--------------------------+----------+
-; N/A   ; None         ; 7.500 ns   ; pin_name6 ; registrador:inst10|inst5 ; BH1      ;
-; N/A   ; None         ; 7.000 ns   ; pin_name2 ; registrador:inst|inst5   ; BH1      ;
-; N/A   ; None         ; 7.000 ns   ; pin_name1 ; registrador:inst|inst4   ; BH1      ;
-; N/A   ; None         ; 6.700 ns   ; LSB       ; registrador:inst|inst6   ; BH1      ;
-; N/A   ; None         ; 5.800 ns   ; MSB       ; registrador:inst|inst    ; BH1      ;
-; N/A   ; None         ; 2.100 ns   ; LSB2      ; registrador:inst10|inst6 ; BH1      ;
-; N/A   ; None         ; 2.100 ns   ; MSB2      ; registrador:inst10|inst  ; BH1      ;
+; N/A   ; None         ; 9.800 ns   ; Operacao  ; registrador:inst9|inst   ; BH2      ;
+; N/A   ; None         ; 9.600 ns   ; Operacao  ; registrador:inst11|inst  ; BH2      ;
+; N/A   ; None         ; 7.700 ns   ; pin_name1 ; registrador:inst|inst4   ; BH1      ;
+; N/A   ; None         ; 7.600 ns   ; Operacao  ; registrador:inst9|inst4  ; BH2      ;
+; N/A   ; None         ; 7.400 ns   ; LSB       ; registrador:inst|inst6   ; BH1      ;
+; N/A   ; None         ; 7.400 ns   ; pin_name6 ; registrador:inst10|inst5 ; BH1      ;
+; N/A   ; None         ; 6.900 ns   ; LSB2      ; registrador:inst10|inst6 ; BH1      ;
+; N/A   ; None         ; 6.000 ns   ; pin_name2 ; registrador:inst|inst5   ; BH1      ;
+; N/A   ; None         ; 5.900 ns   ; MSB2      ; registrador:inst10|inst  ; BH1      ;
+; N/A   ; None         ; 4.900 ns   ; Operacao  ; registrador:inst9|inst5  ; BH2      ;
+; N/A   ; None         ; 4.700 ns   ; MSB       ; registrador:inst|inst    ; BH1      ;
 ; N/A   ; None         ; 1.700 ns   ; pin_name5 ; registrador:inst10|inst4 ; BH1      ;
 +-------+--------------+------------+-----------+--------------------------+----------+
 
@@ -153,88 +158,99 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------+--------------+------------+--------------------------+----+------------+
 ; Slack ; Required tco ; Actual tco ; From                     ; To ; From Clock ;
 +-------+--------------+------------+--------------------------+----+------------+
-; N/A   ; None         ; 80.000 ns  ; contador:inst1|inst1     ; d1 ; pin_name   ;
-; N/A   ; None         ; 79.800 ns  ; contador:inst1|inst      ; f  ; pin_name   ;
-; N/A   ; None         ; 79.600 ns  ; contador:inst1|inst1     ; e  ; pin_name   ;
-; N/A   ; None         ; 79.500 ns  ; contador:inst1|inst1     ; c  ; pin_name   ;
-; N/A   ; None         ; 79.500 ns  ; contador:inst1|inst1     ; b  ; pin_name   ;
-; N/A   ; None         ; 79.400 ns  ; contador:inst1|inst1     ; g  ; pin_name   ;
-; N/A   ; None         ; 79.100 ns  ; contador:inst1|inst1     ; d3 ; pin_name   ;
-; N/A   ; None         ; 78.400 ns  ; contador:inst1|inst1     ; d4 ; pin_name   ;
-; N/A   ; None         ; 78.400 ns  ; contador:inst1|inst1     ; A  ; pin_name   ;
-; N/A   ; None         ; 78.200 ns  ; contador:inst1|inst1     ; d2 ; pin_name   ;
-; N/A   ; None         ; 78.000 ns  ; contador:inst1|inst1     ; f  ; pin_name   ;
-; N/A   ; None         ; 78.000 ns  ; contador:inst1|inst1     ; d  ; pin_name   ;
-; N/A   ; None         ; 77.800 ns  ; contador:inst1|inst1     ; dp ; pin_name   ;
-; N/A   ; None         ; 76.600 ns  ; contador:inst1|inst      ; e  ; pin_name   ;
-; N/A   ; None         ; 76.500 ns  ; contador:inst1|inst      ; b  ; pin_name   ;
-; N/A   ; None         ; 76.300 ns  ; contador:inst1|inst      ; d1 ; pin_name   ;
-; N/A   ; None         ; 76.000 ns  ; contador:inst1|inst      ; d3 ; pin_name   ;
-; N/A   ; None         ; 75.800 ns  ; contador:inst1|inst      ; c  ; pin_name   ;
-; N/A   ; None         ; 75.700 ns  ; contador:inst1|inst      ; g  ; pin_name   ;
-; N/A   ; None         ; 75.500 ns  ; contador:inst1|inst      ; d2 ; pin_name   ;
-; N/A   ; None         ; 75.300 ns  ; contador:inst1|inst      ; d4 ; pin_name   ;
-; N/A   ; None         ; 75.300 ns  ; contador:inst1|inst      ; A  ; pin_name   ;
-; N/A   ; None         ; 74.400 ns  ; contador:inst1|inst      ; d  ; pin_name   ;
-; N/A   ; None         ; 74.200 ns  ; contador:inst1|inst      ; dp ; pin_name   ;
-; N/A   ; None         ; 22.300 ns  ; registrador:inst10|inst5 ; c  ; BH1        ;
-; N/A   ; None         ; 22.300 ns  ; registrador:inst|inst5   ; c  ; BH1        ;
-; N/A   ; None         ; 22.300 ns  ; registrador:inst|inst5   ; b  ; BH1        ;
-; N/A   ; None         ; 22.200 ns  ; registrador:inst10|inst6 ; g  ; BH1        ;
-; N/A   ; None         ; 22.200 ns  ; registrador:inst10|inst4 ; e  ; BH1        ;
-; N/A   ; None         ; 22.200 ns  ; registrador:inst10|inst4 ; c  ; BH1        ;
-; N/A   ; None         ; 22.200 ns  ; registrador:inst10|inst5 ; b  ; BH1        ;
-; N/A   ; None         ; 22.100 ns  ; registrador:inst10|inst  ; e  ; BH1        ;
-; N/A   ; None         ; 22.100 ns  ; registrador:inst10|inst  ; c  ; BH1        ;
-; N/A   ; None         ; 22.100 ns  ; registrador:inst10|inst  ; b  ; BH1        ;
-; N/A   ; None         ; 22.000 ns  ; registrador:inst10|inst4 ; g  ; BH1        ;
-; N/A   ; None         ; 22.000 ns  ; registrador:inst10|inst5 ; g  ; BH1        ;
-; N/A   ; None         ; 22.000 ns  ; registrador:inst|inst5   ; g  ; BH1        ;
-; N/A   ; None         ; 21.900 ns  ; registrador:inst10|inst6 ; b  ; BH1        ;
-; N/A   ; None         ; 21.800 ns  ; registrador:inst10|inst  ; g  ; BH1        ;
-; N/A   ; None         ; 21.800 ns  ; registrador:inst|inst6   ; g  ; BH1        ;
-; N/A   ; None         ; 21.800 ns  ; registrador:inst10|inst5 ; e  ; BH1        ;
-; N/A   ; None         ; 21.800 ns  ; registrador:inst10|inst6 ; c  ; BH1        ;
-; N/A   ; None         ; 21.800 ns  ; registrador:inst10|inst4 ; b  ; BH1        ;
-; N/A   ; None         ; 21.700 ns  ; registrador:inst|inst    ; b  ; BH1        ;
-; N/A   ; None         ; 21.600 ns  ; registrador:inst|inst    ; c  ; BH1        ;
-; N/A   ; None         ; 21.600 ns  ; registrador:inst|inst6   ; b  ; BH1        ;
-; N/A   ; None         ; 21.500 ns  ; registrador:inst10|inst4 ; A  ; BH1        ;
-; N/A   ; None         ; 21.400 ns  ; registrador:inst|inst6   ; c  ; BH1        ;
-; N/A   ; None         ; 21.300 ns  ; registrador:inst|inst    ; g  ; BH1        ;
-; N/A   ; None         ; 21.300 ns  ; registrador:inst10|inst  ; f  ; BH1        ;
-; N/A   ; None         ; 21.300 ns  ; registrador:inst10|inst5 ; f  ; BH1        ;
-; N/A   ; None         ; 21.300 ns  ; registrador:inst10|inst  ; A  ; BH1        ;
-; N/A   ; None         ; 21.100 ns  ; registrador:inst10|inst6 ; A  ; BH1        ;
-; N/A   ; None         ; 21.000 ns  ; registrador:inst10|inst6 ; f  ; BH1        ;
-; N/A   ; None         ; 21.000 ns  ; registrador:inst|inst5   ; f  ; BH1        ;
-; N/A   ; None         ; 20.900 ns  ; registrador:inst10|inst5 ; A  ; BH1        ;
-; N/A   ; None         ; 20.800 ns  ; registrador:inst10|inst6 ; d  ; BH1        ;
-; N/A   ; None         ; 20.700 ns  ; registrador:inst10|inst4 ; d  ; BH1        ;
+; N/A   ; None         ; 88.800 ns  ; contador:inst1|inst1     ; c  ; pin_name   ;
+; N/A   ; None         ; 88.700 ns  ; contador:inst1|inst1     ; b  ; pin_name   ;
+; N/A   ; None         ; 84.000 ns  ; contador:inst1|inst      ; c  ; pin_name   ;
+; N/A   ; None         ; 83.900 ns  ; contador:inst1|inst1     ; d  ; pin_name   ;
+; N/A   ; None         ; 83.900 ns  ; contador:inst1|inst      ; b  ; pin_name   ;
+; N/A   ; None         ; 83.500 ns  ; contador:inst1|inst1     ; dp ; pin_name   ;
+; N/A   ; None         ; 83.400 ns  ; contador:inst1|inst1     ; g  ; pin_name   ;
+; N/A   ; None         ; 83.400 ns  ; contador:inst1|inst1     ; e  ; pin_name   ;
+; N/A   ; None         ; 83.300 ns  ; contador:inst1|inst1     ; d4 ; pin_name   ;
+; N/A   ; None         ; 82.300 ns  ; contador:inst1|inst1     ; d2 ; pin_name   ;
+; N/A   ; None         ; 82.000 ns  ; contador:inst1|inst1     ; f  ; pin_name   ;
+; N/A   ; None         ; 81.500 ns  ; contador:inst1|inst1     ; A  ; pin_name   ;
+; N/A   ; None         ; 81.300 ns  ; contador:inst1|inst1     ; d3 ; pin_name   ;
+; N/A   ; None         ; 80.500 ns  ; contador:inst1|inst1     ; d1 ; pin_name   ;
+; N/A   ; None         ; 78.500 ns  ; contador:inst1|inst      ; g  ; pin_name   ;
+; N/A   ; None         ; 78.200 ns  ; contador:inst1|inst      ; d  ; pin_name   ;
+; N/A   ; None         ; 78.100 ns  ; contador:inst1|inst      ; e  ; pin_name   ;
+; N/A   ; None         ; 77.900 ns  ; contador:inst1|inst      ; d2 ; pin_name   ;
+; N/A   ; None         ; 77.800 ns  ; contador:inst1|inst      ; dp ; pin_name   ;
+; N/A   ; None         ; 77.200 ns  ; contador:inst1|inst      ; d4 ; pin_name   ;
+; N/A   ; None         ; 76.500 ns  ; contador:inst1|inst      ; d3 ; pin_name   ;
+; N/A   ; None         ; 76.000 ns  ; contador:inst1|inst      ; f  ; pin_name   ;
+; N/A   ; None         ; 75.900 ns  ; contador:inst1|inst      ; A  ; pin_name   ;
+; N/A   ; None         ; 75.700 ns  ; contador:inst1|inst      ; d1 ; pin_name   ;
+; N/A   ; None         ; 27.100 ns  ; registrador:inst10|inst  ; b  ; BH1        ;
+; N/A   ; None         ; 26.700 ns  ; registrador:inst|inst    ; b  ; BH1        ;
+; N/A   ; None         ; 26.600 ns  ; registrador:inst|inst    ; c  ; BH1        ;
+; N/A   ; None         ; 25.100 ns  ; registrador:inst10|inst  ; g  ; BH1        ;
+; N/A   ; None         ; 25.000 ns  ; registrador:inst10|inst  ; d  ; BH1        ;
+; N/A   ; None         ; 25.000 ns  ; registrador:inst10|inst  ; c  ; BH1        ;
+; N/A   ; None         ; 24.900 ns  ; registrador:inst10|inst5 ; b  ; BH1        ;
+; N/A   ; None         ; 24.900 ns  ; registrador:inst|inst5   ; b  ; BH1        ;
+; N/A   ; None         ; 24.800 ns  ; registrador:inst|inst5   ; c  ; BH1        ;
+; N/A   ; None         ; 24.600 ns  ; registrador:inst|inst4   ; c  ; BH1        ;
+; N/A   ; None         ; 24.600 ns  ; registrador:inst|inst6   ; b  ; BH1        ;
+; N/A   ; None         ; 24.400 ns  ; registrador:inst10|inst4 ; b  ; BH1        ;
+; N/A   ; None         ; 24.400 ns  ; registrador:inst|inst4   ; b  ; BH1        ;
+; N/A   ; None         ; 24.200 ns  ; registrador:inst|inst6   ; c  ; BH1        ;
+; N/A   ; None         ; 24.000 ns  ; registrador:inst10|inst6 ; b  ; BH1        ;
+; N/A   ; None         ; 23.100 ns  ; registrador:inst10|inst  ; A  ; BH1        ;
+; N/A   ; None         ; 23.000 ns  ; registrador:inst10|inst5 ; g  ; BH1        ;
+; N/A   ; None         ; 22.900 ns  ; registrador:inst10|inst  ; f  ; BH1        ;
+; N/A   ; None         ; 22.900 ns  ; registrador:inst10|inst  ; e  ; BH1        ;
+; N/A   ; None         ; 22.900 ns  ; registrador:inst|inst    ; e  ; BH1        ;
+; N/A   ; None         ; 22.900 ns  ; registrador:inst10|inst5 ; c  ; BH1        ;
+; N/A   ; None         ; 22.800 ns  ; registrador:inst10|inst5 ; d  ; BH1        ;
+; N/A   ; None         ; 22.700 ns  ; registrador:inst10|inst4 ; g  ; BH1        ;
+; N/A   ; None         ; 22.700 ns  ; registrador:inst10|inst4 ; d  ; BH1        ;
+; N/A   ; None         ; 22.600 ns  ; registrador:inst|inst    ; f  ; BH1        ;
+; N/A   ; None         ; 22.500 ns  ; registrador:inst|inst    ; d  ; BH1        ;
+; N/A   ; None         ; 22.500 ns  ; registrador:inst10|inst4 ; c  ; BH1        ;
+; N/A   ; None         ; 22.300 ns  ; registrador:inst10|inst6 ; g  ; BH1        ;
+; N/A   ; None         ; 22.300 ns  ; registrador:inst|inst    ; g  ; BH1        ;
+; N/A   ; None         ; 22.200 ns  ; registrador:inst10|inst6 ; d  ; BH1        ;
+; N/A   ; None         ; 22.200 ns  ; registrador:inst|inst    ; A  ; BH1        ;
+; N/A   ; None         ; 21.500 ns  ; registrador:inst10|inst6 ; c  ; BH1        ;
+; N/A   ; None         ; 21.300 ns  ; registrador:inst9|inst6  ; c  ; BH2        ;
+; N/A   ; None         ; 21.300 ns  ; registrador:inst9|inst6  ; b  ; BH2        ;
+; N/A   ; None         ; 21.000 ns  ; registrador:inst|inst4   ; f  ; BH1        ;
+; N/A   ; None         ; 20.900 ns  ; registrador:inst|inst4   ; e  ; BH1        ;
+; N/A   ; None         ; 20.800 ns  ; registrador:inst10|inst4 ; f  ; BH1        ;
+; N/A   ; None         ; 20.800 ns  ; registrador:inst|inst6   ; d  ; BH1        ;
+; N/A   ; None         ; 20.700 ns  ; registrador:inst10|inst5 ; f  ; BH1        ;
+; N/A   ; None         ; 20.700 ns  ; registrador:inst|inst6   ; f  ; BH1        ;
+; N/A   ; None         ; 20.700 ns  ; registrador:inst|inst5   ; f  ; BH1        ;
+; N/A   ; None         ; 20.700 ns  ; registrador:inst|inst4   ; d  ; BH1        ;
+; N/A   ; None         ; 20.700 ns  ; registrador:inst10|inst4 ; A  ; BH1        ;
+; N/A   ; None         ; 20.600 ns  ; registrador:inst|inst6   ; g  ; BH1        ;
 ; N/A   ; None         ; 20.600 ns  ; registrador:inst|inst5   ; e  ; BH1        ;
-; N/A   ; None         ; 20.600 ns  ; registrador:inst|inst5   ; A  ; BH1        ;
-; N/A   ; None         ; 20.500 ns  ; registrador:inst10|inst5 ; d  ; BH1        ;
-; N/A   ; None         ; 20.500 ns  ; registrador:inst|inst5   ; d  ; BH1        ;
-; N/A   ; None         ; 20.500 ns  ; registrador:inst|inst4   ; c  ; BH1        ;
-; N/A   ; None         ; 20.500 ns  ; registrador:inst|inst    ; A  ; BH1        ;
-; N/A   ; None         ; 20.400 ns  ; registrador:inst|inst    ; e  ; BH1        ;
-; N/A   ; None         ; 20.400 ns  ; registrador:inst10|inst  ; d  ; BH1        ;
-; N/A   ; None         ; 20.400 ns  ; registrador:inst|inst6   ; d  ; BH1        ;
-; N/A   ; None         ; 20.400 ns  ; registrador:inst|inst6   ; A  ; BH1        ;
-; N/A   ; None         ; 20.300 ns  ; registrador:inst|inst4   ; g  ; BH1        ;
-; N/A   ; None         ; 20.300 ns  ; registrador:inst|inst6   ; f  ; BH1        ;
-; N/A   ; None         ; 20.200 ns  ; registrador:inst|inst4   ; b  ; BH1        ;
-; N/A   ; None         ; 20.100 ns  ; registrador:inst10|inst4 ; f  ; BH1        ;
-; N/A   ; None         ; 20.100 ns  ; registrador:inst|inst    ; f  ; BH1        ;
-; N/A   ; None         ; 19.900 ns  ; registrador:inst|inst    ; d  ; BH1        ;
-; N/A   ; None         ; 19.500 ns  ; registrador:inst|inst4   ; A  ; BH1        ;
-; N/A   ; None         ; 19.300 ns  ; registrador:inst|inst4   ; e  ; BH1        ;
-; N/A   ; None         ; 19.200 ns  ; registrador:inst|inst4   ; f  ; BH1        ;
-; N/A   ; None         ; 19.000 ns  ; registrador:inst|inst4   ; d  ; BH1        ;
-; N/A   ; None         ; 18.400 ns  ; registrador:inst10|inst6 ; e  ; BH1        ;
-; N/A   ; None         ; 16.500 ns  ; registrador:inst|inst6   ; e  ; BH1        ;
-; N/A   ; None         ; 15.900 ns  ; registrador:inst10|inst  ; dp ; BH1        ;
-; N/A   ; None         ; 15.900 ns  ; registrador:inst|inst    ; dp ; BH1        ;
+; N/A   ; None         ; 20.600 ns  ; registrador:inst|inst5   ; d  ; BH1        ;
+; N/A   ; None         ; 20.500 ns  ; registrador:inst10|inst  ; dp ; BH1        ;
+; N/A   ; None         ; 20.500 ns  ; registrador:inst|inst5   ; g  ; BH1        ;
+; N/A   ; None         ; 20.500 ns  ; registrador:inst10|inst4 ; e  ; BH1        ;
+; N/A   ; None         ; 20.400 ns  ; registrador:inst|inst    ; dp ; BH1        ;
+; N/A   ; None         ; 20.400 ns  ; registrador:inst|inst4   ; g  ; BH1        ;
+; N/A   ; None         ; 20.400 ns  ; registrador:inst10|inst5 ; A  ; BH1        ;
+; N/A   ; None         ; 20.300 ns  ; registrador:inst|inst4   ; A  ; BH1        ;
+; N/A   ; None         ; 20.200 ns  ; registrador:inst10|inst5 ; e  ; BH1        ;
+; N/A   ; None         ; 20.200 ns  ; registrador:inst11|inst  ; c  ; BH2        ;
+; N/A   ; None         ; 20.200 ns  ; registrador:inst11|inst  ; b  ; BH2        ;
+; N/A   ; None         ; 20.000 ns  ; registrador:inst9|inst4  ; c  ; BH2        ;
+; N/A   ; None         ; 20.000 ns  ; registrador:inst9|inst4  ; b  ; BH2        ;
+; N/A   ; None         ; 19.900 ns  ; registrador:inst10|inst6 ; f  ; BH1        ;
+; N/A   ; None         ; 19.900 ns  ; registrador:inst9|inst5  ; c  ; BH2        ;
+; N/A   ; None         ; 19.900 ns  ; registrador:inst9|inst5  ; b  ; BH2        ;
+; N/A   ; None         ; 19.900 ns  ; registrador:inst|inst6   ; A  ; BH1        ;
+; N/A   ; None         ; 19.800 ns  ; registrador:inst|inst5   ; A  ; BH1        ;
+; N/A   ; None         ; 19.700 ns  ; registrador:inst10|inst6 ; A  ; BH1        ;
+; N/A   ; None         ; 18.800 ns  ; registrador:inst11|inst  ; g  ; BH2        ;
+; N/A   ; None         ; 18.500 ns  ; registrador:inst9|inst   ; c  ; BH2        ;
+; N/A   ; None         ; 18.500 ns  ; registrador:inst9|inst   ; b  ; BH2        ;
+; N/A   ; None         ; 17.700 ns  ; registrador:inst10|inst6 ; e  ; BH1        ;
+; N/A   ; None         ; 17.300 ns  ; registrador:inst|inst6   ; e  ; BH1        ;
 +-------+--------------+------------+--------------------------+----+------------+
 
 
@@ -243,14 +259,18 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------+-------------+-----------+-----------+--------------------------+----------+
 ; Minimum Slack ; Required th ; Actual th ; From      ; To                       ; To Clock ;
 +---------------+-------------+-----------+-----------+--------------------------+----------+
+; N/A           ; None        ; -0.100 ns ; Operacao  ; registrador:inst9|inst4  ; BH2      ;
+; N/A           ; None        ; -0.100 ns ; Operacao  ; registrador:inst11|inst  ; BH2      ;
+; N/A           ; None        ; -0.100 ns ; Operacao  ; registrador:inst9|inst   ; BH2      ;
 ; N/A           ; None        ; -0.100 ns ; pin_name5 ; registrador:inst10|inst4 ; BH1      ;
-; N/A           ; None        ; -0.500 ns ; LSB2      ; registrador:inst10|inst6 ; BH1      ;
-; N/A           ; None        ; -0.500 ns ; MSB2      ; registrador:inst10|inst  ; BH1      ;
-; N/A           ; None        ; -4.200 ns ; MSB       ; registrador:inst|inst    ; BH1      ;
-; N/A           ; None        ; -5.100 ns ; LSB       ; registrador:inst|inst6   ; BH1      ;
-; N/A           ; None        ; -5.400 ns ; pin_name2 ; registrador:inst|inst5   ; BH1      ;
-; N/A           ; None        ; -5.400 ns ; pin_name1 ; registrador:inst|inst4   ; BH1      ;
-; N/A           ; None        ; -5.900 ns ; pin_name6 ; registrador:inst10|inst5 ; BH1      ;
+; N/A           ; None        ; -0.300 ns ; Operacao  ; registrador:inst9|inst5  ; BH2      ;
+; N/A           ; None        ; -3.100 ns ; MSB       ; registrador:inst|inst    ; BH1      ;
+; N/A           ; None        ; -4.300 ns ; MSB2      ; registrador:inst10|inst  ; BH1      ;
+; N/A           ; None        ; -4.400 ns ; pin_name2 ; registrador:inst|inst5   ; BH1      ;
+; N/A           ; None        ; -5.300 ns ; LSB2      ; registrador:inst10|inst6 ; BH1      ;
+; N/A           ; None        ; -5.800 ns ; LSB       ; registrador:inst|inst6   ; BH1      ;
+; N/A           ; None        ; -5.800 ns ; pin_name6 ; registrador:inst10|inst5 ; BH1      ;
+; N/A           ; None        ; -6.100 ns ; pin_name1 ; registrador:inst|inst4   ; BH1      ;
 +---------------+-------------+-----------+-----------+--------------------------+----------+
 
 
@@ -260,13 +280,14 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II Classic Timing Analyzer
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Wed Jul 31 03:19:57 2019
+    Info: Processing started: Wed Jul 31 01:38:21 2019
 Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off calculadora_binaria -c calculadora_binaria
 Info: Started post-fitting delay annotation
 Info: Delay annotation completed successfully
 Warning: Found pins functioning as undefined clocks and/or memory enables
     Info: Assuming node "BH1" is an undefined clock
     Info: Assuming node "pin_name" is an undefined clock
+    Info: Assuming node "BH2" is an undefined clock
 Warning: Found 19 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
     Info: Detected ripple clock "divisor_de_clock:inst4|inst" as buffer
     Info: Detected ripple clock "divisor_de_clock:inst4|inst1" as buffer
@@ -291,120 +312,126 @@ Info: No valid register-to-register data paths exist for clock "BH1"
 Info: Clock "pin_name" Internal fmax is restricted to 200.0 MHz between source register "contador:inst1|inst1" and destination register "contador:inst1|inst1"
     Info: fmax restricted to Clock High delay (2.5 ns) plus Clock Low delay (2.5 ns) : restricted to 5.0 ns. Expand message to see actual delay path.
         Info: + Longest register to register delay is 1.200 ns
-            Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC1_J46; Fanout = 15; REG Node = 'contador:inst1|inst1'
-            Info: 2: + IC(0.200 ns) + CELL(1.000 ns) = 1.200 ns; Loc. = LC1_J46; Fanout = 15; REG Node = 'contador:inst1|inst1'
+            Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC3_I34; Fanout = 12; REG Node = 'contador:inst1|inst1'
+            Info: 2: + IC(0.200 ns) + CELL(1.000 ns) = 1.200 ns; Loc. = LC3_I34; Fanout = 12; REG Node = 'contador:inst1|inst1'
             Info: Total cell delay = 1.000 ns ( 83.33 % )
             Info: Total interconnect delay = 0.200 ns ( 16.67 % )
         Info: - Smallest clock skew is 0.000 ns
-            Info: + Shortest clock path from clock "pin_name" to destination register is 63.200 ns
-                Info: 1: + IC(0.000 ns) + CELL(0.500 ns) = 0.500 ns; Loc. = PIN_183; Fanout = 1; CLK Node = 'pin_name'
-                Info: 2: + IC(1.400 ns) + CELL(1.100 ns) = 3.000 ns; Loc. = LC1_I10; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst'
-                Info: 3: + IC(2.200 ns) + CELL(1.100 ns) = 6.300 ns; Loc. = LC1_I25; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst1'
-                Info: 4: + IC(1.900 ns) + CELL(1.100 ns) = 9.300 ns; Loc. = LC1_I14; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst2'
-                Info: 5: + IC(1.900 ns) + CELL(1.100 ns) = 12.300 ns; Loc. = LC2_I17; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst3'
-                Info: 6: + IC(1.800 ns) + CELL(1.100 ns) = 15.200 ns; Loc. = LC1_I16; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst4'
-                Info: 7: + IC(1.800 ns) + CELL(1.100 ns) = 18.100 ns; Loc. = LC1_I17; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst5'
-                Info: 8: + IC(1.800 ns) + CELL(1.100 ns) = 21.000 ns; Loc. = LC1_I12; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst6'
-                Info: 9: + IC(1.100 ns) + CELL(1.100 ns) = 23.200 ns; Loc. = LC1_I7; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst7'
-                Info: 10: + IC(2.300 ns) + CELL(1.100 ns) = 26.600 ns; Loc. = LC1_I26; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst8'
-                Info: 11: + IC(1.900 ns) + CELL(1.100 ns) = 29.600 ns; Loc. = LC1_I20; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst9'
-                Info: 12: + IC(3.400 ns) + CELL(1.100 ns) = 34.100 ns; Loc. = LC1_B24; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst10'
-                Info: 13: + IC(1.300 ns) + CELL(1.100 ns) = 36.500 ns; Loc. = LC1_B10; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst11'
-                Info: 14: + IC(1.800 ns) + CELL(1.100 ns) = 39.400 ns; Loc. = LC1_B2; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst12'
-                Info: 15: + IC(2.200 ns) + CELL(1.100 ns) = 42.700 ns; Loc. = LC3_B14; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst13'
-                Info: 16: + IC(2.000 ns) + CELL(1.100 ns) = 45.800 ns; Loc. = LC1_B22; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst14'
-                Info: 17: + IC(2.000 ns) + CELL(1.100 ns) = 48.900 ns; Loc. = LC2_B2; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst15'
-                Info: 18: + IC(2.400 ns) + CELL(1.100 ns) = 52.400 ns; Loc. = LC1_B20; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst16'
-                Info: 19: + IC(1.800 ns) + CELL(1.100 ns) = 55.300 ns; Loc. = LC1_B18; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst17'
-                Info: 20: + IC(1.800 ns) + CELL(1.100 ns) = 58.200 ns; Loc. = LC1_B14; Fanout = 15; REG Node = 'contador:inst1|inst'
-                Info: 21: + IC(5.000 ns) + CELL(0.000 ns) = 63.200 ns; Loc. = LC1_J46; Fanout = 15; REG Node = 'contador:inst1|inst1'
-                Info: Total cell delay = 21.400 ns ( 33.86 % )
-                Info: Total interconnect delay = 41.800 ns ( 66.14 % )
-            Info: - Longest clock path from clock "pin_name" to source register is 63.200 ns
-                Info: 1: + IC(0.000 ns) + CELL(0.500 ns) = 0.500 ns; Loc. = PIN_183; Fanout = 1; CLK Node = 'pin_name'
-                Info: 2: + IC(1.400 ns) + CELL(1.100 ns) = 3.000 ns; Loc. = LC1_I10; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst'
-                Info: 3: + IC(2.200 ns) + CELL(1.100 ns) = 6.300 ns; Loc. = LC1_I25; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst1'
-                Info: 4: + IC(1.900 ns) + CELL(1.100 ns) = 9.300 ns; Loc. = LC1_I14; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst2'
-                Info: 5: + IC(1.900 ns) + CELL(1.100 ns) = 12.300 ns; Loc. = LC2_I17; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst3'
-                Info: 6: + IC(1.800 ns) + CELL(1.100 ns) = 15.200 ns; Loc. = LC1_I16; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst4'
-                Info: 7: + IC(1.800 ns) + CELL(1.100 ns) = 18.100 ns; Loc. = LC1_I17; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst5'
-                Info: 8: + IC(1.800 ns) + CELL(1.100 ns) = 21.000 ns; Loc. = LC1_I12; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst6'
-                Info: 9: + IC(1.100 ns) + CELL(1.100 ns) = 23.200 ns; Loc. = LC1_I7; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst7'
-                Info: 10: + IC(2.300 ns) + CELL(1.100 ns) = 26.600 ns; Loc. = LC1_I26; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst8'
-                Info: 11: + IC(1.900 ns) + CELL(1.100 ns) = 29.600 ns; Loc. = LC1_I20; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst9'
-                Info: 12: + IC(3.400 ns) + CELL(1.100 ns) = 34.100 ns; Loc. = LC1_B24; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst10'
-                Info: 13: + IC(1.300 ns) + CELL(1.100 ns) = 36.500 ns; Loc. = LC1_B10; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst11'
-                Info: 14: + IC(1.800 ns) + CELL(1.100 ns) = 39.400 ns; Loc. = LC1_B2; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst12'
-                Info: 15: + IC(2.200 ns) + CELL(1.100 ns) = 42.700 ns; Loc. = LC3_B14; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst13'
-                Info: 16: + IC(2.000 ns) + CELL(1.100 ns) = 45.800 ns; Loc. = LC1_B22; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst14'
-                Info: 17: + IC(2.000 ns) + CELL(1.100 ns) = 48.900 ns; Loc. = LC2_B2; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst15'
-                Info: 18: + IC(2.400 ns) + CELL(1.100 ns) = 52.400 ns; Loc. = LC1_B20; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst16'
-                Info: 19: + IC(1.800 ns) + CELL(1.100 ns) = 55.300 ns; Loc. = LC1_B18; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst17'
-                Info: 20: + IC(1.800 ns) + CELL(1.100 ns) = 58.200 ns; Loc. = LC1_B14; Fanout = 15; REG Node = 'contador:inst1|inst'
-                Info: 21: + IC(5.000 ns) + CELL(0.000 ns) = 63.200 ns; Loc. = LC1_J46; Fanout = 15; REG Node = 'contador:inst1|inst1'
-                Info: Total cell delay = 21.400 ns ( 33.86 % )
-                Info: Total interconnect delay = 41.800 ns ( 66.14 % )
+            Info: + Shortest clock path from clock "pin_name" to destination register is 67.800 ns
+                Info: 1: + IC(0.000 ns) + CELL(0.500 ns) = 0.500 ns; Loc. = PIN_184; Fanout = 1; CLK Node = 'pin_name'
+                Info: 2: + IC(1.400 ns) + CELL(1.100 ns) = 3.000 ns; Loc. = LC1_H31; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst'
+                Info: 3: + IC(2.000 ns) + CELL(1.100 ns) = 6.100 ns; Loc. = LC1_H42; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst1'
+                Info: 4: + IC(1.800 ns) + CELL(1.100 ns) = 9.000 ns; Loc. = LC1_H34; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst2'
+                Info: 5: + IC(1.800 ns) + CELL(1.100 ns) = 11.900 ns; Loc. = LC1_H39; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst3'
+                Info: 6: + IC(1.800 ns) + CELL(1.100 ns) = 14.800 ns; Loc. = LC1_H27; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst4'
+                Info: 7: + IC(1.900 ns) + CELL(1.100 ns) = 17.800 ns; Loc. = LC1_H3; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst5'
+                Info: 8: + IC(2.200 ns) + CELL(1.100 ns) = 21.100 ns; Loc. = LC1_H14; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst6'
+                Info: 9: + IC(2.000 ns) + CELL(1.100 ns) = 24.200 ns; Loc. = LC1_H19; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst7'
+                Info: 10: + IC(1.900 ns) + CELL(1.100 ns) = 27.200 ns; Loc. = LC1_H22; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst8'
+                Info: 11: + IC(2.000 ns) + CELL(1.100 ns) = 30.300 ns; Loc. = LC1_H2; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst9'
+                Info: 12: + IC(2.500 ns) + CELL(1.100 ns) = 33.900 ns; Loc. = LC4_H27; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst10'
+                Info: 13: + IC(4.000 ns) + CELL(1.100 ns) = 39.000 ns; Loc. = LC1_K52; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst11'
+                Info: 14: + IC(2.100 ns) + CELL(1.100 ns) = 42.200 ns; Loc. = LC1_K29; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst12'
+                Info: 15: + IC(1.800 ns) + CELL(1.100 ns) = 45.100 ns; Loc. = LC1_K30; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst13'
+                Info: 16: + IC(1.900 ns) + CELL(1.100 ns) = 48.100 ns; Loc. = LC1_K36; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst14'
+                Info: 17: + IC(3.700 ns) + CELL(1.100 ns) = 52.900 ns; Loc. = LC1_J49; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst15'
+                Info: 18: + IC(1.700 ns) + CELL(1.100 ns) = 55.700 ns; Loc. = LC1_J47; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst16'
+                Info: 19: + IC(1.800 ns) + CELL(1.100 ns) = 58.600 ns; Loc. = LC1_J39; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst17'
+                Info: 20: + IC(1.700 ns) + CELL(1.100 ns) = 61.400 ns; Loc. = LC1_J38; Fanout = 14; REG Node = 'contador:inst1|inst'
+                Info: 21: + IC(6.400 ns) + CELL(0.000 ns) = 67.800 ns; Loc. = LC3_I34; Fanout = 12; REG Node = 'contador:inst1|inst1'
+                Info: Total cell delay = 21.400 ns ( 31.56 % )
+                Info: Total interconnect delay = 46.400 ns ( 68.44 % )
+            Info: - Longest clock path from clock "pin_name" to source register is 67.800 ns
+                Info: 1: + IC(0.000 ns) + CELL(0.500 ns) = 0.500 ns; Loc. = PIN_184; Fanout = 1; CLK Node = 'pin_name'
+                Info: 2: + IC(1.400 ns) + CELL(1.100 ns) = 3.000 ns; Loc. = LC1_H31; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst'
+                Info: 3: + IC(2.000 ns) + CELL(1.100 ns) = 6.100 ns; Loc. = LC1_H42; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst1'
+                Info: 4: + IC(1.800 ns) + CELL(1.100 ns) = 9.000 ns; Loc. = LC1_H34; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst2'
+                Info: 5: + IC(1.800 ns) + CELL(1.100 ns) = 11.900 ns; Loc. = LC1_H39; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst3'
+                Info: 6: + IC(1.800 ns) + CELL(1.100 ns) = 14.800 ns; Loc. = LC1_H27; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst4'
+                Info: 7: + IC(1.900 ns) + CELL(1.100 ns) = 17.800 ns; Loc. = LC1_H3; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst5'
+                Info: 8: + IC(2.200 ns) + CELL(1.100 ns) = 21.100 ns; Loc. = LC1_H14; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst6'
+                Info: 9: + IC(2.000 ns) + CELL(1.100 ns) = 24.200 ns; Loc. = LC1_H19; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst7'
+                Info: 10: + IC(1.900 ns) + CELL(1.100 ns) = 27.200 ns; Loc. = LC1_H22; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst8'
+                Info: 11: + IC(2.000 ns) + CELL(1.100 ns) = 30.300 ns; Loc. = LC1_H2; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst9'
+                Info: 12: + IC(2.500 ns) + CELL(1.100 ns) = 33.900 ns; Loc. = LC4_H27; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst10'
+                Info: 13: + IC(4.000 ns) + CELL(1.100 ns) = 39.000 ns; Loc. = LC1_K52; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst11'
+                Info: 14: + IC(2.100 ns) + CELL(1.100 ns) = 42.200 ns; Loc. = LC1_K29; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst12'
+                Info: 15: + IC(1.800 ns) + CELL(1.100 ns) = 45.100 ns; Loc. = LC1_K30; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst13'
+                Info: 16: + IC(1.900 ns) + CELL(1.100 ns) = 48.100 ns; Loc. = LC1_K36; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst14'
+                Info: 17: + IC(3.700 ns) + CELL(1.100 ns) = 52.900 ns; Loc. = LC1_J49; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst15'
+                Info: 18: + IC(1.700 ns) + CELL(1.100 ns) = 55.700 ns; Loc. = LC1_J47; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst16'
+                Info: 19: + IC(1.800 ns) + CELL(1.100 ns) = 58.600 ns; Loc. = LC1_J39; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst17'
+                Info: 20: + IC(1.700 ns) + CELL(1.100 ns) = 61.400 ns; Loc. = LC1_J38; Fanout = 14; REG Node = 'contador:inst1|inst'
+                Info: 21: + IC(6.400 ns) + CELL(0.000 ns) = 67.800 ns; Loc. = LC3_I34; Fanout = 12; REG Node = 'contador:inst1|inst1'
+                Info: Total cell delay = 21.400 ns ( 31.56 % )
+                Info: Total interconnect delay = 46.400 ns ( 68.44 % )
         Info: + Micro clock to output delay of source is 1.100 ns
         Info: + Micro setup delay of destination is 0.700 ns
-Info: tsu for register "registrador:inst10|inst5" (data pin = "pin_name6", clock pin = "BH1") is 7.500 ns
-    Info: + Longest pin to register delay is 8.700 ns
-        Info: 1: + IC(0.000 ns) + CELL(3.100 ns) = 3.100 ns; Loc. = PIN_202; Fanout = 1; PIN Node = 'pin_name6'
-        Info: 2: + IC(4.600 ns) + CELL(1.000 ns) = 8.700 ns; Loc. = LC1_J39; Fanout = 8; REG Node = 'registrador:inst10|inst5'
-        Info: Total cell delay = 4.100 ns ( 47.13 % )
-        Info: Total interconnect delay = 4.600 ns ( 52.87 % )
+Info: No valid register-to-register data paths exist for clock "BH2"
+Info: tsu for register "registrador:inst9|inst" (data pin = "Operacao", clock pin = "BH2") is 9.800 ns
+    Info: + Longest pin to register delay is 11.000 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.500 ns) = 0.500 ns; Loc. = PIN_78; Fanout = 7; PIN Node = 'Operacao'
+        Info: 2: + IC(1.600 ns) + CELL(1.900 ns) = 4.000 ns; Loc. = LC2_I45; Fanout = 2; COMB Node = 'soma_e_subtracao:inst27|somador_completo:inst12|inst6~0'
+        Info: 3: + IC(1.100 ns) + CELL(2.000 ns) = 7.100 ns; Loc. = LC4_I50; Fanout = 2; COMB Node = 'soma_e_subtracao:inst27|somador_completo:inst13|inst6~0'
+        Info: 4: + IC(0.200 ns) + CELL(2.000 ns) = 9.300 ns; Loc. = LC5_I50; Fanout = 2; COMB Node = 'soma_e_subtracao:inst27|somador_completo:inst14|inst6~0'
+        Info: 5: + IC(0.200 ns) + CELL(1.500 ns) = 11.000 ns; Loc. = LC8_I50; Fanout = 1; REG Node = 'registrador:inst9|inst'
+        Info: Total cell delay = 7.900 ns ( 71.82 % )
+        Info: Total interconnect delay = 3.100 ns ( 28.18 % )
     Info: + Micro setup delay of destination is 0.700 ns
-    Info: - Shortest clock path from clock "BH1" to destination register is 1.900 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.500 ns) = 0.500 ns; Loc. = PIN_79; Fanout = 8; CLK Node = 'BH1'
-        Info: 2: + IC(1.400 ns) + CELL(0.000 ns) = 1.900 ns; Loc. = LC1_J39; Fanout = 8; REG Node = 'registrador:inst10|inst5'
+    Info: - Shortest clock path from clock "BH2" to destination register is 1.900 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.500 ns) = 0.500 ns; Loc. = PIN_183; Fanout = 5; CLK Node = 'BH2'
+        Info: 2: + IC(1.400 ns) + CELL(0.000 ns) = 1.900 ns; Loc. = LC8_I50; Fanout = 1; REG Node = 'registrador:inst9|inst'
         Info: Total cell delay = 0.500 ns ( 26.32 % )
         Info: Total interconnect delay = 1.400 ns ( 73.68 % )
-Info: tco from clock "pin_name" to destination pin "d1" through register "contador:inst1|inst1" is 80.000 ns
-    Info: + Longest clock path from clock "pin_name" to source register is 63.200 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.500 ns) = 0.500 ns; Loc. = PIN_183; Fanout = 1; CLK Node = 'pin_name'
-        Info: 2: + IC(1.400 ns) + CELL(1.100 ns) = 3.000 ns; Loc. = LC1_I10; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst'
-        Info: 3: + IC(2.200 ns) + CELL(1.100 ns) = 6.300 ns; Loc. = LC1_I25; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst1'
-        Info: 4: + IC(1.900 ns) + CELL(1.100 ns) = 9.300 ns; Loc. = LC1_I14; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst2'
-        Info: 5: + IC(1.900 ns) + CELL(1.100 ns) = 12.300 ns; Loc. = LC2_I17; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst3'
-        Info: 6: + IC(1.800 ns) + CELL(1.100 ns) = 15.200 ns; Loc. = LC1_I16; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst4'
-        Info: 7: + IC(1.800 ns) + CELL(1.100 ns) = 18.100 ns; Loc. = LC1_I17; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst5'
-        Info: 8: + IC(1.800 ns) + CELL(1.100 ns) = 21.000 ns; Loc. = LC1_I12; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst6'
-        Info: 9: + IC(1.100 ns) + CELL(1.100 ns) = 23.200 ns; Loc. = LC1_I7; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst7'
-        Info: 10: + IC(2.300 ns) + CELL(1.100 ns) = 26.600 ns; Loc. = LC1_I26; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst8'
-        Info: 11: + IC(1.900 ns) + CELL(1.100 ns) = 29.600 ns; Loc. = LC1_I20; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst9'
-        Info: 12: + IC(3.400 ns) + CELL(1.100 ns) = 34.100 ns; Loc. = LC1_B24; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst10'
-        Info: 13: + IC(1.300 ns) + CELL(1.100 ns) = 36.500 ns; Loc. = LC1_B10; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst11'
-        Info: 14: + IC(1.800 ns) + CELL(1.100 ns) = 39.400 ns; Loc. = LC1_B2; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst12'
-        Info: 15: + IC(2.200 ns) + CELL(1.100 ns) = 42.700 ns; Loc. = LC3_B14; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst13'
-        Info: 16: + IC(2.000 ns) + CELL(1.100 ns) = 45.800 ns; Loc. = LC1_B22; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst14'
-        Info: 17: + IC(2.000 ns) + CELL(1.100 ns) = 48.900 ns; Loc. = LC2_B2; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst15'
-        Info: 18: + IC(2.400 ns) + CELL(1.100 ns) = 52.400 ns; Loc. = LC1_B20; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst16'
-        Info: 19: + IC(1.800 ns) + CELL(1.100 ns) = 55.300 ns; Loc. = LC1_B18; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst17'
-        Info: 20: + IC(1.800 ns) + CELL(1.100 ns) = 58.200 ns; Loc. = LC1_B14; Fanout = 15; REG Node = 'contador:inst1|inst'
-        Info: 21: + IC(5.000 ns) + CELL(0.000 ns) = 63.200 ns; Loc. = LC1_J46; Fanout = 15; REG Node = 'contador:inst1|inst1'
-        Info: Total cell delay = 21.400 ns ( 33.86 % )
-        Info: Total interconnect delay = 41.800 ns ( 66.14 % )
+Info: tco from clock "pin_name" to destination pin "c" through register "contador:inst1|inst1" is 88.800 ns
+    Info: + Longest clock path from clock "pin_name" to source register is 67.800 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.500 ns) = 0.500 ns; Loc. = PIN_184; Fanout = 1; CLK Node = 'pin_name'
+        Info: 2: + IC(1.400 ns) + CELL(1.100 ns) = 3.000 ns; Loc. = LC1_H31; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst'
+        Info: 3: + IC(2.000 ns) + CELL(1.100 ns) = 6.100 ns; Loc. = LC1_H42; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst1'
+        Info: 4: + IC(1.800 ns) + CELL(1.100 ns) = 9.000 ns; Loc. = LC1_H34; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst2'
+        Info: 5: + IC(1.800 ns) + CELL(1.100 ns) = 11.900 ns; Loc. = LC1_H39; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst3'
+        Info: 6: + IC(1.800 ns) + CELL(1.100 ns) = 14.800 ns; Loc. = LC1_H27; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst4'
+        Info: 7: + IC(1.900 ns) + CELL(1.100 ns) = 17.800 ns; Loc. = LC1_H3; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst5'
+        Info: 8: + IC(2.200 ns) + CELL(1.100 ns) = 21.100 ns; Loc. = LC1_H14; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst6'
+        Info: 9: + IC(2.000 ns) + CELL(1.100 ns) = 24.200 ns; Loc. = LC1_H19; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst7'
+        Info: 10: + IC(1.900 ns) + CELL(1.100 ns) = 27.200 ns; Loc. = LC1_H22; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst8'
+        Info: 11: + IC(2.000 ns) + CELL(1.100 ns) = 30.300 ns; Loc. = LC1_H2; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst9'
+        Info: 12: + IC(2.500 ns) + CELL(1.100 ns) = 33.900 ns; Loc. = LC4_H27; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst10'
+        Info: 13: + IC(4.000 ns) + CELL(1.100 ns) = 39.000 ns; Loc. = LC1_K52; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst11'
+        Info: 14: + IC(2.100 ns) + CELL(1.100 ns) = 42.200 ns; Loc. = LC1_K29; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst12'
+        Info: 15: + IC(1.800 ns) + CELL(1.100 ns) = 45.100 ns; Loc. = LC1_K30; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst13'
+        Info: 16: + IC(1.900 ns) + CELL(1.100 ns) = 48.100 ns; Loc. = LC1_K36; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst14'
+        Info: 17: + IC(3.700 ns) + CELL(1.100 ns) = 52.900 ns; Loc. = LC1_J49; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst15'
+        Info: 18: + IC(1.700 ns) + CELL(1.100 ns) = 55.700 ns; Loc. = LC1_J47; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst16'
+        Info: 19: + IC(1.800 ns) + CELL(1.100 ns) = 58.600 ns; Loc. = LC1_J39; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst17'
+        Info: 20: + IC(1.700 ns) + CELL(1.100 ns) = 61.400 ns; Loc. = LC1_J38; Fanout = 14; REG Node = 'contador:inst1|inst'
+        Info: 21: + IC(6.400 ns) + CELL(0.000 ns) = 67.800 ns; Loc. = LC3_I34; Fanout = 12; REG Node = 'contador:inst1|inst1'
+        Info: Total cell delay = 21.400 ns ( 31.56 % )
+        Info: Total interconnect delay = 46.400 ns ( 68.44 % )
     Info: + Micro clock to output delay of source is 1.100 ns
-    Info: + Longest register to pin delay is 15.700 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC1_J46; Fanout = 15; REG Node = 'contador:inst1|inst1'
-        Info: 2: + IC(2.000 ns) + CELL(1.900 ns) = 3.900 ns; Loc. = LC8_J30; Fanout = 1; COMB Node = 'multiplexador:inst5|inst39~0'
-        Info: 3: + IC(3.200 ns) + CELL(8.600 ns) = 15.700 ns; Loc. = PIN_13; Fanout = 0; PIN Node = 'd1'
-        Info: Total cell delay = 10.500 ns ( 66.88 % )
-        Info: Total interconnect delay = 5.200 ns ( 33.12 % )
-Info: th for register "registrador:inst10|inst4" (data pin = "pin_name5", clock pin = "BH1") is -0.100 ns
-    Info: + Longest clock path from clock "BH1" to destination register is 1.900 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.500 ns) = 0.500 ns; Loc. = PIN_79; Fanout = 8; CLK Node = 'BH1'
-        Info: 2: + IC(1.400 ns) + CELL(0.000 ns) = 1.900 ns; Loc. = LC1_J51; Fanout = 7; REG Node = 'registrador:inst10|inst4'
+    Info: + Longest register to pin delay is 19.900 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC3_I34; Fanout = 12; REG Node = 'contador:inst1|inst1'
+        Info: 2: + IC(0.200 ns) + CELL(1.900 ns) = 2.100 ns; Loc. = LC1_I34; Fanout = 3; COMB Node = 'multiplexador:inst5|inst39~0'
+        Info: 3: + IC(2.000 ns) + CELL(2.000 ns) = 6.100 ns; Loc. = LC3_I48; Fanout = 1; COMB Node = 'multiplexador:inst5|inst18~2'
+        Info: 4: + IC(1.900 ns) + CELL(2.000 ns) = 10.000 ns; Loc. = LC6_I34; Fanout = 1; COMB Node = 'multiplexador:inst5|inst18~3'
+        Info: 5: + IC(1.400 ns) + CELL(8.500 ns) = 19.900 ns; Loc. = PIN_67; Fanout = 0; PIN Node = 'c'
+        Info: Total cell delay = 14.400 ns ( 72.36 % )
+        Info: Total interconnect delay = 5.500 ns ( 27.64 % )
+Info: th for register "registrador:inst9|inst4" (data pin = "Operacao", clock pin = "BH2") is -0.100 ns
+    Info: + Longest clock path from clock "BH2" to destination register is 1.900 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.500 ns) = 0.500 ns; Loc. = PIN_183; Fanout = 5; CLK Node = 'BH2'
+        Info: 2: + IC(1.400 ns) + CELL(0.000 ns) = 1.900 ns; Loc. = LC6_I50; Fanout = 2; REG Node = 'registrador:inst9|inst4'
         Info: Total cell delay = 0.500 ns ( 26.32 % )
         Info: Total interconnect delay = 1.400 ns ( 73.68 % )
     Info: + Micro hold delay of destination is 0.900 ns
     Info: - Shortest pin to register delay is 2.900 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.500 ns) = 0.500 ns; Loc. = PIN_182; Fanout = 1; PIN Node = 'pin_name5'
-        Info: 2: + IC(1.400 ns) + CELL(1.000 ns) = 2.900 ns; Loc. = LC1_J51; Fanout = 7; REG Node = 'registrador:inst10|inst4'
+        Info: 1: + IC(0.000 ns) + CELL(0.500 ns) = 0.500 ns; Loc. = PIN_78; Fanout = 7; PIN Node = 'Operacao'
+        Info: 2: + IC(1.400 ns) + CELL(1.000 ns) = 2.900 ns; Loc. = LC6_I50; Fanout = 2; REG Node = 'registrador:inst9|inst4'
         Info: Total cell delay = 1.500 ns ( 51.72 % )
         Info: Total interconnect delay = 1.400 ns ( 48.28 % )
 Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 2 warnings
     Info: Peak virtual memory: 181 megabytes
-    Info: Processing ended: Wed Jul 31 03:19:58 2019
+    Info: Processing ended: Wed Jul 31 01:38:22 2019
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

@@ -34,9 +34,9 @@ AUTO
 }
 # hierarchies {
 registrador:inst
+registrador:inst9
 registrador:inst10
 registrador:inst11
-registrador:inst9
 }
 # macro_sequence
 
@@ -193,7 +193,7 @@ db|calculadora_binaria.(0).cnf
 # case_insensitive
 # source_file
 calculadora_binaria.bdf
-7a3d5c07ce7b8c871a485eeb6e7e131
+732fdb59b1b6c8f53f91d5cc25213da1
 26
 # internal_option {
 BLOCK_DESIGN_NAMING
@@ -201,6 +201,26 @@ AUTO
 }
 # hierarchies {
 |
+}
+# macro_sequence
+
+# end
+# entity
+dec_result_dezena
+# storage
+db|calculadora_binaria.(9).cnf
+db|calculadora_binaria.(9).cnf
+# case_insensitive
+# source_file
+dec_result_dezena.bdf
+5ac2347fec1538af282355ef97014a8
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+dec_result_dezena:inst2
 }
 # macro_sequence
 

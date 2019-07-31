@@ -5,19 +5,19 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 7.500 ns
-From           : pin_name6
-To             : registrador:inst10|inst5
+Actual Time    : 9.800 ns
+From           : Operacao
+To             : registrador:inst9|inst
 From Clock     : --
-To Clock       : BH1
+To Clock       : BH2
 Failed Paths   : 0
 
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 80.000 ns
+Actual Time    : 88.800 ns
 From           : contador:inst1|inst1
-To             : d1
+To             : c
 From Clock     : pin_name
 To Clock       : --
 Failed Paths   : 0
