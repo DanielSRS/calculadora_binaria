@@ -5,20 +5,20 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 9.800 ns
-From           : Operacao
-To             : registrador:inst9|inst
+Actual Time    : 7.700 ns
+From           : LSB
+To             : registrador:inst|inst6
 From Clock     : --
-To Clock       : BH2
+To Clock       : BH1
 Failed Paths   : 0
 
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 88.800 ns
+Actual Time    : 78.600 ns
 From           : contador:inst1|inst1
 To             : c
-From Clock     : pin_name
+From Clock     : CLOCK
 To Clock       : --
 Failed Paths   : 0
 
@@ -32,15 +32,35 @@ From Clock     : --
 To Clock       : BH1
 Failed Paths   : 0
 
-Type           : Clock Setup: 'pin_name'
+Type           : Clock Setup: 'CLK25'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 21.69 MHz ( period = 46.100 ns )
+From           : debouncer:inst18|contador_para_deboucing:inst4|inst35
+To             : debouncer:inst18|inst1
+From Clock     : CLK25
+To Clock       : CLK25
+Failed Paths   : 0
+
+Type           : Clock Setup: 'CLOCK'
 Slack          : N/A
 Required Time  : None
 Actual Time    : Restricted to 200.00 MHz ( period = 5.000 ns )
-From           : divisor_de_clock:inst4|inst
-To             : divisor_de_clock:inst4|inst
-From Clock     : pin_name
-To Clock       : pin_name
+From           : divisor_de_clock:inst13|inst
+To             : divisor_de_clock:inst13|inst
+From Clock     : CLOCK
+To Clock       : CLOCK
 Failed Paths   : 0
+
+Type           : Clock Hold: 'CLK25'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : debouncer:inst18|inst
+To             : debouncer:inst18|contador_para_deboucing:inst4|inst35
+From Clock     : CLK25
+To Clock       : CLK25
+Failed Paths   : 32
 
 Type           : Total number of failed paths
 Slack          : 
@@ -50,7 +70,7 @@ From           :
 To             : 
 From Clock     : 
 To Clock       : 
-Failed Paths   : 0
+Failed Paths   : 32
 
 --------------------------------------------------------------------------------------
 

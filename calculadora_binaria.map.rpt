@@ -1,5 +1,5 @@
 Analysis & Synthesis report for calculadora_binaria
-Wed Jul 31 01:38:05 2019
+Wed Jul 31 15:59:14 2019
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -40,13 +40,13 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                               ;
 +-----------------------------+----------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Wed Jul 31 01:38:05 2019        ;
+; Analysis & Synthesis Status ; Successful - Wed Jul 31 15:59:14 2019        ;
 ; Quartus II Version          ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
 ; Revision Name               ; calculadora_binaria                          ;
 ; Top-level Entity Name       ; calculadora_binaria                          ;
 ; Family                      ; ACEX1K                                       ;
-; Total logic elements        ; 68                                           ;
-; Total pins                  ; 24                                           ;
+; Total logic elements        ; 90                                           ;
+; Total pins                  ; 25                                           ;
 ; Total memory bits           ; 0                                            ;
 ; Total PLLs                  ; 0                                            ;
 +-----------------------------+----------------------------------------------+
@@ -114,64 +114,68 @@ applicable agreement for further details.
 +--------------------------------------------------------------+---------------------+---------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                          ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                          ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------+
-; calculadora_binaria.bdf          ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Pictures/calculadora_binaria/calculadora_binaria.bdf   ;
-; multiplexador.bdf                ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Pictures/calculadora_binaria/multiplexador.bdf         ;
-; divisor_de_clock.bdf             ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Pictures/calculadora_binaria/divisor_de_clock.bdf      ;
-; registrador.bdf                  ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Pictures/calculadora_binaria/registrador.bdf           ;
-; demultiplexador.bdf              ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Pictures/calculadora_binaria/demultiplexador.bdf       ;
-; decodificador_parcela.bdf        ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Pictures/calculadora_binaria/decodificador_parcela.bdf ;
-; contador.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Pictures/calculadora_binaria/contador.bdf              ;
-; somador_completo.bdf             ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Pictures/calculadora_binaria/somador_completo.bdf      ;
-; soma_e_subtracao.bdf             ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Pictures/calculadora_binaria/soma_e_subtracao.bdf      ;
-; dec_result_dezena.bdf            ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Pictures/calculadora_binaria/dec_result_dezena.bdf     ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                            ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                            ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------+
+; calculadora_binaria.bdf          ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Pictures/calculadora_binaria/calculadora_binaria.bdf     ;
+; multiplexador.bdf                ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Pictures/calculadora_binaria/multiplexador.bdf           ;
+; divisor_de_clock.bdf             ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Pictures/calculadora_binaria/divisor_de_clock.bdf        ;
+; registrador.bdf                  ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Pictures/calculadora_binaria/registrador.bdf             ;
+; demultiplexador.bdf              ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Pictures/calculadora_binaria/demultiplexador.bdf         ;
+; decodificador_parcela.bdf        ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Pictures/calculadora_binaria/decodificador_parcela.bdf   ;
+; contador.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Pictures/calculadora_binaria/contador.bdf                ;
+; somador_completo.bdf             ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Pictures/calculadora_binaria/somador_completo.bdf        ;
+; soma_e_subtracao.bdf             ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Pictures/calculadora_binaria/soma_e_subtracao.bdf        ;
+; dec_result_dezena.bdf            ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Pictures/calculadora_binaria/dec_result_dezena.bdf       ;
+; debouncer.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Pictures/calculadora_binaria/debouncer.bdf               ;
+; contador_para_deboucing.bdf      ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Pictures/calculadora_binaria/contador_para_deboucing.bdf ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------+
 
 
-+------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary          ;
-+--------------------------------+---------------------+
-; Resource                       ; Usage               ;
-+--------------------------------+---------------------+
-; Total logic elements           ; 68                  ;
-; Total combinational functions  ; 60                  ;
-;     -- Total 4-input functions ; 31                  ;
-;     -- Total 3-input functions ; 4                   ;
-;     -- Total 2-input functions ; 5                   ;
-;     -- Total 1-input functions ; 20                  ;
-;     -- Total 0-input functions ; 0                   ;
-; Total registers                ; 33                  ;
-; I/O pins                       ; 24                  ;
-; Maximum fan-out node           ; contador:inst1|inst ;
-; Maximum fan-out                ; 14                  ;
-; Total fan-out                  ; 221                 ;
-; Average fan-out                ; 2.40                ;
-+--------------------------------+---------------------+
++----------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                            ;
++--------------------------------+-------------------------------------------------------+
+; Resource                       ; Usage                                                 ;
++--------------------------------+-------------------------------------------------------+
+; Total logic elements           ; 90                                                    ;
+; Total combinational functions  ; 79                                                    ;
+;     -- Total 4-input functions ; 31                                                    ;
+;     -- Total 3-input functions ; 4                                                     ;
+;     -- Total 2-input functions ; 6                                                     ;
+;     -- Total 1-input functions ; 37                                                    ;
+;     -- Total 0-input functions ; 1                                                     ;
+; Total registers                ; 54                                                    ;
+; I/O pins                       ; 25                                                    ;
+; Maximum fan-out node           ; debouncer:inst18|contador_para_deboucing:inst4|inst35 ;
+; Maximum fan-out                ; 19                                                    ;
+; Total fan-out                  ; 301                                                   ;
+; Average fan-out                ; 2.62                                                  ;
++--------------------------------+-------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                          ;
-+---------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node      ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                  ; Library Name ;
-+---------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------------+--------------+
-; |calculadora_binaria            ; 68 (0)      ; 33           ; 0           ; 24   ; 35 (0)       ; 8 (0)             ; 25 (0)           ; 0 (0)           ; 0 (0)      ; |calculadora_binaria                                                 ; work         ;
-;    |contador:inst1|             ; 2 (2)       ; 2            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |calculadora_binaria|contador:inst1                                  ; work         ;
-;    |demultiplexador:inst3|      ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |calculadora_binaria|demultiplexador:inst3                           ; work         ;
-;    |divisor_de_clock:inst4|     ; 18 (18)     ; 18           ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 18 (18)          ; 0 (0)           ; 0 (0)      ; |calculadora_binaria|divisor_de_clock:inst4                          ; work         ;
-;    |multiplexador:inst5|        ; 30 (30)     ; 0            ; 0           ; 0    ; 30 (30)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |calculadora_binaria|multiplexador:inst5                             ; work         ;
-;    |registrador:inst10|         ; 4 (4)       ; 4            ; 0           ; 0    ; 0 (0)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |calculadora_binaria|registrador:inst10                              ; work         ;
-;    |registrador:inst11|         ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |calculadora_binaria|registrador:inst11                              ; work         ;
-;    |registrador:inst9|          ; 4 (4)       ; 4            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |calculadora_binaria|registrador:inst9                               ; work         ;
-;    |registrador:inst|           ; 4 (4)       ; 4            ; 0           ; 0    ; 0 (0)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |calculadora_binaria|registrador:inst                                ; work         ;
-;    |soma_e_subtracao:inst27|    ; 3 (0)       ; 0            ; 0           ; 0    ; 3 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |calculadora_binaria|soma_e_subtracao:inst27                         ; work         ;
-;       |somador_completo:inst12| ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |calculadora_binaria|soma_e_subtracao:inst27|somador_completo:inst12 ; work         ;
-;       |somador_completo:inst13| ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |calculadora_binaria|soma_e_subtracao:inst27|somador_completo:inst13 ; work         ;
-;       |somador_completo:inst14| ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |calculadora_binaria|soma_e_subtracao:inst27|somador_completo:inst14 ; work         ;
-+---------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                ;
++---------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node            ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                  ; Library Name ;
++---------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------------+--------------+
+; |calculadora_binaria                  ; 90 (0)      ; 54           ; 0           ; 25   ; 36 (0)       ; 11 (0)            ; 43 (0)           ; 0 (0)           ; 0 (0)      ; |calculadora_binaria                                                 ; work         ;
+;    |contador:inst1|                   ; 2 (2)       ; 2            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |calculadora_binaria|contador:inst1                                  ; work         ;
+;    |debouncer:inst18|                 ; 22 (4)      ; 21           ; 0           ; 0    ; 1 (1)        ; 3 (3)             ; 18 (0)           ; 0 (0)           ; 0 (0)      ; |calculadora_binaria|debouncer:inst18                                ; work         ;
+;       |contador_para_deboucing:inst4| ; 18 (18)     ; 18           ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 18 (18)          ; 0 (0)           ; 0 (0)      ; |calculadora_binaria|debouncer:inst18|contador_para_deboucing:inst4  ; work         ;
+;    |demultiplexador:inst3|            ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |calculadora_binaria|demultiplexador:inst3                           ; work         ;
+;    |divisor_de_clock:inst13|          ; 18 (18)     ; 18           ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 18 (18)          ; 0 (0)           ; 0 (0)      ; |calculadora_binaria|divisor_de_clock:inst13                         ; work         ;
+;    |multiplexador:inst5|              ; 30 (30)     ; 0            ; 0           ; 0    ; 30 (30)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |calculadora_binaria|multiplexador:inst5                             ; work         ;
+;    |registrador:inst10|               ; 4 (4)       ; 4            ; 0           ; 0    ; 0 (0)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |calculadora_binaria|registrador:inst10                              ; work         ;
+;    |registrador:inst11|               ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |calculadora_binaria|registrador:inst11                              ; work         ;
+;    |registrador:inst9|                ; 4 (4)       ; 4            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |calculadora_binaria|registrador:inst9                               ; work         ;
+;    |registrador:inst|                 ; 4 (4)       ; 4            ; 0           ; 0    ; 0 (0)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |calculadora_binaria|registrador:inst                                ; work         ;
+;    |soma_e_subtracao:inst27|          ; 3 (0)       ; 0            ; 0           ; 0    ; 3 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |calculadora_binaria|soma_e_subtracao:inst27                         ; work         ;
+;       |somador_completo:inst12|       ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |calculadora_binaria|soma_e_subtracao:inst27|somador_completo:inst12 ; work         ;
+;       |somador_completo:inst13|       ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |calculadora_binaria|soma_e_subtracao:inst27|somador_completo:inst13 ; work         ;
+;       |somador_completo:inst14|       ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |calculadora_binaria|soma_e_subtracao:inst27|somador_completo:inst14 ; work         ;
++---------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -192,12 +196,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 33    ;
+; Total registers                              ; 54    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 18    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 19    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -208,7 +212,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Wed Jul 31 01:38:02 2019
+    Info: Processing started: Wed Jul 31 15:59:12 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off calculadora_binaria -c calculadora_binaria
 Info: Found 1 design units, including 1 entities, in source file calculadora_binaria.bdf
     Info: Found entity 1: calculadora_binaria
@@ -230,6 +234,10 @@ Info: Found 1 design units, including 1 entities, in source file soma_e_subtraca
     Info: Found entity 1: soma_e_subtracao
 Info: Found 1 design units, including 1 entities, in source file dec_result_dezena.bdf
     Info: Found entity 1: dec_result_dezena
+Info: Found 1 design units, including 1 entities, in source file debouncer.bdf
+    Info: Found entity 1: debouncer
+Info: Found 1 design units, including 1 entities, in source file contador_para_deboucing.bdf
+    Info: Found entity 1: contador_para_deboucing
 Info: Elaborating entity "calculadora_binaria" for the top level hierarchy
 Info: Elaborating entity "multiplexador" for hierarchy "multiplexador:inst5"
 Info: Elaborating entity "decodificador_parcela" for hierarchy "decodificador_parcela:inst25"
@@ -237,17 +245,19 @@ Info: Elaborating entity "registrador" for hierarchy "registrador:inst"
 Info: Elaborating entity "dec_result_dezena" for hierarchy "dec_result_dezena:inst2"
 Info: Elaborating entity "soma_e_subtracao" for hierarchy "soma_e_subtracao:inst27"
 Info: Elaborating entity "somador_completo" for hierarchy "soma_e_subtracao:inst27|somador_completo:inst12"
+Info: Elaborating entity "debouncer" for hierarchy "debouncer:inst18"
+Info: Elaborating entity "contador_para_deboucing" for hierarchy "debouncer:inst18|contador_para_deboucing:inst4"
 Info: Elaborating entity "contador" for hierarchy "contador:inst1"
-Info: Elaborating entity "divisor_de_clock" for hierarchy "divisor_de_clock:inst4"
+Info: Elaborating entity "divisor_de_clock" for hierarchy "divisor_de_clock:inst13"
 Info: Elaborating entity "demultiplexador" for hierarchy "demultiplexador:inst3"
-Info: Implemented 92 device resources after synthesis - the final resource count might be different
-    Info: Implemented 12 input pins
+Info: Implemented 115 device resources after synthesis - the final resource count might be different
+    Info: Implemented 13 input pins
     Info: Implemented 12 output pins
-    Info: Implemented 68 logic cells
+    Info: Implemented 90 logic cells
 Info: Quartus II Analysis & Synthesis was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 215 megabytes
-    Info: Processing ended: Wed Jul 31 01:38:06 2019
-    Info: Elapsed time: 00:00:04
+    Info: Peak virtual memory: 212 megabytes
+    Info: Processing ended: Wed Jul 31 15:59:14 2019
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
 

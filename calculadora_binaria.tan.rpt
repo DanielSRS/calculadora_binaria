@@ -1,5 +1,5 @@
 Classic Timing Analyzer report for calculadora_binaria
-Wed Jul 31 01:38:22 2019
+Wed Jul 31 15:59:30 2019
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -11,11 +11,13 @@ Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
   3. Timing Analyzer Settings
   4. Clock Settings Summary
   5. Parallel Compilation
-  6. Clock Setup: 'pin_name'
-  7. tsu
-  8. tco
-  9. th
- 10. Timing Analyzer Messages
+  6. Clock Setup: 'CLOCK'
+  7. Clock Setup: 'CLK25'
+  8. Clock Hold: 'CLK25'
+  9. tsu
+ 10. tco
+ 11. th
+ 12. Timing Analyzer Messages
 
 
 
@@ -38,17 +40,19 @@ applicable agreement for further details.
 
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Timing Analyzer Summary                                                                                                                                                                                  ;
-+------------------------------+-------+---------------+------------------------------------------------+-----------------------------+-----------------------------+------------+----------+--------------+
-; Type                         ; Slack ; Required Time ; Actual Time                                    ; From                        ; To                          ; From Clock ; To Clock ; Failed Paths ;
-+------------------------------+-------+---------------+------------------------------------------------+-----------------------------+-----------------------------+------------+----------+--------------+
-; Worst-case tsu               ; N/A   ; None          ; 9.800 ns                                       ; Operacao                    ; registrador:inst9|inst      ; --         ; BH2      ; 0            ;
-; Worst-case tco               ; N/A   ; None          ; 88.800 ns                                      ; contador:inst1|inst1        ; c                           ; pin_name   ; --       ; 0            ;
-; Worst-case th                ; N/A   ; None          ; -0.100 ns                                      ; pin_name5                   ; registrador:inst10|inst4    ; --         ; BH1      ; 0            ;
-; Clock Setup: 'pin_name'      ; N/A   ; None          ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; divisor_de_clock:inst4|inst ; divisor_de_clock:inst4|inst ; pin_name   ; pin_name ; 0            ;
-; Total number of failed paths ;       ;               ;                                                ;                             ;                             ;            ;          ; 0            ;
-+------------------------------+-------+---------------+------------------------------------------------+-----------------------------+-----------------------------+------------+----------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                                                                                                         ;
++------------------------------+------------------------------------------+---------------+------------------------------------------------+-------------------------------------------------------+-------------------------------------------------------+------------+----------+--------------+
+; Type                         ; Slack                                    ; Required Time ; Actual Time                                    ; From                                                  ; To                                                    ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+------------------------------------------+---------------+------------------------------------------------+-------------------------------------------------------+-------------------------------------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A                                      ; None          ; 7.700 ns                                       ; LSB                                                   ; registrador:inst|inst6                                ; --         ; BH1      ; 0            ;
+; Worst-case tco               ; N/A                                      ; None          ; 78.600 ns                                      ; contador:inst1|inst1                                  ; c                                                     ; CLOCK      ; --       ; 0            ;
+; Worst-case th                ; N/A                                      ; None          ; -0.100 ns                                      ; pin_name5                                             ; registrador:inst10|inst4                              ; --         ; BH1      ; 0            ;
+; Clock Setup: 'CLK25'         ; N/A                                      ; None          ; 21.69 MHz ( period = 46.100 ns )               ; debouncer:inst18|contador_para_deboucing:inst4|inst35 ; debouncer:inst18|inst1                                ; CLK25      ; CLK25    ; 0            ;
+; Clock Setup: 'CLOCK'         ; N/A                                      ; None          ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; divisor_de_clock:inst13|inst                          ; divisor_de_clock:inst13|inst                          ; CLOCK      ; CLOCK    ; 0            ;
+; Clock Hold: 'CLK25'          ; Not operational: Clock Skew > Data Delay ; None          ; N/A                                            ; debouncer:inst18|inst                                 ; debouncer:inst18|contador_para_deboucing:inst4|inst35 ; CLK25      ; CLK25    ; 32           ;
+; Total number of failed paths ;                                          ;               ;                                                ;                                                       ;                                                       ;            ;          ; 32           ;
++------------------------------+------------------------------------------+---------------+------------------------------------------------+-------------------------------------------------------+-------------------------------------------------------+------------+----------+--------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------+
@@ -89,8 +93,9 @@ applicable agreement for further details.
 ; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
 +-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
 ; BH1             ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
-; pin_name        ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; CLOCK           ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
 ; BH2             ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; CLK25           ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
 +-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
 
 
@@ -105,32 +110,104 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Clock Setup: 'pin_name'                                                                                                                                                                                                            ;
-+-------+------------------------------------------------+-------------------------------+-------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
-; Slack ; Actual fmax (period)                           ; From                          ; To                            ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
-+-------+------------------------------------------------+-------------------------------+-------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
-; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; contador:inst1|inst1          ; contador:inst1|inst1          ; pin_name   ; pin_name ; None                        ; None                      ; 1.200 ns                ;
-; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; contador:inst1|inst           ; contador:inst1|inst           ; pin_name   ; pin_name ; None                        ; None                      ; 1.200 ns                ;
-; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; divisor_de_clock:inst4|inst17 ; divisor_de_clock:inst4|inst17 ; pin_name   ; pin_name ; None                        ; None                      ; 1.200 ns                ;
-; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; divisor_de_clock:inst4|inst16 ; divisor_de_clock:inst4|inst16 ; pin_name   ; pin_name ; None                        ; None                      ; 1.200 ns                ;
-; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; divisor_de_clock:inst4|inst15 ; divisor_de_clock:inst4|inst15 ; pin_name   ; pin_name ; None                        ; None                      ; 1.200 ns                ;
-; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; divisor_de_clock:inst4|inst14 ; divisor_de_clock:inst4|inst14 ; pin_name   ; pin_name ; None                        ; None                      ; 1.200 ns                ;
-; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; divisor_de_clock:inst4|inst13 ; divisor_de_clock:inst4|inst13 ; pin_name   ; pin_name ; None                        ; None                      ; 1.200 ns                ;
-; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; divisor_de_clock:inst4|inst12 ; divisor_de_clock:inst4|inst12 ; pin_name   ; pin_name ; None                        ; None                      ; 1.200 ns                ;
-; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; divisor_de_clock:inst4|inst11 ; divisor_de_clock:inst4|inst11 ; pin_name   ; pin_name ; None                        ; None                      ; 1.200 ns                ;
-; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; divisor_de_clock:inst4|inst10 ; divisor_de_clock:inst4|inst10 ; pin_name   ; pin_name ; None                        ; None                      ; 1.200 ns                ;
-; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; divisor_de_clock:inst4|inst9  ; divisor_de_clock:inst4|inst9  ; pin_name   ; pin_name ; None                        ; None                      ; 1.200 ns                ;
-; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; divisor_de_clock:inst4|inst8  ; divisor_de_clock:inst4|inst8  ; pin_name   ; pin_name ; None                        ; None                      ; 1.200 ns                ;
-; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; divisor_de_clock:inst4|inst7  ; divisor_de_clock:inst4|inst7  ; pin_name   ; pin_name ; None                        ; None                      ; 1.200 ns                ;
-; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; divisor_de_clock:inst4|inst6  ; divisor_de_clock:inst4|inst6  ; pin_name   ; pin_name ; None                        ; None                      ; 1.200 ns                ;
-; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; divisor_de_clock:inst4|inst5  ; divisor_de_clock:inst4|inst5  ; pin_name   ; pin_name ; None                        ; None                      ; 1.200 ns                ;
-; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; divisor_de_clock:inst4|inst4  ; divisor_de_clock:inst4|inst4  ; pin_name   ; pin_name ; None                        ; None                      ; 1.200 ns                ;
-; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; divisor_de_clock:inst4|inst3  ; divisor_de_clock:inst4|inst3  ; pin_name   ; pin_name ; None                        ; None                      ; 1.200 ns                ;
-; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; divisor_de_clock:inst4|inst2  ; divisor_de_clock:inst4|inst2  ; pin_name   ; pin_name ; None                        ; None                      ; 1.200 ns                ;
-; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; divisor_de_clock:inst4|inst1  ; divisor_de_clock:inst4|inst1  ; pin_name   ; pin_name ; None                        ; None                      ; 1.200 ns                ;
-; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; divisor_de_clock:inst4|inst   ; divisor_de_clock:inst4|inst   ; pin_name   ; pin_name ; None                        ; None                      ; 1.200 ns                ;
-+-------+------------------------------------------------+-------------------------------+-------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'CLOCK'                                                                                                                                                                                                                 ;
++-------+------------------------------------------------+--------------------------------+--------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From                           ; To                             ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+--------------------------------+--------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; contador:inst1|inst1           ; contador:inst1|inst1           ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.200 ns                ;
+; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; contador:inst1|inst            ; contador:inst1|inst            ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.200 ns                ;
+; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; divisor_de_clock:inst13|inst17 ; divisor_de_clock:inst13|inst17 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.200 ns                ;
+; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; divisor_de_clock:inst13|inst16 ; divisor_de_clock:inst13|inst16 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.200 ns                ;
+; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; divisor_de_clock:inst13|inst15 ; divisor_de_clock:inst13|inst15 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.200 ns                ;
+; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; divisor_de_clock:inst13|inst14 ; divisor_de_clock:inst13|inst14 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.200 ns                ;
+; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; divisor_de_clock:inst13|inst13 ; divisor_de_clock:inst13|inst13 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.200 ns                ;
+; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; divisor_de_clock:inst13|inst12 ; divisor_de_clock:inst13|inst12 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.200 ns                ;
+; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; divisor_de_clock:inst13|inst11 ; divisor_de_clock:inst13|inst11 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.200 ns                ;
+; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; divisor_de_clock:inst13|inst10 ; divisor_de_clock:inst13|inst10 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.200 ns                ;
+; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; divisor_de_clock:inst13|inst9  ; divisor_de_clock:inst13|inst9  ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.200 ns                ;
+; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; divisor_de_clock:inst13|inst8  ; divisor_de_clock:inst13|inst8  ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.200 ns                ;
+; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; divisor_de_clock:inst13|inst7  ; divisor_de_clock:inst13|inst7  ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.200 ns                ;
+; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; divisor_de_clock:inst13|inst6  ; divisor_de_clock:inst13|inst6  ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.200 ns                ;
+; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; divisor_de_clock:inst13|inst5  ; divisor_de_clock:inst13|inst5  ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.200 ns                ;
+; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; divisor_de_clock:inst13|inst4  ; divisor_de_clock:inst13|inst4  ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.200 ns                ;
+; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; divisor_de_clock:inst13|inst3  ; divisor_de_clock:inst13|inst3  ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.200 ns                ;
+; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; divisor_de_clock:inst13|inst2  ; divisor_de_clock:inst13|inst2  ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.200 ns                ;
+; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; divisor_de_clock:inst13|inst1  ; divisor_de_clock:inst13|inst1  ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.200 ns                ;
+; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; divisor_de_clock:inst13|inst   ; divisor_de_clock:inst13|inst   ; CLOCK      ; CLOCK    ; None                        ; None                      ; 1.200 ns                ;
++-------+------------------------------------------------+--------------------------------+--------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'CLK25'                                                                                                                                                                                                                                                               ;
++-------+------------------------------------------------+-------------------------------------------------------+-------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From                                                  ; To                                                    ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+-------------------------------------------------------+-------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; 21.69 MHz ( period = 46.100 ns )               ; debouncer:inst18|contador_para_deboucing:inst4|inst35 ; debouncer:inst18|inst1                                ; CLK25      ; CLK25    ; None                        ; None                      ; 1.400 ns                ;
+; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; debouncer:inst18|inst2                                ; debouncer:inst18|contador_para_deboucing:inst4|inst   ; CLK25      ; CLK25    ; None                        ; None                      ; 2.600 ns                ;
+; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; debouncer:inst18|inst                                 ; debouncer:inst18|contador_para_deboucing:inst4|inst   ; CLK25      ; CLK25    ; None                        ; None                      ; 2.400 ns                ;
+; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; debouncer:inst18|inst2                                ; debouncer:inst18|inst1                                ; CLK25      ; CLK25    ; None                        ; None                      ; 1.200 ns                ;
+; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; debouncer:inst18|inst                                 ; debouncer:inst18|inst2                                ; CLK25      ; CLK25    ; None                        ; None                      ; 1.200 ns                ;
+; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; debouncer:inst18|contador_para_deboucing:inst4|inst34 ; debouncer:inst18|contador_para_deboucing:inst4|inst34 ; CLK25      ; CLK25    ; None                        ; None                      ; 1.200 ns                ;
+; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; debouncer:inst18|contador_para_deboucing:inst4|inst33 ; debouncer:inst18|contador_para_deboucing:inst4|inst33 ; CLK25      ; CLK25    ; None                        ; None                      ; 1.200 ns                ;
+; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; debouncer:inst18|contador_para_deboucing:inst4|inst32 ; debouncer:inst18|contador_para_deboucing:inst4|inst32 ; CLK25      ; CLK25    ; None                        ; None                      ; 1.200 ns                ;
+; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; debouncer:inst18|contador_para_deboucing:inst4|inst31 ; debouncer:inst18|contador_para_deboucing:inst4|inst31 ; CLK25      ; CLK25    ; None                        ; None                      ; 1.200 ns                ;
+; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; debouncer:inst18|contador_para_deboucing:inst4|inst30 ; debouncer:inst18|contador_para_deboucing:inst4|inst30 ; CLK25      ; CLK25    ; None                        ; None                      ; 1.200 ns                ;
+; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; debouncer:inst18|contador_para_deboucing:inst4|inst29 ; debouncer:inst18|contador_para_deboucing:inst4|inst29 ; CLK25      ; CLK25    ; None                        ; None                      ; 1.200 ns                ;
+; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; debouncer:inst18|contador_para_deboucing:inst4|inst28 ; debouncer:inst18|contador_para_deboucing:inst4|inst28 ; CLK25      ; CLK25    ; None                        ; None                      ; 1.200 ns                ;
+; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; debouncer:inst18|contador_para_deboucing:inst4|inst26 ; debouncer:inst18|contador_para_deboucing:inst4|inst26 ; CLK25      ; CLK25    ; None                        ; None                      ; 1.200 ns                ;
+; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; debouncer:inst18|contador_para_deboucing:inst4|inst25 ; debouncer:inst18|contador_para_deboucing:inst4|inst25 ; CLK25      ; CLK25    ; None                        ; None                      ; 1.200 ns                ;
+; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; debouncer:inst18|contador_para_deboucing:inst4|inst24 ; debouncer:inst18|contador_para_deboucing:inst4|inst24 ; CLK25      ; CLK25    ; None                        ; None                      ; 1.200 ns                ;
+; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; debouncer:inst18|contador_para_deboucing:inst4|inst27 ; debouncer:inst18|contador_para_deboucing:inst4|inst27 ; CLK25      ; CLK25    ; None                        ; None                      ; 1.200 ns                ;
+; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; debouncer:inst18|contador_para_deboucing:inst4|inst23 ; debouncer:inst18|contador_para_deboucing:inst4|inst23 ; CLK25      ; CLK25    ; None                        ; None                      ; 1.200 ns                ;
+; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; debouncer:inst18|contador_para_deboucing:inst4|inst22 ; debouncer:inst18|contador_para_deboucing:inst4|inst22 ; CLK25      ; CLK25    ; None                        ; None                      ; 1.200 ns                ;
+; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; debouncer:inst18|contador_para_deboucing:inst4|inst21 ; debouncer:inst18|contador_para_deboucing:inst4|inst21 ; CLK25      ; CLK25    ; None                        ; None                      ; 1.200 ns                ;
+; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; debouncer:inst18|contador_para_deboucing:inst4|inst20 ; debouncer:inst18|contador_para_deboucing:inst4|inst20 ; CLK25      ; CLK25    ; None                        ; None                      ; 1.200 ns                ;
+; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; debouncer:inst18|contador_para_deboucing:inst4|inst19 ; debouncer:inst18|contador_para_deboucing:inst4|inst19 ; CLK25      ; CLK25    ; None                        ; None                      ; 1.200 ns                ;
+; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; debouncer:inst18|contador_para_deboucing:inst4|inst   ; debouncer:inst18|contador_para_deboucing:inst4|inst   ; CLK25      ; CLK25    ; None                        ; None                      ; 1.200 ns                ;
+; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; debouncer:inst18|inst2                                ; debouncer:inst18|contador_para_deboucing:inst4|inst19 ; CLK25      ; CLK25    ; None                        ; None                      ; 3.700 ns                ;
+; N/A   ; Restricted to 200.00 MHz ( period = 5.000 ns ) ; debouncer:inst18|inst                                 ; debouncer:inst18|contador_para_deboucing:inst4|inst19 ; CLK25      ; CLK25    ; None                        ; None                      ; 3.500 ns                ;
++-------+------------------------------------------------+-------------------------------------------------------+-------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Hold: 'CLK25'                                                                                                                                                                                                                    ;
++------------------------------------------+------------------------+-------------------------------------------------------+------------+----------+----------------------------+----------------------------+--------------------------+
+; Minimum Slack                            ; From                   ; To                                                    ; From Clock ; To Clock ; Required Hold Relationship ; Required Shortest P2P Time ; Actual Shortest P2P Time ;
++------------------------------------------+------------------------+-------------------------------------------------------+------------+----------+----------------------------+----------------------------+--------------------------+
+; Not operational: Clock Skew > Data Delay ; debouncer:inst18|inst  ; debouncer:inst18|contador_para_deboucing:inst4|inst35 ; CLK25      ; CLK25    ; None                       ; None                       ; 3.400 ns                 ;
+; Not operational: Clock Skew > Data Delay ; debouncer:inst18|inst2 ; debouncer:inst18|contador_para_deboucing:inst4|inst35 ; CLK25      ; CLK25    ; None                       ; None                       ; 3.600 ns                 ;
+; Not operational: Clock Skew > Data Delay ; debouncer:inst18|inst  ; debouncer:inst18|contador_para_deboucing:inst4|inst34 ; CLK25      ; CLK25    ; None                       ; None                       ; 3.400 ns                 ;
+; Not operational: Clock Skew > Data Delay ; debouncer:inst18|inst2 ; debouncer:inst18|contador_para_deboucing:inst4|inst34 ; CLK25      ; CLK25    ; None                       ; None                       ; 3.600 ns                 ;
+; Not operational: Clock Skew > Data Delay ; debouncer:inst18|inst  ; debouncer:inst18|contador_para_deboucing:inst4|inst33 ; CLK25      ; CLK25    ; None                       ; None                       ; 3.600 ns                 ;
+; Not operational: Clock Skew > Data Delay ; debouncer:inst18|inst2 ; debouncer:inst18|contador_para_deboucing:inst4|inst33 ; CLK25      ; CLK25    ; None                       ; None                       ; 3.800 ns                 ;
+; Not operational: Clock Skew > Data Delay ; debouncer:inst18|inst  ; debouncer:inst18|contador_para_deboucing:inst4|inst32 ; CLK25      ; CLK25    ; None                       ; None                       ; 3.500 ns                 ;
+; Not operational: Clock Skew > Data Delay ; debouncer:inst18|inst2 ; debouncer:inst18|contador_para_deboucing:inst4|inst32 ; CLK25      ; CLK25    ; None                       ; None                       ; 3.700 ns                 ;
+; Not operational: Clock Skew > Data Delay ; debouncer:inst18|inst  ; debouncer:inst18|contador_para_deboucing:inst4|inst31 ; CLK25      ; CLK25    ; None                       ; None                       ; 3.500 ns                 ;
+; Not operational: Clock Skew > Data Delay ; debouncer:inst18|inst2 ; debouncer:inst18|contador_para_deboucing:inst4|inst31 ; CLK25      ; CLK25    ; None                       ; None                       ; 3.700 ns                 ;
+; Not operational: Clock Skew > Data Delay ; debouncer:inst18|inst  ; debouncer:inst18|contador_para_deboucing:inst4|inst30 ; CLK25      ; CLK25    ; None                       ; None                       ; 3.600 ns                 ;
+; Not operational: Clock Skew > Data Delay ; debouncer:inst18|inst2 ; debouncer:inst18|contador_para_deboucing:inst4|inst30 ; CLK25      ; CLK25    ; None                       ; None                       ; 3.800 ns                 ;
+; Not operational: Clock Skew > Data Delay ; debouncer:inst18|inst  ; debouncer:inst18|contador_para_deboucing:inst4|inst29 ; CLK25      ; CLK25    ; None                       ; None                       ; 3.500 ns                 ;
+; Not operational: Clock Skew > Data Delay ; debouncer:inst18|inst2 ; debouncer:inst18|contador_para_deboucing:inst4|inst29 ; CLK25      ; CLK25    ; None                       ; None                       ; 3.700 ns                 ;
+; Not operational: Clock Skew > Data Delay ; debouncer:inst18|inst  ; debouncer:inst18|contador_para_deboucing:inst4|inst28 ; CLK25      ; CLK25    ; None                       ; None                       ; 3.500 ns                 ;
+; Not operational: Clock Skew > Data Delay ; debouncer:inst18|inst2 ; debouncer:inst18|contador_para_deboucing:inst4|inst28 ; CLK25      ; CLK25    ; None                       ; None                       ; 3.700 ns                 ;
+; Not operational: Clock Skew > Data Delay ; debouncer:inst18|inst  ; debouncer:inst18|contador_para_deboucing:inst4|inst26 ; CLK25      ; CLK25    ; None                       ; None                       ; 3.700 ns                 ;
+; Not operational: Clock Skew > Data Delay ; debouncer:inst18|inst2 ; debouncer:inst18|contador_para_deboucing:inst4|inst26 ; CLK25      ; CLK25    ; None                       ; None                       ; 3.900 ns                 ;
+; Not operational: Clock Skew > Data Delay ; debouncer:inst18|inst  ; debouncer:inst18|contador_para_deboucing:inst4|inst25 ; CLK25      ; CLK25    ; None                       ; None                       ; 3.700 ns                 ;
+; Not operational: Clock Skew > Data Delay ; debouncer:inst18|inst2 ; debouncer:inst18|contador_para_deboucing:inst4|inst25 ; CLK25      ; CLK25    ; None                       ; None                       ; 3.900 ns                 ;
+; Not operational: Clock Skew > Data Delay ; debouncer:inst18|inst  ; debouncer:inst18|contador_para_deboucing:inst4|inst24 ; CLK25      ; CLK25    ; None                       ; None                       ; 3.400 ns                 ;
+; Not operational: Clock Skew > Data Delay ; debouncer:inst18|inst2 ; debouncer:inst18|contador_para_deboucing:inst4|inst24 ; CLK25      ; CLK25    ; None                       ; None                       ; 3.600 ns                 ;
+; Not operational: Clock Skew > Data Delay ; debouncer:inst18|inst  ; debouncer:inst18|contador_para_deboucing:inst4|inst27 ; CLK25      ; CLK25    ; None                       ; None                       ; 3.400 ns                 ;
+; Not operational: Clock Skew > Data Delay ; debouncer:inst18|inst2 ; debouncer:inst18|contador_para_deboucing:inst4|inst27 ; CLK25      ; CLK25    ; None                       ; None                       ; 3.600 ns                 ;
+; Not operational: Clock Skew > Data Delay ; debouncer:inst18|inst  ; debouncer:inst18|contador_para_deboucing:inst4|inst23 ; CLK25      ; CLK25    ; None                       ; None                       ; 3.500 ns                 ;
+; Not operational: Clock Skew > Data Delay ; debouncer:inst18|inst2 ; debouncer:inst18|contador_para_deboucing:inst4|inst23 ; CLK25      ; CLK25    ; None                       ; None                       ; 3.700 ns                 ;
+; Not operational: Clock Skew > Data Delay ; debouncer:inst18|inst  ; debouncer:inst18|contador_para_deboucing:inst4|inst22 ; CLK25      ; CLK25    ; None                       ; None                       ; 3.500 ns                 ;
+; Not operational: Clock Skew > Data Delay ; debouncer:inst18|inst2 ; debouncer:inst18|contador_para_deboucing:inst4|inst22 ; CLK25      ; CLK25    ; None                       ; None                       ; 3.700 ns                 ;
+; Not operational: Clock Skew > Data Delay ; debouncer:inst18|inst  ; debouncer:inst18|contador_para_deboucing:inst4|inst21 ; CLK25      ; CLK25    ; None                       ; None                       ; 3.500 ns                 ;
+; Not operational: Clock Skew > Data Delay ; debouncer:inst18|inst2 ; debouncer:inst18|contador_para_deboucing:inst4|inst21 ; CLK25      ; CLK25    ; None                       ; None                       ; 3.700 ns                 ;
+; Not operational: Clock Skew > Data Delay ; debouncer:inst18|inst  ; debouncer:inst18|contador_para_deboucing:inst4|inst20 ; CLK25      ; CLK25    ; None                       ; None                       ; 2.400 ns                 ;
+; Not operational: Clock Skew > Data Delay ; debouncer:inst18|inst2 ; debouncer:inst18|contador_para_deboucing:inst4|inst20 ; CLK25      ; CLK25    ; None                       ; None                       ; 2.600 ns                 ;
++------------------------------------------+------------------------+-------------------------------------------------------+------------+----------+----------------------------+----------------------------+--------------------------+
 
 
 +-------------------------------------------------------------------------------------+
@@ -138,17 +215,14 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------+--------------+------------+-----------+--------------------------+----------+
 ; Slack ; Required tsu ; Actual tsu ; From      ; To                       ; To Clock ;
 +-------+--------------+------------+-----------+--------------------------+----------+
-; N/A   ; None         ; 9.800 ns   ; Operacao  ; registrador:inst9|inst   ; BH2      ;
-; N/A   ; None         ; 9.600 ns   ; Operacao  ; registrador:inst11|inst  ; BH2      ;
-; N/A   ; None         ; 7.700 ns   ; pin_name1 ; registrador:inst|inst4   ; BH1      ;
-; N/A   ; None         ; 7.600 ns   ; Operacao  ; registrador:inst9|inst4  ; BH2      ;
-; N/A   ; None         ; 7.400 ns   ; LSB       ; registrador:inst|inst6   ; BH1      ;
-; N/A   ; None         ; 7.400 ns   ; pin_name6 ; registrador:inst10|inst5 ; BH1      ;
-; N/A   ; None         ; 6.900 ns   ; LSB2      ; registrador:inst10|inst6 ; BH1      ;
-; N/A   ; None         ; 6.000 ns   ; pin_name2 ; registrador:inst|inst5   ; BH1      ;
-; N/A   ; None         ; 5.900 ns   ; MSB2      ; registrador:inst10|inst  ; BH1      ;
-; N/A   ; None         ; 4.900 ns   ; Operacao  ; registrador:inst9|inst5  ; BH2      ;
-; N/A   ; None         ; 4.700 ns   ; MSB       ; registrador:inst|inst    ; BH1      ;
+; N/A   ; None         ; 7.700 ns   ; LSB       ; registrador:inst|inst6   ; BH1      ;
+; N/A   ; None         ; 7.500 ns   ; pin_name1 ; registrador:inst|inst4   ; BH1      ;
+; N/A   ; None         ; 7.400 ns   ; MSB       ; registrador:inst|inst    ; BH1      ;
+; N/A   ; None         ; 7.400 ns   ; LSB2      ; registrador:inst10|inst6 ; BH1      ;
+; N/A   ; None         ; 7.000 ns   ; Operacao  ; debouncer:inst18|inst    ; CLK25    ;
+; N/A   ; None         ; 7.000 ns   ; MSB2      ; registrador:inst10|inst  ; BH1      ;
+; N/A   ; None         ; 6.900 ns   ; pin_name6 ; registrador:inst10|inst5 ; BH1      ;
+; N/A   ; None         ; 6.100 ns   ; pin_name2 ; registrador:inst|inst5   ; BH1      ;
 ; N/A   ; None         ; 1.700 ns   ; pin_name5 ; registrador:inst10|inst4 ; BH1      ;
 +-------+--------------+------------+-----------+--------------------------+----------+
 
@@ -158,99 +232,99 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------+--------------+------------+--------------------------+----+------------+
 ; Slack ; Required tco ; Actual tco ; From                     ; To ; From Clock ;
 +-------+--------------+------------+--------------------------+----+------------+
-; N/A   ; None         ; 88.800 ns  ; contador:inst1|inst1     ; c  ; pin_name   ;
-; N/A   ; None         ; 88.700 ns  ; contador:inst1|inst1     ; b  ; pin_name   ;
-; N/A   ; None         ; 84.000 ns  ; contador:inst1|inst      ; c  ; pin_name   ;
-; N/A   ; None         ; 83.900 ns  ; contador:inst1|inst1     ; d  ; pin_name   ;
-; N/A   ; None         ; 83.900 ns  ; contador:inst1|inst      ; b  ; pin_name   ;
-; N/A   ; None         ; 83.500 ns  ; contador:inst1|inst1     ; dp ; pin_name   ;
-; N/A   ; None         ; 83.400 ns  ; contador:inst1|inst1     ; g  ; pin_name   ;
-; N/A   ; None         ; 83.400 ns  ; contador:inst1|inst1     ; e  ; pin_name   ;
-; N/A   ; None         ; 83.300 ns  ; contador:inst1|inst1     ; d4 ; pin_name   ;
-; N/A   ; None         ; 82.300 ns  ; contador:inst1|inst1     ; d2 ; pin_name   ;
-; N/A   ; None         ; 82.000 ns  ; contador:inst1|inst1     ; f  ; pin_name   ;
-; N/A   ; None         ; 81.500 ns  ; contador:inst1|inst1     ; A  ; pin_name   ;
-; N/A   ; None         ; 81.300 ns  ; contador:inst1|inst1     ; d3 ; pin_name   ;
-; N/A   ; None         ; 80.500 ns  ; contador:inst1|inst1     ; d1 ; pin_name   ;
-; N/A   ; None         ; 78.500 ns  ; contador:inst1|inst      ; g  ; pin_name   ;
-; N/A   ; None         ; 78.200 ns  ; contador:inst1|inst      ; d  ; pin_name   ;
-; N/A   ; None         ; 78.100 ns  ; contador:inst1|inst      ; e  ; pin_name   ;
-; N/A   ; None         ; 77.900 ns  ; contador:inst1|inst      ; d2 ; pin_name   ;
-; N/A   ; None         ; 77.800 ns  ; contador:inst1|inst      ; dp ; pin_name   ;
-; N/A   ; None         ; 77.200 ns  ; contador:inst1|inst      ; d4 ; pin_name   ;
-; N/A   ; None         ; 76.500 ns  ; contador:inst1|inst      ; d3 ; pin_name   ;
-; N/A   ; None         ; 76.000 ns  ; contador:inst1|inst      ; f  ; pin_name   ;
-; N/A   ; None         ; 75.900 ns  ; contador:inst1|inst      ; A  ; pin_name   ;
-; N/A   ; None         ; 75.700 ns  ; contador:inst1|inst      ; d1 ; pin_name   ;
-; N/A   ; None         ; 27.100 ns  ; registrador:inst10|inst  ; b  ; BH1        ;
-; N/A   ; None         ; 26.700 ns  ; registrador:inst|inst    ; b  ; BH1        ;
-; N/A   ; None         ; 26.600 ns  ; registrador:inst|inst    ; c  ; BH1        ;
-; N/A   ; None         ; 25.100 ns  ; registrador:inst10|inst  ; g  ; BH1        ;
-; N/A   ; None         ; 25.000 ns  ; registrador:inst10|inst  ; d  ; BH1        ;
-; N/A   ; None         ; 25.000 ns  ; registrador:inst10|inst  ; c  ; BH1        ;
-; N/A   ; None         ; 24.900 ns  ; registrador:inst10|inst5 ; b  ; BH1        ;
-; N/A   ; None         ; 24.900 ns  ; registrador:inst|inst5   ; b  ; BH1        ;
-; N/A   ; None         ; 24.800 ns  ; registrador:inst|inst5   ; c  ; BH1        ;
-; N/A   ; None         ; 24.600 ns  ; registrador:inst|inst4   ; c  ; BH1        ;
-; N/A   ; None         ; 24.600 ns  ; registrador:inst|inst6   ; b  ; BH1        ;
-; N/A   ; None         ; 24.400 ns  ; registrador:inst10|inst4 ; b  ; BH1        ;
-; N/A   ; None         ; 24.400 ns  ; registrador:inst|inst4   ; b  ; BH1        ;
-; N/A   ; None         ; 24.200 ns  ; registrador:inst|inst6   ; c  ; BH1        ;
-; N/A   ; None         ; 24.000 ns  ; registrador:inst10|inst6 ; b  ; BH1        ;
-; N/A   ; None         ; 23.100 ns  ; registrador:inst10|inst  ; A  ; BH1        ;
-; N/A   ; None         ; 23.000 ns  ; registrador:inst10|inst5 ; g  ; BH1        ;
-; N/A   ; None         ; 22.900 ns  ; registrador:inst10|inst  ; f  ; BH1        ;
-; N/A   ; None         ; 22.900 ns  ; registrador:inst10|inst  ; e  ; BH1        ;
-; N/A   ; None         ; 22.900 ns  ; registrador:inst|inst    ; e  ; BH1        ;
+; N/A   ; None         ; 78.600 ns  ; contador:inst1|inst1     ; c  ; CLOCK      ;
+; N/A   ; None         ; 78.300 ns  ; contador:inst1|inst1     ; b  ; CLOCK      ;
+; N/A   ; None         ; 78.000 ns  ; contador:inst1|inst1     ; dp ; CLOCK      ;
+; N/A   ; None         ; 76.600 ns  ; contador:inst1|inst1     ; g  ; CLOCK      ;
+; N/A   ; None         ; 75.800 ns  ; contador:inst1|inst1     ; f  ; CLOCK      ;
+; N/A   ; None         ; 75.400 ns  ; contador:inst1|inst      ; dp ; CLOCK      ;
+; N/A   ; None         ; 75.100 ns  ; contador:inst1|inst1     ; e  ; CLOCK      ;
+; N/A   ; None         ; 74.000 ns  ; contador:inst1|inst1     ; d3 ; CLOCK      ;
+; N/A   ; None         ; 73.800 ns  ; contador:inst1|inst      ; c  ; CLOCK      ;
+; N/A   ; None         ; 73.600 ns  ; contador:inst1|inst1     ; d  ; CLOCK      ;
+; N/A   ; None         ; 73.600 ns  ; contador:inst1|inst1     ; A  ; CLOCK      ;
+; N/A   ; None         ; 73.500 ns  ; contador:inst1|inst      ; g  ; CLOCK      ;
+; N/A   ; None         ; 73.500 ns  ; contador:inst1|inst      ; b  ; CLOCK      ;
+; N/A   ; None         ; 73.300 ns  ; contador:inst1|inst1     ; d1 ; CLOCK      ;
+; N/A   ; None         ; 73.100 ns  ; contador:inst1|inst1     ; d2 ; CLOCK      ;
+; N/A   ; None         ; 72.800 ns  ; contador:inst1|inst      ; f  ; CLOCK      ;
+; N/A   ; None         ; 72.800 ns  ; contador:inst1|inst      ; e  ; CLOCK      ;
+; N/A   ; None         ; 72.700 ns  ; contador:inst1|inst1     ; d4 ; CLOCK      ;
+; N/A   ; None         ; 69.200 ns  ; contador:inst1|inst      ; d3 ; CLOCK      ;
+; N/A   ; None         ; 68.800 ns  ; contador:inst1|inst      ; d  ; CLOCK      ;
+; N/A   ; None         ; 68.800 ns  ; contador:inst1|inst      ; A  ; CLOCK      ;
+; N/A   ; None         ; 68.700 ns  ; contador:inst1|inst      ; d2 ; CLOCK      ;
+; N/A   ; None         ; 68.500 ns  ; contador:inst1|inst      ; d1 ; CLOCK      ;
+; N/A   ; None         ; 67.900 ns  ; contador:inst1|inst      ; d4 ; CLOCK      ;
+; N/A   ; None         ; 23.500 ns  ; registrador:inst10|inst6 ; g  ; BH1        ;
+; N/A   ; None         ; 23.000 ns  ; registrador:inst10|inst6 ; f  ; BH1        ;
 ; N/A   ; None         ; 22.900 ns  ; registrador:inst10|inst5 ; c  ; BH1        ;
-; N/A   ; None         ; 22.800 ns  ; registrador:inst10|inst5 ; d  ; BH1        ;
-; N/A   ; None         ; 22.700 ns  ; registrador:inst10|inst4 ; g  ; BH1        ;
-; N/A   ; None         ; 22.700 ns  ; registrador:inst10|inst4 ; d  ; BH1        ;
-; N/A   ; None         ; 22.600 ns  ; registrador:inst|inst    ; f  ; BH1        ;
-; N/A   ; None         ; 22.500 ns  ; registrador:inst|inst    ; d  ; BH1        ;
-; N/A   ; None         ; 22.500 ns  ; registrador:inst10|inst4 ; c  ; BH1        ;
-; N/A   ; None         ; 22.300 ns  ; registrador:inst10|inst6 ; g  ; BH1        ;
-; N/A   ; None         ; 22.300 ns  ; registrador:inst|inst    ; g  ; BH1        ;
-; N/A   ; None         ; 22.200 ns  ; registrador:inst10|inst6 ; d  ; BH1        ;
-; N/A   ; None         ; 22.200 ns  ; registrador:inst|inst    ; A  ; BH1        ;
-; N/A   ; None         ; 21.500 ns  ; registrador:inst10|inst6 ; c  ; BH1        ;
-; N/A   ; None         ; 21.300 ns  ; registrador:inst9|inst6  ; c  ; BH2        ;
-; N/A   ; None         ; 21.300 ns  ; registrador:inst9|inst6  ; b  ; BH2        ;
-; N/A   ; None         ; 21.000 ns  ; registrador:inst|inst4   ; f  ; BH1        ;
-; N/A   ; None         ; 20.900 ns  ; registrador:inst|inst4   ; e  ; BH1        ;
-; N/A   ; None         ; 20.800 ns  ; registrador:inst10|inst4 ; f  ; BH1        ;
-; N/A   ; None         ; 20.800 ns  ; registrador:inst|inst6   ; d  ; BH1        ;
-; N/A   ; None         ; 20.700 ns  ; registrador:inst10|inst5 ; f  ; BH1        ;
-; N/A   ; None         ; 20.700 ns  ; registrador:inst|inst6   ; f  ; BH1        ;
-; N/A   ; None         ; 20.700 ns  ; registrador:inst|inst5   ; f  ; BH1        ;
-; N/A   ; None         ; 20.700 ns  ; registrador:inst|inst4   ; d  ; BH1        ;
-; N/A   ; None         ; 20.700 ns  ; registrador:inst10|inst4 ; A  ; BH1        ;
-; N/A   ; None         ; 20.600 ns  ; registrador:inst|inst6   ; g  ; BH1        ;
-; N/A   ; None         ; 20.600 ns  ; registrador:inst|inst5   ; e  ; BH1        ;
-; N/A   ; None         ; 20.600 ns  ; registrador:inst|inst5   ; d  ; BH1        ;
-; N/A   ; None         ; 20.500 ns  ; registrador:inst10|inst  ; dp ; BH1        ;
-; N/A   ; None         ; 20.500 ns  ; registrador:inst|inst5   ; g  ; BH1        ;
-; N/A   ; None         ; 20.500 ns  ; registrador:inst10|inst4 ; e  ; BH1        ;
-; N/A   ; None         ; 20.400 ns  ; registrador:inst|inst    ; dp ; BH1        ;
-; N/A   ; None         ; 20.400 ns  ; registrador:inst|inst4   ; g  ; BH1        ;
-; N/A   ; None         ; 20.400 ns  ; registrador:inst10|inst5 ; A  ; BH1        ;
-; N/A   ; None         ; 20.300 ns  ; registrador:inst|inst4   ; A  ; BH1        ;
-; N/A   ; None         ; 20.200 ns  ; registrador:inst10|inst5 ; e  ; BH1        ;
-; N/A   ; None         ; 20.200 ns  ; registrador:inst11|inst  ; c  ; BH2        ;
-; N/A   ; None         ; 20.200 ns  ; registrador:inst11|inst  ; b  ; BH2        ;
-; N/A   ; None         ; 20.000 ns  ; registrador:inst9|inst4  ; c  ; BH2        ;
-; N/A   ; None         ; 20.000 ns  ; registrador:inst9|inst4  ; b  ; BH2        ;
-; N/A   ; None         ; 19.900 ns  ; registrador:inst10|inst6 ; f  ; BH1        ;
-; N/A   ; None         ; 19.900 ns  ; registrador:inst9|inst5  ; c  ; BH2        ;
-; N/A   ; None         ; 19.900 ns  ; registrador:inst9|inst5  ; b  ; BH2        ;
-; N/A   ; None         ; 19.900 ns  ; registrador:inst|inst6   ; A  ; BH1        ;
-; N/A   ; None         ; 19.800 ns  ; registrador:inst|inst5   ; A  ; BH1        ;
-; N/A   ; None         ; 19.700 ns  ; registrador:inst10|inst6 ; A  ; BH1        ;
-; N/A   ; None         ; 18.800 ns  ; registrador:inst11|inst  ; g  ; BH2        ;
-; N/A   ; None         ; 18.500 ns  ; registrador:inst9|inst   ; c  ; BH2        ;
-; N/A   ; None         ; 18.500 ns  ; registrador:inst9|inst   ; b  ; BH2        ;
-; N/A   ; None         ; 17.700 ns  ; registrador:inst10|inst6 ; e  ; BH1        ;
-; N/A   ; None         ; 17.300 ns  ; registrador:inst|inst6   ; e  ; BH1        ;
+; N/A   ; None         ; 22.800 ns  ; registrador:inst10|inst6 ; b  ; BH1        ;
+; N/A   ; None         ; 22.700 ns  ; registrador:inst10|inst4 ; c  ; BH1        ;
+; N/A   ; None         ; 22.500 ns  ; registrador:inst10|inst6 ; c  ; BH1        ;
+; N/A   ; None         ; 22.100 ns  ; registrador:inst10|inst  ; g  ; BH1        ;
+; N/A   ; None         ; 21.800 ns  ; registrador:inst10|inst  ; f  ; BH1        ;
+; N/A   ; None         ; 21.800 ns  ; registrador:inst10|inst  ; c  ; BH1        ;
+; N/A   ; None         ; 21.800 ns  ; registrador:inst10|inst  ; b  ; BH1        ;
+; N/A   ; None         ; 21.600 ns  ; registrador:inst10|inst6 ; d  ; BH1        ;
+; N/A   ; None         ; 21.500 ns  ; registrador:inst10|inst5 ; g  ; BH1        ;
+; N/A   ; None         ; 21.500 ns  ; registrador:inst|inst4   ; f  ; BH1        ;
+; N/A   ; None         ; 21.400 ns  ; registrador:inst10|inst4 ; g  ; BH1        ;
+; N/A   ; None         ; 21.400 ns  ; registrador:inst10|inst4 ; f  ; BH1        ;
+; N/A   ; None         ; 21.400 ns  ; registrador:inst|inst6   ; d  ; BH1        ;
+; N/A   ; None         ; 21.300 ns  ; registrador:inst10|inst4 ; d  ; BH1        ;
+; N/A   ; None         ; 21.300 ns  ; registrador:inst10|inst6 ; A  ; BH1        ;
+; N/A   ; None         ; 21.200 ns  ; registrador:inst10|inst  ; e  ; BH1        ;
+; N/A   ; None         ; 21.200 ns  ; registrador:inst10|inst5 ; d  ; BH1        ;
+; N/A   ; None         ; 21.200 ns  ; registrador:inst10|inst5 ; b  ; BH1        ;
+; N/A   ; None         ; 21.100 ns  ; registrador:inst10|inst5 ; f  ; BH1        ;
+; N/A   ; None         ; 21.100 ns  ; registrador:inst|inst4   ; A  ; BH1        ;
+; N/A   ; None         ; 21.100 ns  ; registrador:inst|inst6   ; A  ; BH1        ;
+; N/A   ; None         ; 21.000 ns  ; registrador:inst|inst6   ; f  ; BH1        ;
+; N/A   ; None         ; 20.900 ns  ; registrador:inst|inst4   ; d  ; BH1        ;
+; N/A   ; None         ; 20.900 ns  ; registrador:inst|inst6   ; b  ; BH1        ;
+; N/A   ; None         ; 20.700 ns  ; registrador:inst10|inst4 ; b  ; BH1        ;
+; N/A   ; None         ; 20.600 ns  ; registrador:inst|inst    ; dp ; BH1        ;
+; N/A   ; None         ; 20.500 ns  ; registrador:inst|inst4   ; c  ; BH1        ;
+; N/A   ; None         ; 20.500 ns  ; registrador:inst|inst6   ; c  ; BH1        ;
+; N/A   ; None         ; 20.500 ns  ; registrador:inst10|inst  ; A  ; BH1        ;
+; N/A   ; None         ; 20.400 ns  ; registrador:inst10|inst4 ; e  ; BH1        ;
+; N/A   ; None         ; 20.400 ns  ; registrador:inst|inst5   ; d  ; BH1        ;
+; N/A   ; None         ; 20.400 ns  ; registrador:inst9|inst5  ; c  ; BH2        ;
+; N/A   ; None         ; 20.400 ns  ; registrador:inst|inst5   ; b  ; BH1        ;
+; N/A   ; None         ; 20.400 ns  ; registrador:inst9|inst5  ; b  ; BH2        ;
+; N/A   ; None         ; 20.300 ns  ; registrador:inst10|inst  ; d  ; BH1        ;
+; N/A   ; None         ; 20.300 ns  ; registrador:inst|inst5   ; c  ; BH1        ;
+; N/A   ; None         ; 20.300 ns  ; registrador:inst|inst4   ; b  ; BH1        ;
+; N/A   ; None         ; 20.200 ns  ; registrador:inst9|inst6  ; c  ; BH2        ;
+; N/A   ; None         ; 20.200 ns  ; registrador:inst9|inst6  ; b  ; BH2        ;
+; N/A   ; None         ; 20.200 ns  ; registrador:inst|inst    ; A  ; BH1        ;
+; N/A   ; None         ; 20.200 ns  ; registrador:inst|inst5   ; A  ; BH1        ;
+; N/A   ; None         ; 20.100 ns  ; registrador:inst|inst5   ; f  ; BH1        ;
+; N/A   ; None         ; 20.100 ns  ; registrador:inst10|inst5 ; e  ; BH1        ;
+; N/A   ; None         ; 20.000 ns  ; registrador:inst|inst    ; f  ; BH1        ;
+; N/A   ; None         ; 19.900 ns  ; registrador:inst|inst    ; d  ; BH1        ;
+; N/A   ; None         ; 19.800 ns  ; registrador:inst|inst    ; b  ; BH1        ;
+; N/A   ; None         ; 19.800 ns  ; registrador:inst10|inst4 ; A  ; BH1        ;
+; N/A   ; None         ; 19.700 ns  ; registrador:inst|inst    ; c  ; BH1        ;
+; N/A   ; None         ; 19.400 ns  ; registrador:inst|inst4   ; g  ; BH1        ;
+; N/A   ; None         ; 19.400 ns  ; registrador:inst|inst6   ; g  ; BH1        ;
+; N/A   ; None         ; 19.300 ns  ; registrador:inst|inst4   ; e  ; BH1        ;
+; N/A   ; None         ; 19.300 ns  ; registrador:inst10|inst5 ; A  ; BH1        ;
+; N/A   ; None         ; 19.200 ns  ; registrador:inst10|inst  ; dp ; BH1        ;
+; N/A   ; None         ; 18.800 ns  ; registrador:inst11|inst  ; c  ; BH2        ;
+; N/A   ; None         ; 18.800 ns  ; registrador:inst11|inst  ; b  ; BH2        ;
+; N/A   ; None         ; 18.600 ns  ; registrador:inst9|inst4  ; c  ; BH2        ;
+; N/A   ; None         ; 18.600 ns  ; registrador:inst9|inst4  ; b  ; BH2        ;
+; N/A   ; None         ; 18.400 ns  ; registrador:inst|inst5   ; g  ; BH1        ;
+; N/A   ; None         ; 18.300 ns  ; registrador:inst11|inst  ; g  ; BH2        ;
+; N/A   ; None         ; 18.300 ns  ; registrador:inst10|inst6 ; e  ; BH1        ;
+; N/A   ; None         ; 18.200 ns  ; registrador:inst|inst    ; g  ; BH1        ;
+; N/A   ; None         ; 18.200 ns  ; registrador:inst|inst    ; e  ; BH1        ;
+; N/A   ; None         ; 17.900 ns  ; registrador:inst|inst5   ; e  ; BH1        ;
+; N/A   ; None         ; 17.100 ns  ; registrador:inst|inst6   ; e  ; BH1        ;
+; N/A   ; None         ; 17.100 ns  ; registrador:inst9|inst   ; c  ; BH2        ;
+; N/A   ; None         ; 17.100 ns  ; registrador:inst9|inst   ; b  ; BH2        ;
 +-------+--------------+------------+--------------------------+----+------------+
 
 
@@ -259,18 +333,15 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------+-------------+-----------+-----------+--------------------------+----------+
 ; Minimum Slack ; Required th ; Actual th ; From      ; To                       ; To Clock ;
 +---------------+-------------+-----------+-----------+--------------------------+----------+
-; N/A           ; None        ; -0.100 ns ; Operacao  ; registrador:inst9|inst4  ; BH2      ;
-; N/A           ; None        ; -0.100 ns ; Operacao  ; registrador:inst11|inst  ; BH2      ;
-; N/A           ; None        ; -0.100 ns ; Operacao  ; registrador:inst9|inst   ; BH2      ;
 ; N/A           ; None        ; -0.100 ns ; pin_name5 ; registrador:inst10|inst4 ; BH1      ;
-; N/A           ; None        ; -0.300 ns ; Operacao  ; registrador:inst9|inst5  ; BH2      ;
-; N/A           ; None        ; -3.100 ns ; MSB       ; registrador:inst|inst    ; BH1      ;
-; N/A           ; None        ; -4.300 ns ; MSB2      ; registrador:inst10|inst  ; BH1      ;
-; N/A           ; None        ; -4.400 ns ; pin_name2 ; registrador:inst|inst5   ; BH1      ;
-; N/A           ; None        ; -5.300 ns ; LSB2      ; registrador:inst10|inst6 ; BH1      ;
-; N/A           ; None        ; -5.800 ns ; LSB       ; registrador:inst|inst6   ; BH1      ;
-; N/A           ; None        ; -5.800 ns ; pin_name6 ; registrador:inst10|inst5 ; BH1      ;
-; N/A           ; None        ; -6.100 ns ; pin_name1 ; registrador:inst|inst4   ; BH1      ;
+; N/A           ; None        ; -4.500 ns ; pin_name2 ; registrador:inst|inst5   ; BH1      ;
+; N/A           ; None        ; -5.300 ns ; pin_name6 ; registrador:inst10|inst5 ; BH1      ;
+; N/A           ; None        ; -5.400 ns ; Operacao  ; debouncer:inst18|inst    ; CLK25    ;
+; N/A           ; None        ; -5.400 ns ; MSB2      ; registrador:inst10|inst  ; BH1      ;
+; N/A           ; None        ; -5.800 ns ; MSB       ; registrador:inst|inst    ; BH1      ;
+; N/A           ; None        ; -5.800 ns ; LSB2      ; registrador:inst10|inst6 ; BH1      ;
+; N/A           ; None        ; -5.900 ns ; pin_name1 ; registrador:inst|inst4   ; BH1      ;
+; N/A           ; None        ; -6.100 ns ; LSB       ; registrador:inst|inst6   ; BH1      ;
 +---------------+-------------+-----------+-----------+--------------------------+----------+
 
 
@@ -280,158 +351,247 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II Classic Timing Analyzer
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Wed Jul 31 01:38:21 2019
+    Info: Processing started: Wed Jul 31 15:59:29 2019
 Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off calculadora_binaria -c calculadora_binaria
 Info: Started post-fitting delay annotation
 Info: Delay annotation completed successfully
 Warning: Found pins functioning as undefined clocks and/or memory enables
     Info: Assuming node "BH1" is an undefined clock
-    Info: Assuming node "pin_name" is an undefined clock
+    Info: Assuming node "CLOCK" is an undefined clock
     Info: Assuming node "BH2" is an undefined clock
-Warning: Found 19 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
-    Info: Detected ripple clock "divisor_de_clock:inst4|inst" as buffer
-    Info: Detected ripple clock "divisor_de_clock:inst4|inst1" as buffer
-    Info: Detected ripple clock "divisor_de_clock:inst4|inst2" as buffer
-    Info: Detected ripple clock "divisor_de_clock:inst4|inst3" as buffer
-    Info: Detected ripple clock "divisor_de_clock:inst4|inst4" as buffer
-    Info: Detected ripple clock "divisor_de_clock:inst4|inst5" as buffer
-    Info: Detected ripple clock "divisor_de_clock:inst4|inst6" as buffer
-    Info: Detected ripple clock "divisor_de_clock:inst4|inst7" as buffer
-    Info: Detected ripple clock "divisor_de_clock:inst4|inst8" as buffer
-    Info: Detected ripple clock "divisor_de_clock:inst4|inst9" as buffer
-    Info: Detected ripple clock "divisor_de_clock:inst4|inst10" as buffer
-    Info: Detected ripple clock "divisor_de_clock:inst4|inst11" as buffer
-    Info: Detected ripple clock "divisor_de_clock:inst4|inst12" as buffer
-    Info: Detected ripple clock "divisor_de_clock:inst4|inst13" as buffer
-    Info: Detected ripple clock "divisor_de_clock:inst4|inst14" as buffer
-    Info: Detected ripple clock "divisor_de_clock:inst4|inst15" as buffer
-    Info: Detected ripple clock "divisor_de_clock:inst4|inst16" as buffer
-    Info: Detected ripple clock "divisor_de_clock:inst4|inst17" as buffer
+    Info: Assuming node "CLK25" is an undefined clock
+Warning: Found 36 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected ripple clock "debouncer:inst18|contador_para_deboucing:inst4|inst" as buffer
+    Info: Detected ripple clock "debouncer:inst18|contador_para_deboucing:inst4|inst19" as buffer
+    Info: Detected ripple clock "divisor_de_clock:inst13|inst" as buffer
+    Info: Detected ripple clock "debouncer:inst18|contador_para_deboucing:inst4|inst20" as buffer
+    Info: Detected ripple clock "divisor_de_clock:inst13|inst1" as buffer
+    Info: Detected ripple clock "debouncer:inst18|contador_para_deboucing:inst4|inst21" as buffer
+    Info: Detected ripple clock "divisor_de_clock:inst13|inst2" as buffer
+    Info: Detected ripple clock "debouncer:inst18|contador_para_deboucing:inst4|inst22" as buffer
+    Info: Detected ripple clock "divisor_de_clock:inst13|inst3" as buffer
+    Info: Detected ripple clock "debouncer:inst18|contador_para_deboucing:inst4|inst23" as buffer
+    Info: Detected ripple clock "divisor_de_clock:inst13|inst4" as buffer
+    Info: Detected ripple clock "debouncer:inst18|contador_para_deboucing:inst4|inst27" as buffer
+    Info: Detected ripple clock "divisor_de_clock:inst13|inst5" as buffer
+    Info: Detected ripple clock "debouncer:inst18|contador_para_deboucing:inst4|inst24" as buffer
+    Info: Detected ripple clock "divisor_de_clock:inst13|inst6" as buffer
+    Info: Detected ripple clock "debouncer:inst18|contador_para_deboucing:inst4|inst25" as buffer
+    Info: Detected ripple clock "divisor_de_clock:inst13|inst7" as buffer
+    Info: Detected ripple clock "debouncer:inst18|contador_para_deboucing:inst4|inst26" as buffer
+    Info: Detected ripple clock "divisor_de_clock:inst13|inst8" as buffer
+    Info: Detected ripple clock "debouncer:inst18|contador_para_deboucing:inst4|inst28" as buffer
+    Info: Detected ripple clock "divisor_de_clock:inst13|inst9" as buffer
+    Info: Detected ripple clock "debouncer:inst18|contador_para_deboucing:inst4|inst29" as buffer
+    Info: Detected ripple clock "divisor_de_clock:inst13|inst10" as buffer
+    Info: Detected ripple clock "debouncer:inst18|contador_para_deboucing:inst4|inst30" as buffer
+    Info: Detected ripple clock "divisor_de_clock:inst13|inst11" as buffer
+    Info: Detected ripple clock "debouncer:inst18|contador_para_deboucing:inst4|inst31" as buffer
+    Info: Detected ripple clock "divisor_de_clock:inst13|inst12" as buffer
+    Info: Detected ripple clock "debouncer:inst18|contador_para_deboucing:inst4|inst32" as buffer
+    Info: Detected ripple clock "divisor_de_clock:inst13|inst13" as buffer
+    Info: Detected ripple clock "debouncer:inst18|contador_para_deboucing:inst4|inst33" as buffer
+    Info: Detected ripple clock "divisor_de_clock:inst13|inst14" as buffer
+    Info: Detected ripple clock "debouncer:inst18|contador_para_deboucing:inst4|inst34" as buffer
+    Info: Detected ripple clock "divisor_de_clock:inst13|inst15" as buffer
+    Info: Detected ripple clock "divisor_de_clock:inst13|inst16" as buffer
+    Info: Detected ripple clock "divisor_de_clock:inst13|inst17" as buffer
     Info: Detected ripple clock "contador:inst1|inst" as buffer
 Info: No valid register-to-register data paths exist for clock "BH1"
-Info: Clock "pin_name" Internal fmax is restricted to 200.0 MHz between source register "contador:inst1|inst1" and destination register "contador:inst1|inst1"
+Info: Clock "CLOCK" Internal fmax is restricted to 200.0 MHz between source register "contador:inst1|inst1" and destination register "contador:inst1|inst1"
     Info: fmax restricted to Clock High delay (2.5 ns) plus Clock Low delay (2.5 ns) : restricted to 5.0 ns. Expand message to see actual delay path.
         Info: + Longest register to register delay is 1.200 ns
-            Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC3_I34; Fanout = 12; REG Node = 'contador:inst1|inst1'
-            Info: 2: + IC(0.200 ns) + CELL(1.000 ns) = 1.200 ns; Loc. = LC3_I34; Fanout = 12; REG Node = 'contador:inst1|inst1'
+            Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC1_D18; Fanout = 12; REG Node = 'contador:inst1|inst1'
+            Info: 2: + IC(0.200 ns) + CELL(1.000 ns) = 1.200 ns; Loc. = LC1_D18; Fanout = 12; REG Node = 'contador:inst1|inst1'
             Info: Total cell delay = 1.000 ns ( 83.33 % )
             Info: Total interconnect delay = 0.200 ns ( 16.67 % )
         Info: - Smallest clock skew is 0.000 ns
-            Info: + Shortest clock path from clock "pin_name" to destination register is 67.800 ns
-                Info: 1: + IC(0.000 ns) + CELL(0.500 ns) = 0.500 ns; Loc. = PIN_184; Fanout = 1; CLK Node = 'pin_name'
-                Info: 2: + IC(1.400 ns) + CELL(1.100 ns) = 3.000 ns; Loc. = LC1_H31; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst'
-                Info: 3: + IC(2.000 ns) + CELL(1.100 ns) = 6.100 ns; Loc. = LC1_H42; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst1'
-                Info: 4: + IC(1.800 ns) + CELL(1.100 ns) = 9.000 ns; Loc. = LC1_H34; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst2'
-                Info: 5: + IC(1.800 ns) + CELL(1.100 ns) = 11.900 ns; Loc. = LC1_H39; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst3'
-                Info: 6: + IC(1.800 ns) + CELL(1.100 ns) = 14.800 ns; Loc. = LC1_H27; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst4'
-                Info: 7: + IC(1.900 ns) + CELL(1.100 ns) = 17.800 ns; Loc. = LC1_H3; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst5'
-                Info: 8: + IC(2.200 ns) + CELL(1.100 ns) = 21.100 ns; Loc. = LC1_H14; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst6'
-                Info: 9: + IC(2.000 ns) + CELL(1.100 ns) = 24.200 ns; Loc. = LC1_H19; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst7'
-                Info: 10: + IC(1.900 ns) + CELL(1.100 ns) = 27.200 ns; Loc. = LC1_H22; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst8'
-                Info: 11: + IC(2.000 ns) + CELL(1.100 ns) = 30.300 ns; Loc. = LC1_H2; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst9'
-                Info: 12: + IC(2.500 ns) + CELL(1.100 ns) = 33.900 ns; Loc. = LC4_H27; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst10'
-                Info: 13: + IC(4.000 ns) + CELL(1.100 ns) = 39.000 ns; Loc. = LC1_K52; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst11'
-                Info: 14: + IC(2.100 ns) + CELL(1.100 ns) = 42.200 ns; Loc. = LC1_K29; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst12'
-                Info: 15: + IC(1.800 ns) + CELL(1.100 ns) = 45.100 ns; Loc. = LC1_K30; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst13'
-                Info: 16: + IC(1.900 ns) + CELL(1.100 ns) = 48.100 ns; Loc. = LC1_K36; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst14'
-                Info: 17: + IC(3.700 ns) + CELL(1.100 ns) = 52.900 ns; Loc. = LC1_J49; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst15'
-                Info: 18: + IC(1.700 ns) + CELL(1.100 ns) = 55.700 ns; Loc. = LC1_J47; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst16'
-                Info: 19: + IC(1.800 ns) + CELL(1.100 ns) = 58.600 ns; Loc. = LC1_J39; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst17'
-                Info: 20: + IC(1.700 ns) + CELL(1.100 ns) = 61.400 ns; Loc. = LC1_J38; Fanout = 14; REG Node = 'contador:inst1|inst'
-                Info: 21: + IC(6.400 ns) + CELL(0.000 ns) = 67.800 ns; Loc. = LC3_I34; Fanout = 12; REG Node = 'contador:inst1|inst1'
-                Info: Total cell delay = 21.400 ns ( 31.56 % )
-                Info: Total interconnect delay = 46.400 ns ( 68.44 % )
-            Info: - Longest clock path from clock "pin_name" to source register is 67.800 ns
-                Info: 1: + IC(0.000 ns) + CELL(0.500 ns) = 0.500 ns; Loc. = PIN_184; Fanout = 1; CLK Node = 'pin_name'
-                Info: 2: + IC(1.400 ns) + CELL(1.100 ns) = 3.000 ns; Loc. = LC1_H31; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst'
-                Info: 3: + IC(2.000 ns) + CELL(1.100 ns) = 6.100 ns; Loc. = LC1_H42; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst1'
-                Info: 4: + IC(1.800 ns) + CELL(1.100 ns) = 9.000 ns; Loc. = LC1_H34; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst2'
-                Info: 5: + IC(1.800 ns) + CELL(1.100 ns) = 11.900 ns; Loc. = LC1_H39; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst3'
-                Info: 6: + IC(1.800 ns) + CELL(1.100 ns) = 14.800 ns; Loc. = LC1_H27; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst4'
-                Info: 7: + IC(1.900 ns) + CELL(1.100 ns) = 17.800 ns; Loc. = LC1_H3; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst5'
-                Info: 8: + IC(2.200 ns) + CELL(1.100 ns) = 21.100 ns; Loc. = LC1_H14; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst6'
-                Info: 9: + IC(2.000 ns) + CELL(1.100 ns) = 24.200 ns; Loc. = LC1_H19; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst7'
-                Info: 10: + IC(1.900 ns) + CELL(1.100 ns) = 27.200 ns; Loc. = LC1_H22; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst8'
-                Info: 11: + IC(2.000 ns) + CELL(1.100 ns) = 30.300 ns; Loc. = LC1_H2; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst9'
-                Info: 12: + IC(2.500 ns) + CELL(1.100 ns) = 33.900 ns; Loc. = LC4_H27; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst10'
-                Info: 13: + IC(4.000 ns) + CELL(1.100 ns) = 39.000 ns; Loc. = LC1_K52; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst11'
-                Info: 14: + IC(2.100 ns) + CELL(1.100 ns) = 42.200 ns; Loc. = LC1_K29; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst12'
-                Info: 15: + IC(1.800 ns) + CELL(1.100 ns) = 45.100 ns; Loc. = LC1_K30; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst13'
-                Info: 16: + IC(1.900 ns) + CELL(1.100 ns) = 48.100 ns; Loc. = LC1_K36; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst14'
-                Info: 17: + IC(3.700 ns) + CELL(1.100 ns) = 52.900 ns; Loc. = LC1_J49; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst15'
-                Info: 18: + IC(1.700 ns) + CELL(1.100 ns) = 55.700 ns; Loc. = LC1_J47; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst16'
-                Info: 19: + IC(1.800 ns) + CELL(1.100 ns) = 58.600 ns; Loc. = LC1_J39; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst17'
-                Info: 20: + IC(1.700 ns) + CELL(1.100 ns) = 61.400 ns; Loc. = LC1_J38; Fanout = 14; REG Node = 'contador:inst1|inst'
-                Info: 21: + IC(6.400 ns) + CELL(0.000 ns) = 67.800 ns; Loc. = LC3_I34; Fanout = 12; REG Node = 'contador:inst1|inst1'
-                Info: Total cell delay = 21.400 ns ( 31.56 % )
-                Info: Total interconnect delay = 46.400 ns ( 68.44 % )
+            Info: + Shortest clock path from clock "CLOCK" to destination register is 58.800 ns
+                Info: 1: + IC(0.000 ns) + CELL(0.500 ns) = 0.500 ns; Loc. = PIN_182; Fanout = 1; CLK Node = 'CLOCK'
+                Info: 2: + IC(1.400 ns) + CELL(1.100 ns) = 3.000 ns; Loc. = LC1_K47; Fanout = 2; REG Node = 'divisor_de_clock:inst13|inst'
+                Info: 3: + IC(1.800 ns) + CELL(1.100 ns) = 5.900 ns; Loc. = LC1_K41; Fanout = 2; REG Node = 'divisor_de_clock:inst13|inst1'
+                Info: 4: + IC(1.700 ns) + CELL(1.100 ns) = 8.700 ns; Loc. = LC2_K43; Fanout = 2; REG Node = 'divisor_de_clock:inst13|inst2'
+                Info: 5: + IC(0.200 ns) + CELL(1.100 ns) = 10.000 ns; Loc. = LC1_K43; Fanout = 2; REG Node = 'divisor_de_clock:inst13|inst3'
+                Info: 6: + IC(4.200 ns) + CELL(1.100 ns) = 15.300 ns; Loc. = LC1_B37; Fanout = 2; REG Node = 'divisor_de_clock:inst13|inst4'
+                Info: 7: + IC(1.900 ns) + CELL(1.100 ns) = 18.300 ns; Loc. = LC1_B52; Fanout = 2; REG Node = 'divisor_de_clock:inst13|inst5'
+                Info: 8: + IC(2.100 ns) + CELL(1.100 ns) = 21.500 ns; Loc. = LC2_B30; Fanout = 2; REG Node = 'divisor_de_clock:inst13|inst6'
+                Info: 9: + IC(0.200 ns) + CELL(1.100 ns) = 22.800 ns; Loc. = LC1_B30; Fanout = 2; REG Node = 'divisor_de_clock:inst13|inst7'
+                Info: 10: + IC(2.000 ns) + CELL(1.100 ns) = 25.900 ns; Loc. = LC1_B46; Fanout = 2; REG Node = 'divisor_de_clock:inst13|inst8'
+                Info: 11: + IC(1.800 ns) + CELL(1.100 ns) = 28.800 ns; Loc. = LC2_B37; Fanout = 2; REG Node = 'divisor_de_clock:inst13|inst9'
+                Info: 12: + IC(1.700 ns) + CELL(1.100 ns) = 31.600 ns; Loc. = LC1_B33; Fanout = 2; REG Node = 'divisor_de_clock:inst13|inst10'
+                Info: 13: + IC(1.200 ns) + CELL(1.100 ns) = 33.900 ns; Loc. = LC2_B45; Fanout = 2; REG Node = 'divisor_de_clock:inst13|inst11'
+                Info: 14: + IC(1.900 ns) + CELL(1.100 ns) = 36.900 ns; Loc. = LC1_B27; Fanout = 2; REG Node = 'divisor_de_clock:inst13|inst12'
+                Info: 15: + IC(2.100 ns) + CELL(1.100 ns) = 40.100 ns; Loc. = LC1_B47; Fanout = 2; REG Node = 'divisor_de_clock:inst13|inst13'
+                Info: 16: + IC(1.700 ns) + CELL(1.100 ns) = 42.900 ns; Loc. = LC1_B45; Fanout = 2; REG Node = 'divisor_de_clock:inst13|inst14'
+                Info: 17: + IC(2.500 ns) + CELL(1.100 ns) = 46.500 ns; Loc. = LC1_B10; Fanout = 2; REG Node = 'divisor_de_clock:inst13|inst15'
+                Info: 18: + IC(1.800 ns) + CELL(1.100 ns) = 49.400 ns; Loc. = LC1_B2; Fanout = 2; REG Node = 'divisor_de_clock:inst13|inst16'
+                Info: 19: + IC(4.200 ns) + CELL(1.100 ns) = 54.700 ns; Loc. = LC1_D19; Fanout = 2; REG Node = 'divisor_de_clock:inst13|inst17'
+                Info: 20: + IC(1.200 ns) + CELL(1.100 ns) = 57.000 ns; Loc. = LC1_D22; Fanout = 14; REG Node = 'contador:inst1|inst'
+                Info: 21: + IC(1.800 ns) + CELL(0.000 ns) = 58.800 ns; Loc. = LC1_D18; Fanout = 12; REG Node = 'contador:inst1|inst1'
+                Info: Total cell delay = 21.400 ns ( 36.39 % )
+                Info: Total interconnect delay = 37.400 ns ( 63.61 % )
+            Info: - Longest clock path from clock "CLOCK" to source register is 58.800 ns
+                Info: 1: + IC(0.000 ns) + CELL(0.500 ns) = 0.500 ns; Loc. = PIN_182; Fanout = 1; CLK Node = 'CLOCK'
+                Info: 2: + IC(1.400 ns) + CELL(1.100 ns) = 3.000 ns; Loc. = LC1_K47; Fanout = 2; REG Node = 'divisor_de_clock:inst13|inst'
+                Info: 3: + IC(1.800 ns) + CELL(1.100 ns) = 5.900 ns; Loc. = LC1_K41; Fanout = 2; REG Node = 'divisor_de_clock:inst13|inst1'
+                Info: 4: + IC(1.700 ns) + CELL(1.100 ns) = 8.700 ns; Loc. = LC2_K43; Fanout = 2; REG Node = 'divisor_de_clock:inst13|inst2'
+                Info: 5: + IC(0.200 ns) + CELL(1.100 ns) = 10.000 ns; Loc. = LC1_K43; Fanout = 2; REG Node = 'divisor_de_clock:inst13|inst3'
+                Info: 6: + IC(4.200 ns) + CELL(1.100 ns) = 15.300 ns; Loc. = LC1_B37; Fanout = 2; REG Node = 'divisor_de_clock:inst13|inst4'
+                Info: 7: + IC(1.900 ns) + CELL(1.100 ns) = 18.300 ns; Loc. = LC1_B52; Fanout = 2; REG Node = 'divisor_de_clock:inst13|inst5'
+                Info: 8: + IC(2.100 ns) + CELL(1.100 ns) = 21.500 ns; Loc. = LC2_B30; Fanout = 2; REG Node = 'divisor_de_clock:inst13|inst6'
+                Info: 9: + IC(0.200 ns) + CELL(1.100 ns) = 22.800 ns; Loc. = LC1_B30; Fanout = 2; REG Node = 'divisor_de_clock:inst13|inst7'
+                Info: 10: + IC(2.000 ns) + CELL(1.100 ns) = 25.900 ns; Loc. = LC1_B46; Fanout = 2; REG Node = 'divisor_de_clock:inst13|inst8'
+                Info: 11: + IC(1.800 ns) + CELL(1.100 ns) = 28.800 ns; Loc. = LC2_B37; Fanout = 2; REG Node = 'divisor_de_clock:inst13|inst9'
+                Info: 12: + IC(1.700 ns) + CELL(1.100 ns) = 31.600 ns; Loc. = LC1_B33; Fanout = 2; REG Node = 'divisor_de_clock:inst13|inst10'
+                Info: 13: + IC(1.200 ns) + CELL(1.100 ns) = 33.900 ns; Loc. = LC2_B45; Fanout = 2; REG Node = 'divisor_de_clock:inst13|inst11'
+                Info: 14: + IC(1.900 ns) + CELL(1.100 ns) = 36.900 ns; Loc. = LC1_B27; Fanout = 2; REG Node = 'divisor_de_clock:inst13|inst12'
+                Info: 15: + IC(2.100 ns) + CELL(1.100 ns) = 40.100 ns; Loc. = LC1_B47; Fanout = 2; REG Node = 'divisor_de_clock:inst13|inst13'
+                Info: 16: + IC(1.700 ns) + CELL(1.100 ns) = 42.900 ns; Loc. = LC1_B45; Fanout = 2; REG Node = 'divisor_de_clock:inst13|inst14'
+                Info: 17: + IC(2.500 ns) + CELL(1.100 ns) = 46.500 ns; Loc. = LC1_B10; Fanout = 2; REG Node = 'divisor_de_clock:inst13|inst15'
+                Info: 18: + IC(1.800 ns) + CELL(1.100 ns) = 49.400 ns; Loc. = LC1_B2; Fanout = 2; REG Node = 'divisor_de_clock:inst13|inst16'
+                Info: 19: + IC(4.200 ns) + CELL(1.100 ns) = 54.700 ns; Loc. = LC1_D19; Fanout = 2; REG Node = 'divisor_de_clock:inst13|inst17'
+                Info: 20: + IC(1.200 ns) + CELL(1.100 ns) = 57.000 ns; Loc. = LC1_D22; Fanout = 14; REG Node = 'contador:inst1|inst'
+                Info: 21: + IC(1.800 ns) + CELL(0.000 ns) = 58.800 ns; Loc. = LC1_D18; Fanout = 12; REG Node = 'contador:inst1|inst1'
+                Info: Total cell delay = 21.400 ns ( 36.39 % )
+                Info: Total interconnect delay = 37.400 ns ( 63.61 % )
         Info: + Micro clock to output delay of source is 1.100 ns
         Info: + Micro setup delay of destination is 0.700 ns
 Info: No valid register-to-register data paths exist for clock "BH2"
-Info: tsu for register "registrador:inst9|inst" (data pin = "Operacao", clock pin = "BH2") is 9.800 ns
-    Info: + Longest pin to register delay is 11.000 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.500 ns) = 0.500 ns; Loc. = PIN_78; Fanout = 7; PIN Node = 'Operacao'
-        Info: 2: + IC(1.600 ns) + CELL(1.900 ns) = 4.000 ns; Loc. = LC2_I45; Fanout = 2; COMB Node = 'soma_e_subtracao:inst27|somador_completo:inst12|inst6~0'
-        Info: 3: + IC(1.100 ns) + CELL(2.000 ns) = 7.100 ns; Loc. = LC4_I50; Fanout = 2; COMB Node = 'soma_e_subtracao:inst27|somador_completo:inst13|inst6~0'
-        Info: 4: + IC(0.200 ns) + CELL(2.000 ns) = 9.300 ns; Loc. = LC5_I50; Fanout = 2; COMB Node = 'soma_e_subtracao:inst27|somador_completo:inst14|inst6~0'
-        Info: 5: + IC(0.200 ns) + CELL(1.500 ns) = 11.000 ns; Loc. = LC8_I50; Fanout = 1; REG Node = 'registrador:inst9|inst'
-        Info: Total cell delay = 7.900 ns ( 71.82 % )
-        Info: Total interconnect delay = 3.100 ns ( 28.18 % )
+Info: Clock "CLK25" has Internal fmax of 21.69 MHz between source register "debouncer:inst18|contador_para_deboucing:inst4|inst35" and destination register "debouncer:inst18|inst1" (period= 46.1 ns)
+    Info: + Longest register to register delay is 1.400 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC1_D35; Fanout = 19; REG Node = 'debouncer:inst18|contador_para_deboucing:inst4|inst35'
+        Info: 2: + IC(1.100 ns) + CELL(0.300 ns) = 1.400 ns; Loc. = LC4_D37; Fanout = 7; REG Node = 'debouncer:inst18|inst1'
+        Info: Total cell delay = 0.300 ns ( 21.43 % )
+        Info: Total interconnect delay = 1.100 ns ( 78.57 % )
+    Info: - Smallest clock skew is -42.900 ns
+        Info: + Shortest clock path from clock "CLK25" to destination register is 1.900 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.500 ns) = 0.500 ns; Loc. = PIN_184; Fanout = 4; CLK Node = 'CLK25'
+            Info: 2: + IC(1.400 ns) + CELL(0.000 ns) = 1.900 ns; Loc. = LC4_D37; Fanout = 7; REG Node = 'debouncer:inst18|inst1'
+            Info: Total cell delay = 0.500 ns ( 26.32 % )
+            Info: Total interconnect delay = 1.400 ns ( 73.68 % )
+        Info: - Longest clock path from clock "CLK25" to source register is 44.800 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.500 ns) = 0.500 ns; Loc. = PIN_184; Fanout = 4; CLK Node = 'CLK25'
+            Info: 2: + IC(1.400 ns) + CELL(1.100 ns) = 3.000 ns; Loc. = LC2_D37; Fanout = 2; REG Node = 'debouncer:inst18|contador_para_deboucing:inst4|inst'
+            Info: 3: + IC(1.700 ns) + CELL(1.100 ns) = 5.800 ns; Loc. = LC1_D33; Fanout = 2; REG Node = 'debouncer:inst18|contador_para_deboucing:inst4|inst19'
+            Info: 4: + IC(1.800 ns) + CELL(1.100 ns) = 8.700 ns; Loc. = LC3_D37; Fanout = 2; REG Node = 'debouncer:inst18|contador_para_deboucing:inst4|inst20'
+            Info: 5: + IC(1.800 ns) + CELL(1.100 ns) = 11.600 ns; Loc. = LC1_D44; Fanout = 2; REG Node = 'debouncer:inst18|contador_para_deboucing:inst4|inst21'
+            Info: 6: + IC(1.800 ns) + CELL(1.100 ns) = 14.500 ns; Loc. = LC2_D47; Fanout = 2; REG Node = 'debouncer:inst18|contador_para_deboucing:inst4|inst22'
+            Info: 7: + IC(0.200 ns) + CELL(1.100 ns) = 15.800 ns; Loc. = LC1_D47; Fanout = 2; REG Node = 'debouncer:inst18|contador_para_deboucing:inst4|inst23'
+            Info: 8: + IC(1.400 ns) + CELL(1.100 ns) = 18.300 ns; Loc. = LC2_D36; Fanout = 2; REG Node = 'debouncer:inst18|contador_para_deboucing:inst4|inst27'
+            Info: 9: + IC(0.200 ns) + CELL(1.100 ns) = 19.600 ns; Loc. = LC1_D36; Fanout = 2; REG Node = 'debouncer:inst18|contador_para_deboucing:inst4|inst24'
+            Info: 10: + IC(1.800 ns) + CELL(1.100 ns) = 22.500 ns; Loc. = LC2_D28; Fanout = 2; REG Node = 'debouncer:inst18|contador_para_deboucing:inst4|inst25'
+            Info: 11: + IC(0.200 ns) + CELL(1.100 ns) = 23.800 ns; Loc. = LC1_D28; Fanout = 2; REG Node = 'debouncer:inst18|contador_para_deboucing:inst4|inst26'
+            Info: 12: + IC(1.900 ns) + CELL(1.100 ns) = 26.800 ns; Loc. = LC2_D33; Fanout = 2; REG Node = 'debouncer:inst18|contador_para_deboucing:inst4|inst28'
+            Info: 13: + IC(2.000 ns) + CELL(1.100 ns) = 29.900 ns; Loc. = LC1_D46; Fanout = 2; REG Node = 'debouncer:inst18|contador_para_deboucing:inst4|inst29'
+            Info: 14: + IC(1.800 ns) + CELL(1.100 ns) = 32.800 ns; Loc. = LC2_D52; Fanout = 2; REG Node = 'debouncer:inst18|contador_para_deboucing:inst4|inst30'
+            Info: 15: + IC(1.900 ns) + CELL(1.100 ns) = 35.800 ns; Loc. = LC2_D44; Fanout = 2; REG Node = 'debouncer:inst18|contador_para_deboucing:inst4|inst31'
+            Info: 16: + IC(1.700 ns) + CELL(1.100 ns) = 38.600 ns; Loc. = LC2_D46; Fanout = 2; REG Node = 'debouncer:inst18|contador_para_deboucing:inst4|inst32'
+            Info: 17: + IC(1.800 ns) + CELL(1.100 ns) = 41.500 ns; Loc. = LC1_D52; Fanout = 2; REG Node = 'debouncer:inst18|contador_para_deboucing:inst4|inst33'
+            Info: 18: + IC(2.000 ns) + CELL(1.100 ns) = 44.600 ns; Loc. = LC2_D35; Fanout = 2; REG Node = 'debouncer:inst18|contador_para_deboucing:inst4|inst34'
+            Info: 19: + IC(0.200 ns) + CELL(0.000 ns) = 44.800 ns; Loc. = LC1_D35; Fanout = 19; REG Node = 'debouncer:inst18|contador_para_deboucing:inst4|inst35'
+            Info: Total cell delay = 19.200 ns ( 42.86 % )
+            Info: Total interconnect delay = 25.600 ns ( 57.14 % )
+    Info: + Micro clock to output delay of source is 1.100 ns
     Info: + Micro setup delay of destination is 0.700 ns
-    Info: - Shortest clock path from clock "BH2" to destination register is 1.900 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.500 ns) = 0.500 ns; Loc. = PIN_183; Fanout = 5; CLK Node = 'BH2'
-        Info: 2: + IC(1.400 ns) + CELL(0.000 ns) = 1.900 ns; Loc. = LC8_I50; Fanout = 1; REG Node = 'registrador:inst9|inst'
+Warning: Circuit may not operate. Detected 32 non-operational path(s) clocked by clock "CLK25" with clock skew larger than data delay. See Compilation Report for details.
+Info: Found hold time violation between source  pin or register "debouncer:inst18|inst" and destination pin or register "debouncer:inst18|contador_para_deboucing:inst4|inst35" for clock "CLK25" (Hold time is 39.3 ns)
+    Info: + Largest clock skew is 42.900 ns
+        Info: + Longest clock path from clock "CLK25" to destination register is 44.800 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.500 ns) = 0.500 ns; Loc. = PIN_184; Fanout = 4; CLK Node = 'CLK25'
+            Info: 2: + IC(1.400 ns) + CELL(1.100 ns) = 3.000 ns; Loc. = LC2_D37; Fanout = 2; REG Node = 'debouncer:inst18|contador_para_deboucing:inst4|inst'
+            Info: 3: + IC(1.700 ns) + CELL(1.100 ns) = 5.800 ns; Loc. = LC1_D33; Fanout = 2; REG Node = 'debouncer:inst18|contador_para_deboucing:inst4|inst19'
+            Info: 4: + IC(1.800 ns) + CELL(1.100 ns) = 8.700 ns; Loc. = LC3_D37; Fanout = 2; REG Node = 'debouncer:inst18|contador_para_deboucing:inst4|inst20'
+            Info: 5: + IC(1.800 ns) + CELL(1.100 ns) = 11.600 ns; Loc. = LC1_D44; Fanout = 2; REG Node = 'debouncer:inst18|contador_para_deboucing:inst4|inst21'
+            Info: 6: + IC(1.800 ns) + CELL(1.100 ns) = 14.500 ns; Loc. = LC2_D47; Fanout = 2; REG Node = 'debouncer:inst18|contador_para_deboucing:inst4|inst22'
+            Info: 7: + IC(0.200 ns) + CELL(1.100 ns) = 15.800 ns; Loc. = LC1_D47; Fanout = 2; REG Node = 'debouncer:inst18|contador_para_deboucing:inst4|inst23'
+            Info: 8: + IC(1.400 ns) + CELL(1.100 ns) = 18.300 ns; Loc. = LC2_D36; Fanout = 2; REG Node = 'debouncer:inst18|contador_para_deboucing:inst4|inst27'
+            Info: 9: + IC(0.200 ns) + CELL(1.100 ns) = 19.600 ns; Loc. = LC1_D36; Fanout = 2; REG Node = 'debouncer:inst18|contador_para_deboucing:inst4|inst24'
+            Info: 10: + IC(1.800 ns) + CELL(1.100 ns) = 22.500 ns; Loc. = LC2_D28; Fanout = 2; REG Node = 'debouncer:inst18|contador_para_deboucing:inst4|inst25'
+            Info: 11: + IC(0.200 ns) + CELL(1.100 ns) = 23.800 ns; Loc. = LC1_D28; Fanout = 2; REG Node = 'debouncer:inst18|contador_para_deboucing:inst4|inst26'
+            Info: 12: + IC(1.900 ns) + CELL(1.100 ns) = 26.800 ns; Loc. = LC2_D33; Fanout = 2; REG Node = 'debouncer:inst18|contador_para_deboucing:inst4|inst28'
+            Info: 13: + IC(2.000 ns) + CELL(1.100 ns) = 29.900 ns; Loc. = LC1_D46; Fanout = 2; REG Node = 'debouncer:inst18|contador_para_deboucing:inst4|inst29'
+            Info: 14: + IC(1.800 ns) + CELL(1.100 ns) = 32.800 ns; Loc. = LC2_D52; Fanout = 2; REG Node = 'debouncer:inst18|contador_para_deboucing:inst4|inst30'
+            Info: 15: + IC(1.900 ns) + CELL(1.100 ns) = 35.800 ns; Loc. = LC2_D44; Fanout = 2; REG Node = 'debouncer:inst18|contador_para_deboucing:inst4|inst31'
+            Info: 16: + IC(1.700 ns) + CELL(1.100 ns) = 38.600 ns; Loc. = LC2_D46; Fanout = 2; REG Node = 'debouncer:inst18|contador_para_deboucing:inst4|inst32'
+            Info: 17: + IC(1.800 ns) + CELL(1.100 ns) = 41.500 ns; Loc. = LC1_D52; Fanout = 2; REG Node = 'debouncer:inst18|contador_para_deboucing:inst4|inst33'
+            Info: 18: + IC(2.000 ns) + CELL(1.100 ns) = 44.600 ns; Loc. = LC2_D35; Fanout = 2; REG Node = 'debouncer:inst18|contador_para_deboucing:inst4|inst34'
+            Info: 19: + IC(0.200 ns) + CELL(0.000 ns) = 44.800 ns; Loc. = LC1_D35; Fanout = 19; REG Node = 'debouncer:inst18|contador_para_deboucing:inst4|inst35'
+            Info: Total cell delay = 19.200 ns ( 42.86 % )
+            Info: Total interconnect delay = 25.600 ns ( 57.14 % )
+        Info: - Shortest clock path from clock "CLK25" to source register is 1.900 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.500 ns) = 0.500 ns; Loc. = PIN_184; Fanout = 4; CLK Node = 'CLK25'
+            Info: 2: + IC(1.400 ns) + CELL(0.000 ns) = 1.900 ns; Loc. = LC6_D37; Fanout = 2; REG Node = 'debouncer:inst18|inst'
+            Info: Total cell delay = 0.500 ns ( 26.32 % )
+            Info: Total interconnect delay = 1.400 ns ( 73.68 % )
+    Info: - Micro clock to output delay of source is 1.100 ns
+    Info: - Shortest register to register delay is 3.400 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC6_D37; Fanout = 2; REG Node = 'debouncer:inst18|inst'
+        Info: 2: + IC(0.200 ns) + CELL(1.700 ns) = 1.900 ns; Loc. = LC1_D37; Fanout = 18; COMB Node = 'debouncer:inst18|inst3'
+        Info: 3: + IC(1.200 ns) + CELL(0.300 ns) = 3.400 ns; Loc. = LC1_D35; Fanout = 19; REG Node = 'debouncer:inst18|contador_para_deboucing:inst4|inst35'
+        Info: Total cell delay = 2.000 ns ( 58.82 % )
+        Info: Total interconnect delay = 1.400 ns ( 41.18 % )
+    Info: + Micro hold delay of destination is 0.900 ns
+Info: tsu for register "registrador:inst|inst6" (data pin = "LSB", clock pin = "BH1") is 7.700 ns
+    Info: + Longest pin to register delay is 8.900 ns
+        Info: 1: + IC(0.000 ns) + CELL(3.100 ns) = 3.100 ns; Loc. = PIN_86; Fanout = 1; PIN Node = 'LSB'
+        Info: 2: + IC(4.800 ns) + CELL(1.000 ns) = 8.900 ns; Loc. = LC2_D2; Fanout = 9; REG Node = 'registrador:inst|inst6'
+        Info: Total cell delay = 4.100 ns ( 46.07 % )
+        Info: Total interconnect delay = 4.800 ns ( 53.93 % )
+    Info: + Micro setup delay of destination is 0.700 ns
+    Info: - Shortest clock path from clock "BH1" to destination register is 1.900 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.500 ns) = 0.500 ns; Loc. = PIN_79; Fanout = 8; CLK Node = 'BH1'
+        Info: 2: + IC(1.400 ns) + CELL(0.000 ns) = 1.900 ns; Loc. = LC2_D2; Fanout = 9; REG Node = 'registrador:inst|inst6'
         Info: Total cell delay = 0.500 ns ( 26.32 % )
         Info: Total interconnect delay = 1.400 ns ( 73.68 % )
-Info: tco from clock "pin_name" to destination pin "c" through register "contador:inst1|inst1" is 88.800 ns
-    Info: + Longest clock path from clock "pin_name" to source register is 67.800 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.500 ns) = 0.500 ns; Loc. = PIN_184; Fanout = 1; CLK Node = 'pin_name'
-        Info: 2: + IC(1.400 ns) + CELL(1.100 ns) = 3.000 ns; Loc. = LC1_H31; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst'
-        Info: 3: + IC(2.000 ns) + CELL(1.100 ns) = 6.100 ns; Loc. = LC1_H42; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst1'
-        Info: 4: + IC(1.800 ns) + CELL(1.100 ns) = 9.000 ns; Loc. = LC1_H34; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst2'
-        Info: 5: + IC(1.800 ns) + CELL(1.100 ns) = 11.900 ns; Loc. = LC1_H39; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst3'
-        Info: 6: + IC(1.800 ns) + CELL(1.100 ns) = 14.800 ns; Loc. = LC1_H27; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst4'
-        Info: 7: + IC(1.900 ns) + CELL(1.100 ns) = 17.800 ns; Loc. = LC1_H3; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst5'
-        Info: 8: + IC(2.200 ns) + CELL(1.100 ns) = 21.100 ns; Loc. = LC1_H14; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst6'
-        Info: 9: + IC(2.000 ns) + CELL(1.100 ns) = 24.200 ns; Loc. = LC1_H19; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst7'
-        Info: 10: + IC(1.900 ns) + CELL(1.100 ns) = 27.200 ns; Loc. = LC1_H22; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst8'
-        Info: 11: + IC(2.000 ns) + CELL(1.100 ns) = 30.300 ns; Loc. = LC1_H2; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst9'
-        Info: 12: + IC(2.500 ns) + CELL(1.100 ns) = 33.900 ns; Loc. = LC4_H27; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst10'
-        Info: 13: + IC(4.000 ns) + CELL(1.100 ns) = 39.000 ns; Loc. = LC1_K52; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst11'
-        Info: 14: + IC(2.100 ns) + CELL(1.100 ns) = 42.200 ns; Loc. = LC1_K29; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst12'
-        Info: 15: + IC(1.800 ns) + CELL(1.100 ns) = 45.100 ns; Loc. = LC1_K30; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst13'
-        Info: 16: + IC(1.900 ns) + CELL(1.100 ns) = 48.100 ns; Loc. = LC1_K36; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst14'
-        Info: 17: + IC(3.700 ns) + CELL(1.100 ns) = 52.900 ns; Loc. = LC1_J49; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst15'
-        Info: 18: + IC(1.700 ns) + CELL(1.100 ns) = 55.700 ns; Loc. = LC1_J47; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst16'
-        Info: 19: + IC(1.800 ns) + CELL(1.100 ns) = 58.600 ns; Loc. = LC1_J39; Fanout = 2; REG Node = 'divisor_de_clock:inst4|inst17'
-        Info: 20: + IC(1.700 ns) + CELL(1.100 ns) = 61.400 ns; Loc. = LC1_J38; Fanout = 14; REG Node = 'contador:inst1|inst'
-        Info: 21: + IC(6.400 ns) + CELL(0.000 ns) = 67.800 ns; Loc. = LC3_I34; Fanout = 12; REG Node = 'contador:inst1|inst1'
-        Info: Total cell delay = 21.400 ns ( 31.56 % )
-        Info: Total interconnect delay = 46.400 ns ( 68.44 % )
+Info: tco from clock "CLOCK" to destination pin "c" through register "contador:inst1|inst1" is 78.600 ns
+    Info: + Longest clock path from clock "CLOCK" to source register is 58.800 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.500 ns) = 0.500 ns; Loc. = PIN_182; Fanout = 1; CLK Node = 'CLOCK'
+        Info: 2: + IC(1.400 ns) + CELL(1.100 ns) = 3.000 ns; Loc. = LC1_K47; Fanout = 2; REG Node = 'divisor_de_clock:inst13|inst'
+        Info: 3: + IC(1.800 ns) + CELL(1.100 ns) = 5.900 ns; Loc. = LC1_K41; Fanout = 2; REG Node = 'divisor_de_clock:inst13|inst1'
+        Info: 4: + IC(1.700 ns) + CELL(1.100 ns) = 8.700 ns; Loc. = LC2_K43; Fanout = 2; REG Node = 'divisor_de_clock:inst13|inst2'
+        Info: 5: + IC(0.200 ns) + CELL(1.100 ns) = 10.000 ns; Loc. = LC1_K43; Fanout = 2; REG Node = 'divisor_de_clock:inst13|inst3'
+        Info: 6: + IC(4.200 ns) + CELL(1.100 ns) = 15.300 ns; Loc. = LC1_B37; Fanout = 2; REG Node = 'divisor_de_clock:inst13|inst4'
+        Info: 7: + IC(1.900 ns) + CELL(1.100 ns) = 18.300 ns; Loc. = LC1_B52; Fanout = 2; REG Node = 'divisor_de_clock:inst13|inst5'
+        Info: 8: + IC(2.100 ns) + CELL(1.100 ns) = 21.500 ns; Loc. = LC2_B30; Fanout = 2; REG Node = 'divisor_de_clock:inst13|inst6'
+        Info: 9: + IC(0.200 ns) + CELL(1.100 ns) = 22.800 ns; Loc. = LC1_B30; Fanout = 2; REG Node = 'divisor_de_clock:inst13|inst7'
+        Info: 10: + IC(2.000 ns) + CELL(1.100 ns) = 25.900 ns; Loc. = LC1_B46; Fanout = 2; REG Node = 'divisor_de_clock:inst13|inst8'
+        Info: 11: + IC(1.800 ns) + CELL(1.100 ns) = 28.800 ns; Loc. = LC2_B37; Fanout = 2; REG Node = 'divisor_de_clock:inst13|inst9'
+        Info: 12: + IC(1.700 ns) + CELL(1.100 ns) = 31.600 ns; Loc. = LC1_B33; Fanout = 2; REG Node = 'divisor_de_clock:inst13|inst10'
+        Info: 13: + IC(1.200 ns) + CELL(1.100 ns) = 33.900 ns; Loc. = LC2_B45; Fanout = 2; REG Node = 'divisor_de_clock:inst13|inst11'
+        Info: 14: + IC(1.900 ns) + CELL(1.100 ns) = 36.900 ns; Loc. = LC1_B27; Fanout = 2; REG Node = 'divisor_de_clock:inst13|inst12'
+        Info: 15: + IC(2.100 ns) + CELL(1.100 ns) = 40.100 ns; Loc. = LC1_B47; Fanout = 2; REG Node = 'divisor_de_clock:inst13|inst13'
+        Info: 16: + IC(1.700 ns) + CELL(1.100 ns) = 42.900 ns; Loc. = LC1_B45; Fanout = 2; REG Node = 'divisor_de_clock:inst13|inst14'
+        Info: 17: + IC(2.500 ns) + CELL(1.100 ns) = 46.500 ns; Loc. = LC1_B10; Fanout = 2; REG Node = 'divisor_de_clock:inst13|inst15'
+        Info: 18: + IC(1.800 ns) + CELL(1.100 ns) = 49.400 ns; Loc. = LC1_B2; Fanout = 2; REG Node = 'divisor_de_clock:inst13|inst16'
+        Info: 19: + IC(4.200 ns) + CELL(1.100 ns) = 54.700 ns; Loc. = LC1_D19; Fanout = 2; REG Node = 'divisor_de_clock:inst13|inst17'
+        Info: 20: + IC(1.200 ns) + CELL(1.100 ns) = 57.000 ns; Loc. = LC1_D22; Fanout = 14; REG Node = 'contador:inst1|inst'
+        Info: 21: + IC(1.800 ns) + CELL(0.000 ns) = 58.800 ns; Loc. = LC1_D18; Fanout = 12; REG Node = 'contador:inst1|inst1'
+        Info: Total cell delay = 21.400 ns ( 36.39 % )
+        Info: Total interconnect delay = 37.400 ns ( 63.61 % )
     Info: + Micro clock to output delay of source is 1.100 ns
-    Info: + Longest register to pin delay is 19.900 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC3_I34; Fanout = 12; REG Node = 'contador:inst1|inst1'
-        Info: 2: + IC(0.200 ns) + CELL(1.900 ns) = 2.100 ns; Loc. = LC1_I34; Fanout = 3; COMB Node = 'multiplexador:inst5|inst39~0'
-        Info: 3: + IC(2.000 ns) + CELL(2.000 ns) = 6.100 ns; Loc. = LC3_I48; Fanout = 1; COMB Node = 'multiplexador:inst5|inst18~2'
-        Info: 4: + IC(1.900 ns) + CELL(2.000 ns) = 10.000 ns; Loc. = LC6_I34; Fanout = 1; COMB Node = 'multiplexador:inst5|inst18~3'
-        Info: 5: + IC(1.400 ns) + CELL(8.500 ns) = 19.900 ns; Loc. = PIN_67; Fanout = 0; PIN Node = 'c'
-        Info: Total cell delay = 14.400 ns ( 72.36 % )
-        Info: Total interconnect delay = 5.500 ns ( 27.64 % )
-Info: th for register "registrador:inst9|inst4" (data pin = "Operacao", clock pin = "BH2") is -0.100 ns
-    Info: + Longest clock path from clock "BH2" to destination register is 1.900 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.500 ns) = 0.500 ns; Loc. = PIN_183; Fanout = 5; CLK Node = 'BH2'
-        Info: 2: + IC(1.400 ns) + CELL(0.000 ns) = 1.900 ns; Loc. = LC6_I50; Fanout = 2; REG Node = 'registrador:inst9|inst4'
+    Info: + Longest register to pin delay is 18.700 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC1_D18; Fanout = 12; REG Node = 'contador:inst1|inst1'
+        Info: 2: + IC(1.900 ns) + CELL(1.900 ns) = 3.800 ns; Loc. = LC6_D22; Fanout = 3; COMB Node = 'multiplexador:inst5|inst42~0'
+        Info: 3: + IC(1.200 ns) + CELL(2.200 ns) = 7.200 ns; Loc. = LC8_D13; Fanout = 1; COMB Node = 'multiplexador:inst5|inst18~2'
+        Info: 4: + IC(0.200 ns) + CELL(2.000 ns) = 9.400 ns; Loc. = LC1_D13; Fanout = 1; COMB Node = 'multiplexador:inst5|inst18~3'
+        Info: 5: + IC(0.700 ns) + CELL(8.600 ns) = 18.700 ns; Loc. = PIN_135; Fanout = 0; PIN Node = 'c'
+        Info: Total cell delay = 14.700 ns ( 78.61 % )
+        Info: Total interconnect delay = 4.000 ns ( 21.39 % )
+Info: th for register "registrador:inst10|inst4" (data pin = "pin_name5", clock pin = "BH1") is -0.100 ns
+    Info: + Longest clock path from clock "BH1" to destination register is 1.900 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.500 ns) = 0.500 ns; Loc. = PIN_79; Fanout = 8; CLK Node = 'BH1'
+        Info: 2: + IC(1.400 ns) + CELL(0.000 ns) = 1.900 ns; Loc. = LC6_D5; Fanout = 9; REG Node = 'registrador:inst10|inst4'
         Info: Total cell delay = 0.500 ns ( 26.32 % )
         Info: Total interconnect delay = 1.400 ns ( 73.68 % )
     Info: + Micro hold delay of destination is 0.900 ns
     Info: - Shortest pin to register delay is 2.900 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.500 ns) = 0.500 ns; Loc. = PIN_78; Fanout = 7; PIN Node = 'Operacao'
-        Info: 2: + IC(1.400 ns) + CELL(1.000 ns) = 2.900 ns; Loc. = LC6_I50; Fanout = 2; REG Node = 'registrador:inst9|inst4'
+        Info: 1: + IC(0.000 ns) + CELL(0.500 ns) = 0.500 ns; Loc. = PIN_80; Fanout = 1; PIN Node = 'pin_name5'
+        Info: 2: + IC(1.400 ns) + CELL(1.000 ns) = 2.900 ns; Loc. = LC6_D5; Fanout = 9; REG Node = 'registrador:inst10|inst4'
         Info: Total cell delay = 1.500 ns ( 51.72 % )
         Info: Total interconnect delay = 1.400 ns ( 48.28 % )
-Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 181 megabytes
-    Info: Processing ended: Wed Jul 31 01:38:22 2019
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 178 megabytes
+    Info: Processing ended: Wed Jul 31 15:59:30 2019
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

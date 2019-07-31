@@ -166,7 +166,7 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 0 536 168 552)
+	(rect 0 376 168 392)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
 	(text "Operacao" (rect 5 0 52 12)(font "Arial" ))
 	(pt 168 8)
@@ -198,9 +198,25 @@ applicable agreement for further details.
 )
 (pin
 	(input)
+	(rect 0 424 168 440)
+	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
+	(text "CLK25" (rect 5 0 38 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 92 12)(pt 117 12)(line_width 1))
+		(line (pt 92 4)(pt 117 4)(line_width 1))
+		(line (pt 121 8)(pt 168 8)(line_width 1))
+		(line (pt 92 12)(pt 92 4)(line_width 1))
+		(line (pt 117 4)(pt 121 8)(line_width 1))
+		(line (pt 117 12)(pt 121 8)(line_width 1))
+	)
+	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
 	(rect 320 616 488 632)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
-	(text "pin_name" (rect 9 0 56 12)(font "Arial" ))
+	(text "CLOCK" (rect 5 0 42 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 92 12)(pt 117 12)(line_width 1))
@@ -1503,6 +1519,35 @@ applicable agreement for further details.
 		(rectangle (rect 16 16 136 80)(line_width 1))
 	)
 )
+(symbol
+	(rect 352 352 488 448)
+	(text "debouncer" (rect 5 0 66 14)(font "Arial" (font_size 8)))
+	(text "inst18" (rect 8 80 37 92)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "Botao" (rect 0 0 33 14)(font "Arial" (font_size 8)))
+		(text "Botao" (rect 21 27 54 41)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32)(line_width 1))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "CLK_25Mhz" (rect 0 0 68 14)(font "Arial" (font_size 8)))
+		(text "CLK_25Mhz" (rect 21 43 89 57)(font "Arial" (font_size 8)))
+		(line (pt 0 48)(pt 16 48)(line_width 1))
+	)
+	(port
+		(pt 136 32)
+		(output)
+		(text "sV" (rect 0 0 16 14)(font "Arial" (font_size 8)))
+		(text "sV" (rect 99 27 115 41)(font "Arial" (font_size 8)))
+		(line (pt 136 32)(pt 120 32)(line_width 1))
+	)
+	(drawing
+		(rectangle (rect 16 16 120 80)(line_width 1))
+	)
+)
 (connector
 	(pt 168 352)
 	(pt 320 352)
@@ -2184,22 +2229,6 @@ applicable agreement for further details.
 	(pt 168 576)
 )
 (connector
-	(pt 168 544)
-	(pt 176 544)
-)
-(connector
-	(pt 176 544)
-	(pt 176 560)
-)
-(connector
-	(pt 720 560)
-	(pt 176 560)
-)
-(connector
-	(pt 720 184)
-	(pt 720 560)
-)
-(connector
 	(pt 1064 120)
 	(pt 1064 248)
 )
@@ -2426,6 +2455,30 @@ applicable agreement for further details.
 (connector
 	(pt 744 624)
 	(pt 912 624)
+)
+(connector
+	(pt 168 384)
+	(pt 352 384)
+)
+(connector
+	(pt 352 400)
+	(pt 216 400)
+)
+(connector
+	(pt 216 400)
+	(pt 216 432)
+)
+(connector
+	(pt 216 432)
+	(pt 168 432)
+)
+(connector
+	(pt 720 384)
+	(pt 488 384)
+)
+(connector
+	(pt 720 184)
+	(pt 720 384)
 )
 (junction (pt 320 232))
 (junction (pt 560 8))

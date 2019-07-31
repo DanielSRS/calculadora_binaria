@@ -10,10 +10,11 @@ MSB2 => registrador:inst10.pin_name
 pin_name5 => registrador:inst10.pin_name1
 pin_name6 => registrador:inst10.pin_name2
 LSB2 => registrador:inst10.pin_name3
-Operacao => soma_e_subtracao:inst27.Operacao
+Operacao => debouncer:inst18.Botao
+CLK25 => debouncer:inst18.CLK_25Mhz
 BH2 => registrador:inst9.pin_name4
 BH2 => registrador:inst11.pin_name4
-pin_name => divisor_de_clock:inst4.CLK
+CLOCK => divisor_de_clock:inst13.CLK
 b <= multiplexador:inst5.pin_name1
 c <= multiplexador:inst5.pin_name2
 d <= multiplexador:inst5.pin_name3
@@ -291,6 +292,56 @@ pin_name10 <= inst6.DB_MAX_OUTPUT_PORT_TYPE
 pin_name3 => inst6.DATAIN
 
 
+|calculadora_binaria|debouncer:inst18
+sV <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+CLK_25Mhz => inst2.CLK
+CLK_25Mhz => inst.CLK
+CLK_25Mhz => inst1.CLK
+CLK_25Mhz => contador_para_deboucing:inst4.CLK
+Botao => inst.DATAIN
+
+
+|calculadora_binaria|debouncer:inst18|contador_para_deboucing:inst4
+sC <= inst35.DB_MAX_OUTPUT_PORT_TYPE
+CLK => inst.CLK
+SCLR => inst.ACLR
+SCLR => inst19.ACLR
+SCLR => inst20.ACLR
+SCLR => inst21.ACLR
+SCLR => inst22.ACLR
+SCLR => inst23.ACLR
+SCLR => inst27.ACLR
+SCLR => inst24.ACLR
+SCLR => inst25.ACLR
+SCLR => inst26.ACLR
+SCLR => inst28.ACLR
+SCLR => inst29.ACLR
+SCLR => inst30.ACLR
+SCLR => inst31.ACLR
+SCLR => inst32.ACLR
+SCLR => inst33.ACLR
+SCLR => inst34.ACLR
+SCLR => inst35.ACLR
+ENA => inst.ENA
+ENA => inst19.ENA
+ENA => inst20.ENA
+ENA => inst21.ENA
+ENA => inst22.ENA
+ENA => inst23.ENA
+ENA => inst27.ENA
+ENA => inst24.ENA
+ENA => inst25.ENA
+ENA => inst26.ENA
+ENA => inst28.ENA
+ENA => inst29.ENA
+ENA => inst30.ENA
+ENA => inst31.ENA
+ENA => inst32.ENA
+ENA => inst33.ENA
+ENA => inst34.ENA
+ENA => inst35.ENA
+
+
 |calculadora_binaria|registrador:inst11
 pin_name7 <= inst.DB_MAX_OUTPUT_PORT_TYPE
 pin_name4 => inst.CLK
@@ -360,7 +411,7 @@ CLKd => inst.CLK
 sClsb <= inst.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|calculadora_binaria|divisor_de_clock:inst4
+|calculadora_binaria|divisor_de_clock:inst13
 CLK_Dividido <= inst17.DB_MAX_OUTPUT_PORT_TYPE
 CLK => inst.CLK
 

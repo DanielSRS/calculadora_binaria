@@ -82,26 +82,6 @@ contador:inst1
 
 # end
 # entity
-divisor_de_clock
-# storage
-db|calculadora_binaria.(4).cnf
-db|calculadora_binaria.(4).cnf
-# case_insensitive
-# source_file
-divisor_de_clock.bdf
-1d4dac202ca73c2864915d0f44ed58d
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-divisor_de_clock:inst4
-}
-# macro_sequence
-
-# end
-# entity
 soma_e_subtracao
 # storage
 db|calculadora_binaria.(5).cnf
@@ -186,26 +166,6 @@ multiplexador:inst5
 
 # end
 # entity
-calculadora_binaria
-# storage
-db|calculadora_binaria.(0).cnf
-db|calculadora_binaria.(0).cnf
-# case_insensitive
-# source_file
-calculadora_binaria.bdf
-732fdb59b1b6c8f53f91d5cc25213da1
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-|
-}
-# macro_sequence
-
-# end
-# entity
 dec_result_dezena
 # storage
 db|calculadora_binaria.(9).cnf
@@ -221,6 +181,86 @@ AUTO
 }
 # hierarchies {
 dec_result_dezena:inst2
+}
+# macro_sequence
+
+# end
+# entity
+debouncer
+# storage
+db|calculadora_binaria.(4).cnf
+db|calculadora_binaria.(4).cnf
+# case_insensitive
+# source_file
+debouncer.bdf
+acd6894a6ef7bea7f2512c26dcb28b26
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+debouncer:inst18
+}
+# macro_sequence
+
+# end
+# entity
+calculadora_binaria
+# storage
+db|calculadora_binaria.(0).cnf
+db|calculadora_binaria.(0).cnf
+# case_insensitive
+# source_file
+calculadora_binaria.bdf
+4ff14630f0dab36487281467bc5be57
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+contador_para_deboucing
+# storage
+db|calculadora_binaria.(10).cnf
+db|calculadora_binaria.(10).cnf
+# case_insensitive
+# source_file
+contador_para_deboucing.bdf
+3b16bdf07541ede3c3e1c4d5c28e882
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+debouncer:inst18|contador_para_deboucing:inst4
+}
+# macro_sequence
+
+# end
+# entity
+divisor_de_clock
+# storage
+db|calculadora_binaria.(11).cnf
+db|calculadora_binaria.(11).cnf
+# case_insensitive
+# source_file
+divisor_de_clock.bdf
+c74671e41ba6ced9101d3cf29b3efa39
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+divisor_de_clock:inst13
 }
 # macro_sequence
 
