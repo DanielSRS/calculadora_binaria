@@ -1,0 +1,209 @@
+Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+2
+51
+OFF
+OFF
+OFF
+ON
+ON
+OFF
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+registrador
+# storage
+db|calculadora_binaria.(1).cnf
+db|calculadora_binaria.(1).cnf
+# case_insensitive
+# source_file
+registrador.bdf
+7f4b94d7886590d71cd93f40107939a0
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+registrador:inst
+registrador:inst10
+registrador:inst11
+registrador:inst9
+}
+# macro_sequence
+
+# end
+# entity
+demultiplexador
+# storage
+db|calculadora_binaria.(2).cnf
+db|calculadora_binaria.(2).cnf
+# case_insensitive
+# source_file
+demultiplexador.bdf
+1f6a8a1e8c987426b0b96cc67b88af36
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+demultiplexador:inst3
+}
+# macro_sequence
+
+# end
+# entity
+contador
+# storage
+db|calculadora_binaria.(3).cnf
+db|calculadora_binaria.(3).cnf
+# case_insensitive
+# source_file
+contador.bdf
+fda8515b3290636f93d61b3ba478b93f
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+contador:inst1
+}
+# macro_sequence
+
+# end
+# entity
+divisor_de_clock
+# storage
+db|calculadora_binaria.(4).cnf
+db|calculadora_binaria.(4).cnf
+# case_insensitive
+# source_file
+divisor_de_clock.bdf
+1d4dac202ca73c2864915d0f44ed58d
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+divisor_de_clock:inst4
+}
+# macro_sequence
+
+# end
+# entity
+soma_e_subtracao
+# storage
+db|calculadora_binaria.(5).cnf
+db|calculadora_binaria.(5).cnf
+# case_insensitive
+# source_file
+soma_e_subtracao.bdf
+e49fad615be1e34e14e0d3b95d9561
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+soma_e_subtracao:inst27
+}
+# macro_sequence
+
+# end
+# entity
+somador_completo
+# storage
+db|calculadora_binaria.(6).cnf
+db|calculadora_binaria.(6).cnf
+# case_insensitive
+# source_file
+somador_completo.bdf
+68e3c6c4955af6ded2bb44d9328639
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+soma_e_subtracao:inst27|somador_completo:inst12
+soma_e_subtracao:inst27|somador_completo:inst15
+soma_e_subtracao:inst27|somador_completo:inst14
+soma_e_subtracao:inst27|somador_completo:inst13
+}
+# macro_sequence
+
+# end
+# entity
+decodificador_parcela
+# storage
+db|calculadora_binaria.(7).cnf
+db|calculadora_binaria.(7).cnf
+# case_insensitive
+# source_file
+decodificador_parcela.bdf
+6f2f0b8efe56f35c38f02ebc6f783
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+decodificador_parcela:inst25
+decodificador_parcela:inst26
+}
+# macro_sequence
+
+# end
+# entity
+multiplexador
+# storage
+db|calculadora_binaria.(8).cnf
+db|calculadora_binaria.(8).cnf
+# case_insensitive
+# source_file
+multiplexador.bdf
+bc38e6163bb71781a4a95b59bc87f090
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+multiplexador:inst5
+}
+# macro_sequence
+
+# end
+# entity
+calculadora_binaria
+# storage
+db|calculadora_binaria.(0).cnf
+db|calculadora_binaria.(0).cnf
+# case_insensitive
+# source_file
+calculadora_binaria.bdf
+7a3d5c07ce7b8c871a485eeb6e7e131
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# complete
+

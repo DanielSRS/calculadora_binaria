@@ -48,3 +48,9 @@ set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name BDF_FILE calculadora_binaria.bdf
 set_global_assignment -name BDF_FILE multiplexador.bdf
 set_global_assignment -name BDF_FILE divisor_de_clock.bdf
+set_global_assignment -name BDF_FILE registrador.bdf
+set_global_assignment -name BDF_FILE demultiplexador.bdf
+set_global_assignment -name BDF_FILE decodificador_parcela.bdf
+set_global_assignment -name BDF_FILE contador.bdf
+set_global_assignment -name BDF_FILE somador_completo.bdf
+set_global_assignment -name BDF_FILE soma_e_subtracao.bdf

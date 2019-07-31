@@ -61,8 +61,8 @@ applicable agreement for further details.
 	(port
 		(pt 96 48)
 		(output)
-		(text "B" (rect 0 0 8 14)(font "Arial" (font_size 8)))
-		(text "B" (rect 67 43 75 57)(font "Arial" (font_size 8)))
+		(text "sB" (rect 0 0 15 14)(font "Arial" (font_size 8)))
+		(text "sB" (rect 60 43 75 57)(font "Arial" (font_size 8)))
 		(line (pt 96 48)(pt 80 48)(line_width 1))
 	)
 	(port
