@@ -197,6 +197,22 @@ applicable agreement for further details.
 	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
 )
 (pin
+	(input)
+	(rect 400 616 568 632)
+	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
+	(text "CLK" (rect 5 0 26 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 92 12)(pt 117 12)(line_width 1))
+		(line (pt 92 4)(pt 117 4)(line_width 1))
+		(line (pt 121 8)(pt 168 8)(line_width 1))
+		(line (pt 92 12)(pt 92 4)(line_width 1))
+		(line (pt 117 4)(pt 121 8)(line_width 1))
+		(line (pt 117 12)(pt 121 8)(line_width 1))
+	)
+	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
+)
+(pin
 	(output)
 	(rect 1808 -184 1984 -168)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
@@ -1406,6 +1422,57 @@ applicable agreement for further details.
 		(rectangle (rect 16 16 80 112)(line_width 1))
 	)
 )
+(symbol
+	(rect 688 592 832 688)
+	(text "divisorDeFrequencia" (rect 5 0 121 14)(font "Arial" (font_size 8)))
+	(text "inst18" (rect 8 80 37 92)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "CLK" (rect 0 0 23 14)(font "Arial" (font_size 8)))
+		(text "CLK" (rect 21 27 44 41)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32)(line_width 1))
+	)
+	(port
+		(pt 144 32)
+		(output)
+		(text "CLKdividido" (rect 0 0 66 14)(font "Arial" (font_size 8)))
+		(text "CLKdividido" (rect 57 27 123 41)(font "Arial" (font_size 8)))
+		(line (pt 144 32)(pt 128 32)(line_width 1))
+	)
+	(drawing
+		(rectangle (rect 16 16 128 80)(line_width 1))
+	)
+)
+(symbol
+	(rect 944 592 1064 688)
+	(text "contador" (rect 5 0 55 14)(font "Arial" (font_size 8)))
+	(text "inst19" (rect 8 80 37 92)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "CLKd" (rect 0 0 30 14)(font "Arial" (font_size 8)))
+		(text "CLKd" (rect 21 27 51 41)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32)(line_width 1))
+	)
+	(port
+		(pt 120 32)
+		(output)
+		(text "sCmsb" (rect 0 0 38 14)(font "Arial" (font_size 8)))
+		(text "sCmsb" (rect 61 27 99 41)(font "Arial" (font_size 8)))
+		(line (pt 120 32)(pt 104 32)(line_width 1))
+	)
+	(port
+		(pt 120 48)
+		(output)
+		(text "sClsb" (rect 0 0 31 14)(font "Arial" (font_size 8)))
+		(text "sClsb" (rect 68 43 99 57)(font "Arial" (font_size 8)))
+		(line (pt 120 48)(pt 104 48)(line_width 1))
+	)
+	(drawing
+		(rectangle (rect 16 16 104 80)(line_width 1))
+	)
+)
 (connector
 	(pt 152 8)
 	(pt 320 8)
@@ -2035,14 +2102,6 @@ applicable agreement for further details.
 	(pt 1560 536)
 )
 (connector
-	(pt 1456 328)
-	(pt 1456 520)
-)
-(connector
-	(pt 1456 520)
-	(pt 1456 640)
-)
-(connector
 	(pt 1472 344)
 	(pt 1472 536)
 )
@@ -2249,6 +2308,30 @@ applicable agreement for further details.
 (connector
 	(pt 1304 40)
 	(pt 1304 56)
+)
+(connector
+	(pt 568 624)
+	(pt 688 624)
+)
+(connector
+	(pt 832 624)
+	(pt 944 624)
+)
+(connector
+	(pt 1456 624)
+	(pt 1064 624)
+)
+(connector
+	(pt 1456 328)
+	(pt 1456 520)
+)
+(connector
+	(pt 1456 520)
+	(pt 1456 624)
+)
+(connector
+	(pt 1472 640)
+	(pt 1064 640)
 )
 (junction (pt 304 264))
 (junction (pt 720 272))
