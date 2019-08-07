@@ -1,0 +1,136 @@
+<kpt_db name="calculadoraBinaria.map_bb" kpt_version="1.1">
+  <key_points_set type="reference" hier_sep="/">
+    <key_point id="1" type="register">
+      <name>inst26/inst4/inst20</name>
+      <attributes_list>
+        <attribute name="_KPT_INT_ELIM_STAT_">NF</attribute>
+      </attributes_list>
+    </key_point>
+    <key_point id="2" type="register">
+      <name>inst26/inst4/inst21</name>
+      <attributes_list>
+        <attribute name="_KPT_INT_ELIM_STAT_">NF</attribute>
+      </attributes_list>
+    </key_point>
+    <key_point id="3" type="register">
+      <name>inst26/inst4/inst22</name>
+      <attributes_list>
+        <attribute name="_KPT_INT_ELIM_STAT_">NF</attribute>
+      </attributes_list>
+    </key_point>
+    <key_point id="4" type="register">
+      <name>inst26/inst4/inst23</name>
+      <attributes_list>
+        <attribute name="_KPT_INT_ELIM_STAT_">NF</attribute>
+      </attributes_list>
+    </key_point>
+    <key_point id="5" type="register">
+      <name>inst26/inst4/inst</name>
+      <attributes_list>
+        <attribute name="_KPT_INT_ELIM_STAT_">NF</attribute>
+      </attributes_list>
+    </key_point>
+    <key_point id="6" type="register">
+      <name>inst26/inst</name>
+      <attributes_list>
+        <attribute name="_KPT_INT_ELIM_STAT_">NF</attribute>
+      </attributes_list>
+    </key_point>
+    <key_point id="7" type="register">
+      <name>inst26/inst1</name>
+      <attributes_list>
+        <attribute name="_KPT_INT_ELIM_STAT_">NF</attribute>
+      </attributes_list>
+    </key_point>
+    <key_point id="8" type="register">
+      <name>inst26/inst2</name>
+      <attributes_list>
+        <attribute name="_KPT_INT_ELIM_STAT_">NF</attribute>
+      </attributes_list>
+    </key_point>
+    <key_point id="9" type="register">
+      <name>inst26/inst4/inst35</name>
+      <attributes_list>
+        <attribute name="_KPT_INT_ELIM_STAT_">NF</attribute>
+      </attributes_list>
+    </key_point>
+    <key_point id="10" type="register">
+      <name>inst26/inst4/inst34</name>
+      <attributes_list>
+        <attribute name="_KPT_INT_ELIM_STAT_">NF</attribute>
+      </attributes_list>
+    </key_point>
+    <key_point id="11" type="register">
+      <name>inst26/inst4/inst19</name>
+      <attributes_list>
+        <attribute name="_KPT_INT_ELIM_STAT_">NF</attribute>
+      </attributes_list>
+    </key_point>
+    <key_point id="12" type="register">
+      <name>inst26/inst4/inst24</name>
+      <attributes_list>
+        <attribute name="_KPT_INT_ELIM_STAT_">NF</attribute>
+      </attributes_list>
+    </key_point>
+    <key_point id="13" type="register">
+      <name>inst26/inst4/inst25</name>
+      <attributes_list>
+        <attribute name="_KPT_INT_ELIM_STAT_">NF</attribute>
+      </attributes_list>
+    </key_point>
+    <key_point id="14" type="register">
+      <name>inst26/inst4/inst26</name>
+      <attributes_list>
+        <attribute name="_KPT_INT_ELIM_STAT_">NF</attribute>
+      </attributes_list>
+    </key_point>
+    <key_point id="15" type="register">
+      <name>inst26/inst4/inst27</name>
+      <attributes_list>
+        <attribute name="_KPT_INT_ELIM_STAT_">NF</attribute>
+      </attributes_list>
+    </key_point>
+    <key_point id="16" type="register">
+      <name>inst26/inst4/inst28</name>
+      <attributes_list>
+        <attribute name="_KPT_INT_ELIM_STAT_">NF</attribute>
+      </attributes_list>
+    </key_point>
+    <key_point id="17" type="register">
+      <name>inst26/inst4/inst29</name>
+      <attributes_list>
+        <attribute name="_KPT_INT_ELIM_STAT_">NF</attribute>
+      </attributes_list>
+    </key_point>
+    <key_point id="18" type="register">
+      <name>inst26/inst4/inst33</name>
+      <attributes_list>
+        <attribute name="_KPT_INT_ELIM_STAT_">NF</attribute>
+      </attributes_list>
+    </key_point>
+    <key_point id="19" type="register">
+      <name>inst26/inst4/inst32</name>
+      <attributes_list>
+        <attribute name="_KPT_INT_ELIM_STAT_">NF</attribute>
+      </attributes_list>
+    </key_point>
+    <key_point id="20" type="register">
+      <name>inst26/inst4/inst31</name>
+      <attributes_list>
+        <attribute name="_KPT_INT_ELIM_STAT_">NF</attribute>
+      </attributes_list>
+    </key_point>
+    <key_point id="21" type="register">
+      <name>inst26/inst4/inst30</name>
+      <attributes_list>
+        <attribute name="_KPT_INT_ELIM_STAT_">NF</attribute>
+      </attributes_list>
+    </key_point>
+  </key_points_set>
+  <key_points_set type="transition" hier_sep="|">
+  </key_points_set>
+  <key_points_set type="transformed" hier_sep="|">
+  </key_points_set>
+  <transformations_set hier_sep="|">
+  </transformations_set>
+</kpt_db>

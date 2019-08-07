@@ -1,0 +1,649 @@
+Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+2
+51
+OFF
+OFF
+OFF
+ON
+ON
+OFF
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+multiplexador
+# storage
+db|calculadoraBinaria.(1).cnf
+db|calculadoraBinaria.(1).cnf
+# case_insensitive
+# source_file
+multiplexador.bdf
+faa8ace9db7647cecc5fe3a44796fd4
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+multiplexador:inst3
+}
+# macro_sequence
+
+# end
+# entity
+decodificadorParcela
+# storage
+db|calculadoraBinaria.(2).cnf
+db|calculadoraBinaria.(2).cnf
+# case_insensitive
+# source_file
+decodificadorParcela.bdf
+abd850798ec46d5a95328d5d7165864
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+decodificadorParcela:inst15
+decodificadorParcela:inst16
+}
+# macro_sequence
+
+# end
+# entity
+decodificadorParcelaSaidaA
+# storage
+db|calculadoraBinaria.(3).cnf
+db|calculadoraBinaria.(3).cnf
+# case_insensitive
+# source_file
+decodificadorParcelaSaidaA.bdf
+b778cdcd8448539e0b739c1695cdee
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+decodificadorParcela:inst15|decodificadorParcelaSaidaA:inst
+decodificadorParcela:inst16|decodificadorParcelaSaidaA:inst
+}
+# macro_sequence
+
+# end
+# entity
+decodificadorParcelaSaidaB
+# storage
+db|calculadoraBinaria.(4).cnf
+db|calculadoraBinaria.(4).cnf
+# case_insensitive
+# source_file
+decodificadorParcelaSaidaB.bdf
+60ea4bf31280874ab6dfbb4ad1414f
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+decodificadorParcela:inst15|decodificadorParcelaSaidaB:inst1
+decodificadorParcela:inst16|decodificadorParcelaSaidaB:inst1
+}
+# macro_sequence
+
+# end
+# entity
+decodificadorParcelaSaidaD
+# storage
+db|calculadoraBinaria.(6).cnf
+db|calculadoraBinaria.(6).cnf
+# case_insensitive
+# source_file
+decodificadorParcelaSaidaD.bdf
+a3885435178a329e773217f32a3c9611
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+decodificadorParcela:inst15|decodificadorParcelaSaidaD:inst3
+decodificadorParcela:inst16|decodificadorParcelaSaidaD:inst3
+}
+# macro_sequence
+
+# end
+# entity
+decodificadorParcelaSaidaE
+# storage
+db|calculadoraBinaria.(7).cnf
+db|calculadoraBinaria.(7).cnf
+# case_insensitive
+# source_file
+decodificadorParcelaSaidaE.bdf
+d29288a59675abf4aeb3b20cd21eaa1
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+decodificadorParcela:inst15|decodificadorParcelaSaidaE:inst4
+decodificadorParcela:inst16|decodificadorParcelaSaidaE:inst4
+}
+# macro_sequence
+
+# end
+# entity
+decodificadorParcelaSaidaF
+# storage
+db|calculadoraBinaria.(8).cnf
+db|calculadoraBinaria.(8).cnf
+# case_insensitive
+# source_file
+decodificadorParcelaSaidaF.bdf
+ff2a75b02f6e2bbeb7e149aa45a306a
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+decodificadorParcela:inst15|decodificadorParcelaSaidaF:inst5
+decodificadorParcela:inst16|decodificadorParcelaSaidaF:inst5
+}
+# macro_sequence
+
+# end
+# entity
+decodificadorParcelaSaidaG
+# storage
+db|calculadoraBinaria.(9).cnf
+db|calculadoraBinaria.(9).cnf
+# case_insensitive
+# source_file
+decodificadorParcelaSaidaG.bdf
+e2f3acb66df0ddca87ca1bf081a2
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+decodificadorParcela:inst15|decodificadorParcelaSaidaG:inst6
+decodificadorParcela:inst16|decodificadorParcelaSaidaG:inst6
+}
+# macro_sequence
+
+# end
+# entity
+registrador
+# storage
+db|calculadoraBinaria.(10).cnf
+db|calculadoraBinaria.(10).cnf
+# case_insensitive
+# source_file
+registrador.bdf
+84c06ddc2439335f65fd6243f773373
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+registrador:inst
+registrador:inst13
+registrador:inst11
+registrador:inst14
+}
+# macro_sequence
+
+# end
+# entity
+Flip-flop_D
+# storage
+db|calculadoraBinaria.(11).cnf
+db|calculadoraBinaria.(11).cnf
+# case_insensitive
+# source_file
+Flip-flop_D.bdf
+acaf59321d394f67653934acde642771
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+registrador:inst|Flip-flop_D:inst
+registrador:inst|Flip-flop_D:inst1
+registrador:inst|Flip-flop_D:inst2
+registrador:inst|Flip-flop_D:inst3
+registrador:inst13|Flip-flop_D:inst
+registrador:inst13|Flip-flop_D:inst1
+registrador:inst13|Flip-flop_D:inst2
+registrador:inst13|Flip-flop_D:inst3
+registrador:inst11|Flip-flop_D:inst
+registrador:inst11|Flip-flop_D:inst1
+registrador:inst11|Flip-flop_D:inst2
+registrador:inst11|Flip-flop_D:inst3
+registrador:inst14|Flip-flop_D:inst
+registrador:inst14|Flip-flop_D:inst1
+registrador:inst14|Flip-flop_D:inst2
+registrador:inst14|Flip-flop_D:inst3
+}
+# macro_sequence
+
+# end
+# entity
+decodificadorSomaDezenaSinal
+# storage
+db|calculadoraBinaria.(12).cnf
+db|calculadoraBinaria.(12).cnf
+# case_insensitive
+# source_file
+decodificadorSomaDezenaSinal.bdf
+c41126f94c45e4df248bd7679fcef3af
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+decodificadorSomaDezenaSinal:inst1
+}
+# macro_sequence
+
+# end
+# entity
+somadorSubtrator
+# storage
+db|calculadoraBinaria.(13).cnf
+db|calculadoraBinaria.(13).cnf
+# case_insensitive
+# source_file
+somadorSubtrator.bdf
+dfc256b519c228eaa1f8404649e6f8
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+somadorSubtrator:inst12
+}
+# macro_sequence
+
+# end
+# entity
+somadorCompleto
+# storage
+db|calculadoraBinaria.(14).cnf
+db|calculadoraBinaria.(14).cnf
+# case_insensitive
+# source_file
+somadorCompleto.bdf
+8b68f7d43d42e7724d9b332d90a318
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+somadorSubtrator:inst12|somadorCompleto:inst6
+somadorSubtrator:inst12|somadorCompleto:inst5
+somadorSubtrator:inst12|somadorCompleto:inst4
+somadorSubtrator:inst12|somadorCompleto:inst8
+}
+# macro_sequence
+
+# end
+# entity
+decodificadorSomaUnidade
+# storage
+db|calculadoraBinaria.(15).cnf
+db|calculadoraBinaria.(15).cnf
+# case_insensitive
+# source_file
+decodificadorSomaUnidade.bdf
+2cb2b8bc4ebd69b3603f32fe6fdabe
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+decodificadorSomaUnidade:inst20
+}
+# macro_sequence
+
+# end
+# entity
+decodificadorSomaUnidadeSaidaA
+# storage
+db|calculadoraBinaria.(16).cnf
+db|calculadoraBinaria.(16).cnf
+# case_insensitive
+# source_file
+decodificadorSomaUnidadeSaidaA.bdf
+2d7a532733b6b84482599db217bf1a
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+decodificadorSomaUnidade:inst20|decodificadorSomaUnidadeSaidaA:inst1
+}
+# macro_sequence
+
+# end
+# entity
+decodificadorSomaUnidadeSaidaB
+# storage
+db|calculadoraBinaria.(17).cnf
+db|calculadoraBinaria.(17).cnf
+# case_insensitive
+# source_file
+decodificadorSomaUnidadeSaidaB.bdf
+c3f69cb1ddb8f32951f965d2ee3dbf1b
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+decodificadorSomaUnidade:inst20|decodificadorSomaUnidadeSaidaB:inst2
+}
+# macro_sequence
+
+# end
+# entity
+decodificadorSomaUnidadeSaidaC
+# storage
+db|calculadoraBinaria.(18).cnf
+db|calculadoraBinaria.(18).cnf
+# case_insensitive
+# source_file
+decodificadorSomaUnidadeSaidaC.bdf
+ca83ac1ac649e537c3f91a44ebab43
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+decodificadorSomaUnidade:inst20|decodificadorSomaUnidadeSaidaC:inst14
+}
+# macro_sequence
+
+# end
+# entity
+decodificadorSomaUnidadeSaidaD
+# storage
+db|calculadoraBinaria.(19).cnf
+db|calculadoraBinaria.(19).cnf
+# case_insensitive
+# source_file
+decodificadorSomaUnidadeSaidaD.bdf
+3a64d9ddec5071fc8e9e43b2be6d3fb2
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+decodificadorSomaUnidade:inst20|decodificadorSomaUnidadeSaidaD:inst4
+}
+# macro_sequence
+
+# end
+# entity
+decodificadorSomaUnidadeSaidaG
+# storage
+db|calculadoraBinaria.(22).cnf
+db|calculadoraBinaria.(22).cnf
+# case_insensitive
+# source_file
+decodificadorSomaUnidadeSaidaG.bdf
+3042ec249712cdfb4f2c88f9a71554a
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+decodificadorSomaUnidade:inst20|decodificadorSomaUnidadeSaidaG:inst7
+}
+# macro_sequence
+
+# end
+# entity
+contador
+# storage
+db|calculadoraBinaria.(23).cnf
+db|calculadoraBinaria.(23).cnf
+# case_insensitive
+# source_file
+contador.bdf
+2d40767abaa8a1e5a444e1c7c53d46
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+contador:inst19
+}
+# macro_sequence
+
+# end
+# entity
+Flip-flop_JK
+# storage
+db|calculadoraBinaria.(24).cnf
+db|calculadoraBinaria.(24).cnf
+# case_insensitive
+# source_file
+Flip-flop_JK.bdf
+3f0dab3b38da3d7c94b30d21741eb47
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+contador:inst19|Flip-flop_JK:inst2
+divisorDeFrequencia:inst18|Flip-flop_JK:inst16
+divisorDeFrequencia:inst18|Flip-flop_JK:inst15
+divisorDeFrequencia:inst18|Flip-flop_JK:inst14
+divisorDeFrequencia:inst18|Flip-flop_JK:inst13
+divisorDeFrequencia:inst18|Flip-flop_JK:inst12
+divisorDeFrequencia:inst18|Flip-flop_JK:inst17
+divisorDeFrequencia:inst18|Flip-flop_JK:inst10
+divisorDeFrequencia:inst18|Flip-flop_JK:inst9
+divisorDeFrequencia:inst18|Flip-flop_JK:inst8
+divisorDeFrequencia:inst18|Flip-flop_JK:inst7
+divisorDeFrequencia:inst18|Flip-flop_JK:inst6
+divisorDeFrequencia:inst18|Flip-flop_JK:inst11
+divisorDeFrequencia:inst18|Flip-flop_JK:inst4
+divisorDeFrequencia:inst18|Flip-flop_JK:inst3
+divisorDeFrequencia:inst18|Flip-flop_JK:inst2
+divisorDeFrequencia:inst18|Flip-flop_JK:inst1
+divisorDeFrequencia:inst18|Flip-flop_JK:inst
+divisorDeFrequencia:inst18|Flip-flop_JK:inst5
+}
+# macro_sequence
+
+# end
+# entity
+divisorDeFrequencia
+# storage
+db|calculadoraBinaria.(25).cnf
+db|calculadoraBinaria.(25).cnf
+# case_insensitive
+# source_file
+divisorDeFrequencia.bdf
+7ac6a4ec803f9815c0e5ab134641ed9f
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+divisorDeFrequencia:inst18
+}
+# macro_sequence
+
+# end
+# entity
+demultiplexador
+# storage
+db|calculadoraBinaria.(26).cnf
+db|calculadoraBinaria.(26).cnf
+# case_insensitive
+# source_file
+demultiplexador.bdf
+b75049f631b6cdd48d7ffec49b04b67
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+demultiplexador:inst17
+}
+# macro_sequence
+
+# end
+# entity
+calculadoraBinaria
+# storage
+db|calculadoraBinaria.(0).cnf
+db|calculadoraBinaria.(0).cnf
+# case_insensitive
+# source_file
+calculadoraBinaria.bdf
+d91d7cf177b45273a3ee41ddece701e
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+decodificadorParcelaSaidaC
+# storage
+db|calculadoraBinaria.(5).cnf
+db|calculadoraBinaria.(5).cnf
+# case_insensitive
+# source_file
+decodificadorParcelaSaidaC.bdf
+8ff5ddb875ccabefac34a69b78b28227
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+decodificadorParcela:inst15|decodificadorParcelaSaidaC:inst2
+decodificadorParcela:inst16|decodificadorParcelaSaidaC:inst2
+}
+# macro_sequence
+
+# end
+# entity
+debouncer
+# storage
+db|calculadoraBinaria.(20).cnf
+db|calculadoraBinaria.(20).cnf
+# case_insensitive
+# source_file
+debouncer.bdf
+266d161f2fdda3ca28ae61072af38ee
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+debouncer:inst26
+}
+# macro_sequence
+
+# end
+# entity
+contadorDeboucing
+# storage
+db|calculadoraBinaria.(21).cnf
+db|calculadoraBinaria.(21).cnf
+# case_insensitive
+# source_file
+contadorDeboucing.bdf
+6a34ec2a6be7c7bdd4f57d32840cf0
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+debouncer:inst26|contadorDeboucing:inst4
+}
+# macro_sequence
+
+# end
+# entity
+decodificadorSomaUnidadeSaidaE
+# storage
+db|calculadoraBinaria.(27).cnf
+db|calculadoraBinaria.(27).cnf
+# case_insensitive
+# source_file
+decodificadorSomaUnidadeSaidaE.bdf
+c8e7ee86c4eed4e54b4f4129c9b34d
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+decodificadorSomaUnidade:inst20|decodificadorSomaUnidadeSaidaE:inst5
+}
+# macro_sequence
+
+# end
+# entity
+decodificadorSomaUnidadeSaidaF
+# storage
+db|calculadoraBinaria.(28).cnf
+db|calculadoraBinaria.(28).cnf
+# case_insensitive
+# source_file
+decodificadorSomaUnidadeSaidaF.bdf
+55d430604df58a83df443c398cc7edee
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+decodificadorSomaUnidade:inst20|decodificadorSomaUnidadeSaidaF:inst6
+}
+# macro_sequence
+
+# end
+# complete
+

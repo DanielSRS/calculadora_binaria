@@ -21,7 +21,7 @@ applicable agreement for further details.
 (header "symbol" (version "1.1"))
 (symbol
 	(rect 16 16 112 208)
-	(text "decodificadorSomaUnidadeSaidaC" (rect 5 0 200 14)(font "Arial" (font_size 8)))
+	(text "decodificadorSomaUnidadeSaidaG" (rect 5 0 202 14)(font "Arial" (font_size 8)))
 	(text "inst" (rect 8 176 25 188)(font "Arial" ))
 	(port
 		(pt 0 32)
@@ -82,8 +82,8 @@ applicable agreement for further details.
 	(port
 		(pt 96 32)
 		(output)
-		(text "C" (rect 0 0 8 14)(font "Arial" (font_size 8)))
-		(text "C" (rect 67 27 75 41)(font "Arial" (font_size 8)))
+		(text "G" (rect 0 0 9 14)(font "Arial" (font_size 8)))
+		(text "G" (rect 66 27 75 41)(font "Arial" (font_size 8)))
 		(line (pt 96 32)(pt 80 32)(line_width 1))
 	)
 	(drawing

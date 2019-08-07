@@ -1,0 +1,1085 @@
+|calculadoraBinaria
+A <= multiplexador:inst3.A
+entradaMSB1 => registrador:inst.Valor1
+entradaB1 => registrador:inst.Valor2
+entradaC1 => registrador:inst.Valor3
+entradaLSB1 => registrador:inst.Valor4
+botaoRegistro1 => registrador:inst.CLK
+botaoRegistro1 => registrador:inst11.CLK
+entradaMSB2 => registrador:inst11.Valor1
+entradaB2 => registrador:inst11.Valor2
+entradaC2 => registrador:inst11.Valor3
+entradaLSB2 => registrador:inst11.Valor4
+operacao => debouncer:inst26.Botao
+CLK25 => debouncer:inst26.CLK_25Mhz
+botaoRegistro2 => registrador:inst13.CLK
+botaoRegistro2 => registrador:inst14.CLK
+CLK => divisorDeFrequencia:inst18.CLK
+B <= multiplexador:inst3.B
+C <= multiplexador:inst3.C
+D <= multiplexador:inst3.D
+E <= multiplexador:inst3.E
+F <= multiplexador:inst3.F
+G <= multiplexador:inst3.G
+DP <= multiplexador:inst3.DP
+D1 <= demultiplexador:inst17.D0
+D2 <= demultiplexador:inst17.D1
+D3 <= demultiplexador:inst17.D2
+D4 <= demultiplexador:inst17.D3
+
+
+|calculadoraBinaria|multiplexador:inst3
+A <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+Ea1 => inst.IN0
+S1 => inst12.IN0
+S1 => inst4.IN1
+S1 => inst5.IN2
+S1 => inst8.IN1
+S1 => inst9.IN2
+S1 => inst16.IN1
+S1 => inst17.IN2
+S1 => inst21.IN1
+S1 => inst22.IN2
+S1 => inst26.IN1
+S1 => inst27.IN2
+S1 => inst31.IN1
+S1 => inst32.IN2
+S1 => inst36.IN1
+S1 => inst37.IN2
+S1 => inst41.IN1
+S1 => inst42.IN2
+S0 => inst13.IN0
+S0 => inst5.IN1
+S0 => inst3.IN2
+S0 => inst9.IN1
+S0 => inst7.IN2
+S0 => inst17.IN1
+S0 => inst11.IN2
+S0 => inst22.IN1
+S0 => inst20.IN2
+S0 => inst27.IN1
+S0 => inst25.IN2
+S0 => inst32.IN1
+S0 => inst30.IN2
+S0 => inst37.IN1
+S0 => inst35.IN2
+S0 => inst42.IN1
+S0 => inst40.IN2
+Ea3 => inst4.IN0
+Ea4 => inst5.IN0
+Ea2 => inst3.IN0
+B <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+Eb1 => inst14.IN0
+Eb3 => inst8.IN0
+Eb4 => inst9.IN0
+Eb2 => inst7.IN0
+C <= inst18.DB_MAX_OUTPUT_PORT_TYPE
+Ec1 => inst15.IN0
+Ec3 => inst16.IN0
+Ec4 => inst17.IN0
+Ec2 => inst11.IN0
+D <= inst23.DB_MAX_OUTPUT_PORT_TYPE
+Ed1 => inst19.IN0
+Ed3 => inst21.IN0
+Ed4 => inst22.IN0
+Ed2 => inst20.IN0
+E <= inst28.DB_MAX_OUTPUT_PORT_TYPE
+Ee1 => inst24.IN0
+Ee3 => inst26.IN0
+Ee4 => inst27.IN0
+Ee2 => inst25.IN0
+F <= inst33.DB_MAX_OUTPUT_PORT_TYPE
+Ef1 => inst29.IN0
+Ef3 => inst31.IN0
+Ef4 => inst32.IN0
+Ef2 => inst30.IN0
+G <= inst38.DB_MAX_OUTPUT_PORT_TYPE
+Eg1 => inst34.IN0
+Eg3 => inst36.IN0
+Eg4 => inst37.IN0
+Eg2 => inst35.IN0
+DP <= inst43.DB_MAX_OUTPUT_PORT_TYPE
+Eh1 => inst39.IN0
+Eh3 => inst41.IN0
+Eh4 => inst42.IN0
+Eh2 => inst40.IN0
+
+
+|calculadoraBinaria|decodificadorParcela:inst15
+sA <= decodificadorParcelaSaidaA:inst.sA
+A => decodificadorParcelaSaidaA:inst.A
+A => decodificadorParcelaSaidaB:inst1.A
+A => decodificadorParcelaSaidaC:inst2.A
+A => decodificadorParcelaSaidaD:inst3.A
+A => decodificadorParcelaSaidaE:inst4.A
+A => decodificadorParcelaSaidaF:inst5.A
+A => decodificadorParcelaSaidaG:inst6.A
+A => inst7.IN0
+B => decodificadorParcelaSaidaA:inst.B
+B => decodificadorParcelaSaidaB:inst1.B
+B => decodificadorParcelaSaidaC:inst2.B
+B => decodificadorParcelaSaidaD:inst3.B
+B => decodificadorParcelaSaidaE:inst4.B
+B => decodificadorParcelaSaidaF:inst5.B
+B => decodificadorParcelaSaidaG:inst6.B
+C => decodificadorParcelaSaidaA:inst.C
+C => decodificadorParcelaSaidaB:inst1.C
+C => decodificadorParcelaSaidaC:inst2.C
+C => decodificadorParcelaSaidaD:inst3.C
+C => decodificadorParcelaSaidaE:inst4.C
+C => decodificadorParcelaSaidaF:inst5.C
+C => decodificadorParcelaSaidaG:inst6.C
+D => decodificadorParcelaSaidaA:inst.D
+D => decodificadorParcelaSaidaB:inst1.D
+D => decodificadorParcelaSaidaC:inst2.D
+D => decodificadorParcelaSaidaD:inst3.D
+D => decodificadorParcelaSaidaE:inst4.D
+D => decodificadorParcelaSaidaF:inst5.D
+D => decodificadorParcelaSaidaG:inst6.D
+sB <= decodificadorParcelaSaidaB:inst1.sB
+sC <= decodificadorParcelaSaidaC:inst2.sC
+sD <= decodificadorParcelaSaidaD:inst3.sD
+sE <= decodificadorParcelaSaidaE:inst4.sE
+sF <= decodificadorParcelaSaidaF:inst5.sF
+sG <= decodificadorParcelaSaidaG:inst6.sG
+sDP <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calculadoraBinaria|decodificadorParcela:inst15|decodificadorParcelaSaidaA:inst
+sA <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+B => inst5.IN0
+B => inst6.IN1
+B => inst8.IN0
+C => inst9.IN0
+C => inst6.IN2
+D => inst10.IN0
+D => inst6.IN3
+A => inst6.IN0
+A => inst7.IN0
+
+
+|calculadoraBinaria|decodificadorParcela:inst15|decodificadorParcelaSaidaB:inst1
+sB <= inst17.DB_MAX_OUTPUT_PORT_TYPE
+A => inst12.IN0
+A => inst7.IN0
+B => inst8.IN0
+B => inst14.IN1
+B => inst15.IN1
+C => inst12.IN2
+C => inst9.IN0
+C => inst15.IN2
+D => inst14.IN3
+D => inst10.IN0
+
+
+|calculadoraBinaria|decodificadorParcela:inst15|decodificadorParcelaSaidaC:inst2
+sC <= inst20.DB_MAX_OUTPUT_PORT_TYPE
+A => inst19.IN0
+A => inst7.IN0
+B => inst19.IN1
+B => inst8.IN0
+C => inst19.IN2
+D => inst10.IN0
+
+
+|calculadoraBinaria|decodificadorParcela:inst15|decodificadorParcelaSaidaD:inst3
+sD <= inst25.DB_MAX_OUTPUT_PORT_TYPE
+A => inst7.IN0
+B => inst8.IN0
+B => inst23.IN0
+B => inst24.IN0
+C => inst9.IN0
+C => inst24.IN1
+D => inst10.IN0
+D => inst24.IN2
+D => inst22.IN2
+
+
+|calculadoraBinaria|decodificadorParcela:inst15|decodificadorParcelaSaidaE:inst4
+sE <= inst28.DB_MAX_OUTPUT_PORT_TYPE
+B => inst27.IN0
+C => inst9.IN0
+D => inst28.IN1
+A => inst7.IN0
+
+
+|calculadoraBinaria|decodificadorParcela:inst15|decodificadorParcelaSaidaF:inst5
+sF <= inst33.DB_MAX_OUTPUT_PORT_TYPE
+A => inst7.IN0
+A => inst31.IN0
+A => inst32.IN0
+B => inst8.IN0
+B => inst32.IN1
+C => inst9.IN0
+C => inst32.IN2
+C => inst30.IN1
+D => inst31.IN2
+D => inst30.IN2
+
+
+|calculadoraBinaria|decodificadorParcela:inst15|decodificadorParcelaSaidaG:inst6
+sG <= inst37.DB_MAX_OUTPUT_PORT_TYPE
+B => inst8.IN0
+B => inst36.IN0
+C => inst9.IN0
+C => inst36.IN1
+D => inst35.IN2
+D => inst36.IN2
+A => inst7.IN0
+
+
+|calculadoraBinaria|registrador:inst
+D1 <= Flip-flop_D:inst.Q
+Valor1 => Flip-flop_D:inst.D
+CLK => Flip-flop_D:inst.Clock
+CLK => Flip-flop_D:inst1.Clock
+CLK => Flip-flop_D:inst2.Clock
+CLK => Flip-flop_D:inst3.Clock
+D2 <= Flip-flop_D:inst1.Q
+Valor2 => Flip-flop_D:inst1.D
+D3 <= Flip-flop_D:inst2.Q
+Valor3 => Flip-flop_D:inst2.D
+D4 <= Flip-flop_D:inst3.Q
+Valor4 => Flip-flop_D:inst3.D
+
+
+|calculadoraBinaria|registrador:inst|Flip-flop_D:inst
+Q <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst7.IN0
+Clock => inst6.IN1
+D => inst.IN0
+D => inst8.IN1
+
+
+|calculadoraBinaria|registrador:inst|Flip-flop_D:inst1
+Q <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst7.IN0
+Clock => inst6.IN1
+D => inst.IN0
+D => inst8.IN1
+
+
+|calculadoraBinaria|registrador:inst|Flip-flop_D:inst2
+Q <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst7.IN0
+Clock => inst6.IN1
+D => inst.IN0
+D => inst8.IN1
+
+
+|calculadoraBinaria|registrador:inst|Flip-flop_D:inst3
+Q <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst7.IN0
+Clock => inst6.IN1
+D => inst.IN0
+D => inst8.IN1
+
+
+|calculadoraBinaria|decodificadorSomaDezenaSinal:inst1
+sB <= inst19.DB_MAX_OUTPUT_PORT_TYPE
+MSB2 => inst.IN0
+E2b => inst.IN1
+E3b => inst.IN2
+LSB2 => inst.IN3
+MSB => inst11.IN0
+MSB => inst14.IN1
+E2a => inst10.IN0
+E2a => inst16.IN1
+E3a => inst9.IN0
+E3a => inst16.IN2
+LSB => inst16.IN3
+sC <= inst19.DB_MAX_OUTPUT_PORT_TYPE
+sG <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calculadoraBinaria|registrador:inst13
+D1 <= Flip-flop_D:inst.Q
+Valor1 => Flip-flop_D:inst.D
+CLK => Flip-flop_D:inst.Clock
+CLK => Flip-flop_D:inst1.Clock
+CLK => Flip-flop_D:inst2.Clock
+CLK => Flip-flop_D:inst3.Clock
+D2 <= Flip-flop_D:inst1.Q
+Valor2 => Flip-flop_D:inst1.D
+D3 <= Flip-flop_D:inst2.Q
+Valor3 => Flip-flop_D:inst2.D
+D4 <= Flip-flop_D:inst3.Q
+Valor4 => Flip-flop_D:inst3.D
+
+
+|calculadoraBinaria|registrador:inst13|Flip-flop_D:inst
+Q <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst7.IN0
+Clock => inst6.IN1
+D => inst.IN0
+D => inst8.IN1
+
+
+|calculadoraBinaria|registrador:inst13|Flip-flop_D:inst1
+Q <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst7.IN0
+Clock => inst6.IN1
+D => inst.IN0
+D => inst8.IN1
+
+
+|calculadoraBinaria|registrador:inst13|Flip-flop_D:inst2
+Q <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst7.IN0
+Clock => inst6.IN1
+D => inst.IN0
+D => inst8.IN1
+
+
+|calculadoraBinaria|registrador:inst13|Flip-flop_D:inst3
+Q <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst7.IN0
+Clock => inst6.IN1
+D => inst.IN0
+D => inst8.IN1
+
+
+|calculadoraBinaria|somadorSubtrator:inst12
+carryOut <= somadorCompleto:inst6.carryOut
+MSB2 => inst.IN0
+operacao => inst.IN1
+operacao => inst1.IN1
+operacao => inst2.IN1
+operacao => inst3.IN1
+operacao => somadorCompleto:inst8.carryIn
+MSB1 => somadorCompleto:inst6.B
+valorB2 => inst1.IN0
+valorB1 => somadorCompleto:inst5.B
+valorC2 => inst2.IN0
+valorC1 => somadorCompleto:inst4.B
+LSB2 => inst3.IN0
+LSB1 => somadorCompleto:inst8.B
+somaLSB <= somadorCompleto:inst8.soma
+somaC <= somadorCompleto:inst4.soma
+somaB <= somadorCompleto:inst5.soma
+somaMSB <= somadorCompleto:inst6.soma
+
+
+|calculadoraBinaria|somadorSubtrator:inst12|somadorCompleto:inst6
+soma <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => inst3.IN0
+A => inst1.IN0
+A => inst2.IN0
+B => inst3.IN1
+B => inst2.IN1
+B => inst.IN0
+carryIn => inst4.IN1
+carryIn => inst1.IN1
+carryIn => inst.IN1
+carryOut <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calculadoraBinaria|somadorSubtrator:inst12|somadorCompleto:inst5
+soma <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => inst3.IN0
+A => inst1.IN0
+A => inst2.IN0
+B => inst3.IN1
+B => inst2.IN1
+B => inst.IN0
+carryIn => inst4.IN1
+carryIn => inst1.IN1
+carryIn => inst.IN1
+carryOut <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calculadoraBinaria|somadorSubtrator:inst12|somadorCompleto:inst4
+soma <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => inst3.IN0
+A => inst1.IN0
+A => inst2.IN0
+B => inst3.IN1
+B => inst2.IN1
+B => inst.IN0
+carryIn => inst4.IN1
+carryIn => inst1.IN1
+carryIn => inst.IN1
+carryOut <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calculadoraBinaria|somadorSubtrator:inst12|somadorCompleto:inst8
+soma <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => inst3.IN0
+A => inst1.IN0
+A => inst2.IN0
+B => inst3.IN1
+B => inst2.IN1
+B => inst.IN0
+carryIn => inst4.IN1
+carryIn => inst1.IN1
+carryIn => inst.IN1
+carryOut <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calculadoraBinaria|registrador:inst11
+D1 <= Flip-flop_D:inst.Q
+Valor1 => Flip-flop_D:inst.D
+CLK => Flip-flop_D:inst.Clock
+CLK => Flip-flop_D:inst1.Clock
+CLK => Flip-flop_D:inst2.Clock
+CLK => Flip-flop_D:inst3.Clock
+D2 <= Flip-flop_D:inst1.Q
+Valor2 => Flip-flop_D:inst1.D
+D3 <= Flip-flop_D:inst2.Q
+Valor3 => Flip-flop_D:inst2.D
+D4 <= Flip-flop_D:inst3.Q
+Valor4 => Flip-flop_D:inst3.D
+
+
+|calculadoraBinaria|registrador:inst11|Flip-flop_D:inst
+Q <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst7.IN0
+Clock => inst6.IN1
+D => inst.IN0
+D => inst8.IN1
+
+
+|calculadoraBinaria|registrador:inst11|Flip-flop_D:inst1
+Q <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst7.IN0
+Clock => inst6.IN1
+D => inst.IN0
+D => inst8.IN1
+
+
+|calculadoraBinaria|registrador:inst11|Flip-flop_D:inst2
+Q <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst7.IN0
+Clock => inst6.IN1
+D => inst.IN0
+D => inst8.IN1
+
+
+|calculadoraBinaria|registrador:inst11|Flip-flop_D:inst3
+Q <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst7.IN0
+Clock => inst6.IN1
+D => inst.IN0
+D => inst8.IN1
+
+
+|calculadoraBinaria|debouncer:inst26
+sV <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+CLK_25Mhz => inst2.CLK
+CLK_25Mhz => inst.CLK
+CLK_25Mhz => inst1.CLK
+CLK_25Mhz => contadorDeboucing:inst4.CLK
+Botao => inst.DATAIN
+
+
+|calculadoraBinaria|debouncer:inst26|contadorDeboucing:inst4
+sC <= inst35.DB_MAX_OUTPUT_PORT_TYPE
+CLK => inst.CLK
+SCLR => inst.ACLR
+SCLR => inst19.ACLR
+SCLR => inst20.ACLR
+SCLR => inst21.ACLR
+SCLR => inst22.ACLR
+SCLR => inst23.ACLR
+SCLR => inst27.ACLR
+SCLR => inst24.ACLR
+SCLR => inst25.ACLR
+SCLR => inst26.ACLR
+SCLR => inst28.ACLR
+SCLR => inst29.ACLR
+SCLR => inst30.ACLR
+SCLR => inst31.ACLR
+SCLR => inst32.ACLR
+SCLR => inst33.ACLR
+SCLR => inst34.ACLR
+SCLR => inst35.ACLR
+ENA => inst.ENA
+ENA => inst19.ENA
+ENA => inst20.ENA
+ENA => inst21.ENA
+ENA => inst22.ENA
+ENA => inst23.ENA
+ENA => inst27.ENA
+ENA => inst24.ENA
+ENA => inst25.ENA
+ENA => inst26.ENA
+ENA => inst28.ENA
+ENA => inst29.ENA
+ENA => inst30.ENA
+ENA => inst31.ENA
+ENA => inst32.ENA
+ENA => inst33.ENA
+ENA => inst34.ENA
+ENA => inst35.ENA
+
+
+|calculadoraBinaria|registrador:inst14
+D1 <= Flip-flop_D:inst.Q
+Valor1 => Flip-flop_D:inst.D
+CLK => Flip-flop_D:inst.Clock
+CLK => Flip-flop_D:inst1.Clock
+CLK => Flip-flop_D:inst2.Clock
+CLK => Flip-flop_D:inst3.Clock
+D2 <= Flip-flop_D:inst1.Q
+Valor2 => Flip-flop_D:inst1.D
+D3 <= Flip-flop_D:inst2.Q
+Valor3 => Flip-flop_D:inst2.D
+D4 <= Flip-flop_D:inst3.Q
+Valor4 => Flip-flop_D:inst3.D
+
+
+|calculadoraBinaria|registrador:inst14|Flip-flop_D:inst
+Q <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst7.IN0
+Clock => inst6.IN1
+D => inst.IN0
+D => inst8.IN1
+
+
+|calculadoraBinaria|registrador:inst14|Flip-flop_D:inst1
+Q <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst7.IN0
+Clock => inst6.IN1
+D => inst.IN0
+D => inst8.IN1
+
+
+|calculadoraBinaria|registrador:inst14|Flip-flop_D:inst2
+Q <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst7.IN0
+Clock => inst6.IN1
+D => inst.IN0
+D => inst8.IN1
+
+
+|calculadoraBinaria|registrador:inst14|Flip-flop_D:inst3
+Q <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst7.IN0
+Clock => inst6.IN1
+D => inst.IN0
+D => inst8.IN1
+
+
+|calculadoraBinaria|decodificadorSomaUnidade:inst20
+sA <= decodificadorSomaUnidadeSaidaA:inst1.A
+MSB => decodificadorSomaUnidadeSaidaA:inst1.MSB
+MSB => decodificadorSomaUnidadeSaidaB:inst2.MSB
+MSB => decodificadorSomaUnidadeSaidaC:inst14.MSB
+MSB => decodificadorSomaUnidadeSaidaD:inst4.MSB
+MSB => decodificadorSomaUnidadeSaidaE:inst5.MSB
+MSB => decodificadorSomaUnidadeSaidaF:inst6.MSB
+MSB => decodificadorSomaUnidadeSaidaG:inst7.MSB
+E2a => decodificadorSomaUnidadeSaidaA:inst1.E2a
+E2a => decodificadorSomaUnidadeSaidaB:inst2.E2a
+E2a => decodificadorSomaUnidadeSaidaC:inst14.E2a
+E2a => decodificadorSomaUnidadeSaidaD:inst4.E2a
+E2a => decodificadorSomaUnidadeSaidaE:inst5.E2a
+E2a => decodificadorSomaUnidadeSaidaF:inst6.E2a
+E2a => decodificadorSomaUnidadeSaidaG:inst7.E2a
+E3a => decodificadorSomaUnidadeSaidaA:inst1.E3a
+E3a => decodificadorSomaUnidadeSaidaB:inst2.E3a
+E3a => decodificadorSomaUnidadeSaidaC:inst14.E3a
+E3a => decodificadorSomaUnidadeSaidaD:inst4.E3a
+E3a => decodificadorSomaUnidadeSaidaE:inst5.E3a
+E3a => decodificadorSomaUnidadeSaidaF:inst6.E3a
+E3a => decodificadorSomaUnidadeSaidaG:inst7.E3a
+LSB => decodificadorSomaUnidadeSaidaA:inst1.LSB
+LSB => decodificadorSomaUnidadeSaidaB:inst2.LSB
+LSB => decodificadorSomaUnidadeSaidaC:inst14.LSB
+LSB => decodificadorSomaUnidadeSaidaD:inst4.LSB
+LSB => decodificadorSomaUnidadeSaidaE:inst5.LSB
+LSB => decodificadorSomaUnidadeSaidaF:inst6.LSB
+LSB => decodificadorSomaUnidadeSaidaG:inst7.LSB
+MSB2 => inst.IN0
+E2b => inst.IN1
+E3b => inst.IN2
+LSB2 => inst.IN3
+sB <= decodificadorSomaUnidadeSaidaB:inst2.B
+sC <= decodificadorSomaUnidadeSaidaC:inst14.C
+sD <= decodificadorSomaUnidadeSaidaD:inst4.D
+sE <= decodificadorSomaUnidadeSaidaE:inst5.E
+sF <= decodificadorSomaUnidadeSaidaF:inst6.F
+sG <= decodificadorSomaUnidadeSaidaG:inst7.G
+
+
+|calculadoraBinaria|decodificadorSomaUnidade:inst20|decodificadorSomaUnidadeSaidaA:inst1
+A <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+E2a => inst10.IN0
+E2a => inst2.IN0
+E2a => inst4.IN0
+E2a => inst7.IN0
+E2a => inst6.IN0
+E2a => inst8.IN0
+MSB => inst11.IN0
+MSB => inst3.IN1
+MSB => inst4.IN1
+MSB => inst7.IN1
+MSB => inst8.IN1
+MSB2 => inst.IN0
+E2b => inst.IN1
+E3b => inst.IN2
+LSB2 => inst.IN3
+LSB => inst17.IN0
+LSB => inst1.IN3
+LSB => inst3.IN3
+LSB => inst6.IN3
+LSB => inst8.IN3
+E3a => inst9.IN0
+E3a => inst3.IN4
+E3a => inst4.IN4
+E3a => inst8.IN4
+E3a => inst5.IN4
+
+
+|calculadoraBinaria|decodificadorSomaUnidade:inst20|decodificadorSomaUnidadeSaidaB:inst2
+B <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+MSB2 => inst.IN0
+E2b => inst.IN1
+E3b => inst.IN2
+LSB2 => inst.IN3
+MSB => inst11.IN0
+MSB => inst1.IN1
+MSB => inst4.IN1
+E2a => inst10.IN0
+E2a => inst2.IN0
+E2a => inst4.IN0
+E2a => inst3.IN0
+E3a => inst9.IN0
+E3a => inst1.IN3
+E3a => inst4.IN4
+E3a => inst3.IN4
+LSB => inst17.IN0
+LSB => inst2.IN3
+LSB => inst4.IN3
+
+
+|calculadoraBinaria|decodificadorSomaUnidade:inst20|decodificadorSomaUnidadeSaidaC:inst14
+C <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+E2a => inst10.IN0
+E2a => inst3.IN0
+E2a => inst4.IN0
+E2a => inst2.IN0
+MSB => inst11.IN0
+MSB => inst4.IN1
+MSB => inst2.IN1
+MSB2 => inst.IN0
+E2b => inst.IN1
+E3b => inst.IN2
+LSB2 => inst.IN3
+LSB => inst17.IN0
+E3a => inst9.IN0
+E3a => inst1.IN4
+E3a => inst4.IN4
+
+
+|calculadoraBinaria|decodificadorSomaUnidade:inst20|decodificadorSomaUnidadeSaidaD:inst4
+D <= inst16.DB_MAX_OUTPUT_PORT_TYPE
+E2a => inst10.IN0
+E2a => inst13.IN0
+E2a => inst14.IN0
+E2a => inst3.IN0
+E2a => inst2.IN0
+E2a => inst5.IN0
+E2a => inst7.IN0
+MSB => inst11.IN0
+MSB => inst13.IN1
+MSB => inst14.IN1
+MSB => inst4.IN1
+MSB => inst5.IN1
+MSB => inst8.IN1
+MSB2 => inst.IN0
+E2b => inst.IN1
+E3b => inst.IN2
+LSB2 => inst.IN3
+LSB => inst17.IN0
+LSB => inst14.IN3
+LSB => inst1.IN3
+LSB => inst3.IN3
+LSB => inst4.IN3
+LSB => inst7.IN3
+LSB => inst8.IN3
+E3a => inst9.IN0
+E3a => inst14.IN4
+E3a => inst3.IN4
+E3a => inst4.IN4
+E3a => inst6.IN4
+E3a => inst5.IN4
+
+
+|calculadoraBinaria|decodificadorSomaUnidade:inst20|decodificadorSomaUnidadeSaidaE:inst5
+E <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+MSB2 => inst.IN0
+E2b => inst.IN1
+E3b => inst.IN2
+LSB2 => inst.IN3
+MSB => inst11.IN0
+MSB => inst2.IN1
+MSB => inst4.IN1
+E2a => inst1.IN2
+E2a => inst10.IN0
+E2a => inst2.IN2
+E2a => inst4.IN2
+E3a => inst9.IN0
+E3a => inst3.IN3
+E3a => inst2.IN3
+LSB => inst5.IN3
+
+
+|calculadoraBinaria|decodificadorSomaUnidade:inst20|decodificadorSomaUnidadeSaidaF:inst6
+F <= inst16.DB_MAX_OUTPUT_PORT_TYPE
+MSB2 => inst.IN0
+E2b => inst.IN1
+E3b => inst.IN2
+LSB2 => inst.IN3
+MSB => inst13.IN1
+MSB => inst11.IN0
+MSB => inst6.IN1
+MSB => inst8.IN1
+E2a => inst13.IN2
+E2a => inst10.IN0
+E2a => inst6.IN2
+E2a => inst7.IN2
+E3a => inst13.IN3
+E3a => inst3.IN2
+E3a => inst2.IN3
+E3a => inst4.IN2
+E3a => inst9.IN0
+E3a => inst5.IN2
+LSB => inst1.IN3
+LSB => inst3.IN3
+LSB => inst4.IN3
+LSB => inst5.IN3
+LSB => inst8.IN3
+
+
+|calculadoraBinaria|decodificadorSomaUnidade:inst20|decodificadorSomaUnidadeSaidaG:inst7
+G <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+MSB2 => inst.IN0
+E2b => inst.IN1
+E3b => inst.IN2
+LSB2 => inst.IN3
+MSB => inst11.IN0
+MSB => inst2.IN1
+MSB => inst6.IN1
+MSB => inst7.IN1
+E2a => inst10.IN0
+E2a => inst3.IN0
+E2a => inst4.IN0
+E2a => inst5.IN0
+E2a => inst7.IN0
+E3a => inst9.IN0
+E3a => inst2.IN3
+E3a => inst3.IN4
+E3a => inst5.IN4
+E3a => inst7.IN4
+LSB => inst17.IN0
+LSB => inst3.IN3
+LSB => inst4.IN3
+LSB => inst6.IN3
+LSB => inst7.IN3
+
+
+|calculadoraBinaria|decodificadorParcela:inst16
+sA <= decodificadorParcelaSaidaA:inst.sA
+A => decodificadorParcelaSaidaA:inst.A
+A => decodificadorParcelaSaidaB:inst1.A
+A => decodificadorParcelaSaidaC:inst2.A
+A => decodificadorParcelaSaidaD:inst3.A
+A => decodificadorParcelaSaidaE:inst4.A
+A => decodificadorParcelaSaidaF:inst5.A
+A => decodificadorParcelaSaidaG:inst6.A
+A => inst7.IN0
+B => decodificadorParcelaSaidaA:inst.B
+B => decodificadorParcelaSaidaB:inst1.B
+B => decodificadorParcelaSaidaC:inst2.B
+B => decodificadorParcelaSaidaD:inst3.B
+B => decodificadorParcelaSaidaE:inst4.B
+B => decodificadorParcelaSaidaF:inst5.B
+B => decodificadorParcelaSaidaG:inst6.B
+C => decodificadorParcelaSaidaA:inst.C
+C => decodificadorParcelaSaidaB:inst1.C
+C => decodificadorParcelaSaidaC:inst2.C
+C => decodificadorParcelaSaidaD:inst3.C
+C => decodificadorParcelaSaidaE:inst4.C
+C => decodificadorParcelaSaidaF:inst5.C
+C => decodificadorParcelaSaidaG:inst6.C
+D => decodificadorParcelaSaidaA:inst.D
+D => decodificadorParcelaSaidaB:inst1.D
+D => decodificadorParcelaSaidaC:inst2.D
+D => decodificadorParcelaSaidaD:inst3.D
+D => decodificadorParcelaSaidaE:inst4.D
+D => decodificadorParcelaSaidaF:inst5.D
+D => decodificadorParcelaSaidaG:inst6.D
+sB <= decodificadorParcelaSaidaB:inst1.sB
+sC <= decodificadorParcelaSaidaC:inst2.sC
+sD <= decodificadorParcelaSaidaD:inst3.sD
+sE <= decodificadorParcelaSaidaE:inst4.sE
+sF <= decodificadorParcelaSaidaF:inst5.sF
+sG <= decodificadorParcelaSaidaG:inst6.sG
+sDP <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calculadoraBinaria|decodificadorParcela:inst16|decodificadorParcelaSaidaA:inst
+sA <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+B => inst5.IN0
+B => inst6.IN1
+B => inst8.IN0
+C => inst9.IN0
+C => inst6.IN2
+D => inst10.IN0
+D => inst6.IN3
+A => inst6.IN0
+A => inst7.IN0
+
+
+|calculadoraBinaria|decodificadorParcela:inst16|decodificadorParcelaSaidaB:inst1
+sB <= inst17.DB_MAX_OUTPUT_PORT_TYPE
+A => inst12.IN0
+A => inst7.IN0
+B => inst8.IN0
+B => inst14.IN1
+B => inst15.IN1
+C => inst12.IN2
+C => inst9.IN0
+C => inst15.IN2
+D => inst14.IN3
+D => inst10.IN0
+
+
+|calculadoraBinaria|decodificadorParcela:inst16|decodificadorParcelaSaidaC:inst2
+sC <= inst20.DB_MAX_OUTPUT_PORT_TYPE
+A => inst19.IN0
+A => inst7.IN0
+B => inst19.IN1
+B => inst8.IN0
+C => inst19.IN2
+D => inst10.IN0
+
+
+|calculadoraBinaria|decodificadorParcela:inst16|decodificadorParcelaSaidaD:inst3
+sD <= inst25.DB_MAX_OUTPUT_PORT_TYPE
+A => inst7.IN0
+B => inst8.IN0
+B => inst23.IN0
+B => inst24.IN0
+C => inst9.IN0
+C => inst24.IN1
+D => inst10.IN0
+D => inst24.IN2
+D => inst22.IN2
+
+
+|calculadoraBinaria|decodificadorParcela:inst16|decodificadorParcelaSaidaE:inst4
+sE <= inst28.DB_MAX_OUTPUT_PORT_TYPE
+B => inst27.IN0
+C => inst9.IN0
+D => inst28.IN1
+A => inst7.IN0
+
+
+|calculadoraBinaria|decodificadorParcela:inst16|decodificadorParcelaSaidaF:inst5
+sF <= inst33.DB_MAX_OUTPUT_PORT_TYPE
+A => inst7.IN0
+A => inst31.IN0
+A => inst32.IN0
+B => inst8.IN0
+B => inst32.IN1
+C => inst9.IN0
+C => inst32.IN2
+C => inst30.IN1
+D => inst31.IN2
+D => inst30.IN2
+
+
+|calculadoraBinaria|decodificadorParcela:inst16|decodificadorParcelaSaidaG:inst6
+sG <= inst37.DB_MAX_OUTPUT_PORT_TYPE
+B => inst8.IN0
+B => inst36.IN0
+C => inst9.IN0
+C => inst36.IN1
+D => inst35.IN2
+D => inst36.IN2
+A => inst7.IN0
+
+
+|calculadoraBinaria|contador:inst19
+sCmsb <= Flip-flop_JK:inst2.Q
+CLKd => Flip-flop_JK:inst2.Clock
+CLKd => sClsb.DATAIN
+sClsb <= CLKd.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calculadoraBinaria|contador:inst19|Flip-flop_JK:inst2
+Q <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst7.IN0
+Clock => inst6.IN1
+K => inst9.IN1
+J => inst8.IN1
+
+
+|calculadoraBinaria|divisorDeFrequencia:inst18
+CLKdividido <= Flip-flop_JK:inst16.Q
+CLK => Flip-flop_JK:inst5.Clock
+
+
+|calculadoraBinaria|divisorDeFrequencia:inst18|Flip-flop_JK:inst16
+Q <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst7.IN0
+Clock => inst6.IN1
+K => inst9.IN1
+J => inst8.IN1
+
+
+|calculadoraBinaria|divisorDeFrequencia:inst18|Flip-flop_JK:inst15
+Q <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst7.IN0
+Clock => inst6.IN1
+K => inst9.IN1
+J => inst8.IN1
+
+
+|calculadoraBinaria|divisorDeFrequencia:inst18|Flip-flop_JK:inst14
+Q <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst7.IN0
+Clock => inst6.IN1
+K => inst9.IN1
+J => inst8.IN1
+
+
+|calculadoraBinaria|divisorDeFrequencia:inst18|Flip-flop_JK:inst13
+Q <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst7.IN0
+Clock => inst6.IN1
+K => inst9.IN1
+J => inst8.IN1
+
+
+|calculadoraBinaria|divisorDeFrequencia:inst18|Flip-flop_JK:inst12
+Q <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst7.IN0
+Clock => inst6.IN1
+K => inst9.IN1
+J => inst8.IN1
+
+
+|calculadoraBinaria|divisorDeFrequencia:inst18|Flip-flop_JK:inst17
+Q <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst7.IN0
+Clock => inst6.IN1
+K => inst9.IN1
+J => inst8.IN1
+
+
+|calculadoraBinaria|divisorDeFrequencia:inst18|Flip-flop_JK:inst10
+Q <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst7.IN0
+Clock => inst6.IN1
+K => inst9.IN1
+J => inst8.IN1
+
+
+|calculadoraBinaria|divisorDeFrequencia:inst18|Flip-flop_JK:inst9
+Q <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst7.IN0
+Clock => inst6.IN1
+K => inst9.IN1
+J => inst8.IN1
+
+
+|calculadoraBinaria|divisorDeFrequencia:inst18|Flip-flop_JK:inst8
+Q <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst7.IN0
+Clock => inst6.IN1
+K => inst9.IN1
+J => inst8.IN1
+
+
+|calculadoraBinaria|divisorDeFrequencia:inst18|Flip-flop_JK:inst7
+Q <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst7.IN0
+Clock => inst6.IN1
+K => inst9.IN1
+J => inst8.IN1
+
+
+|calculadoraBinaria|divisorDeFrequencia:inst18|Flip-flop_JK:inst6
+Q <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst7.IN0
+Clock => inst6.IN1
+K => inst9.IN1
+J => inst8.IN1
+
+
+|calculadoraBinaria|divisorDeFrequencia:inst18|Flip-flop_JK:inst11
+Q <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst7.IN0
+Clock => inst6.IN1
+K => inst9.IN1
+J => inst8.IN1
+
+
+|calculadoraBinaria|divisorDeFrequencia:inst18|Flip-flop_JK:inst4
+Q <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst7.IN0
+Clock => inst6.IN1
+K => inst9.IN1
+J => inst8.IN1
+
+
+|calculadoraBinaria|divisorDeFrequencia:inst18|Flip-flop_JK:inst3
+Q <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst7.IN0
+Clock => inst6.IN1
+K => inst9.IN1
+J => inst8.IN1
+
+
+|calculadoraBinaria|divisorDeFrequencia:inst18|Flip-flop_JK:inst2
+Q <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst7.IN0
+Clock => inst6.IN1
+K => inst9.IN1
+J => inst8.IN1
+
+
+|calculadoraBinaria|divisorDeFrequencia:inst18|Flip-flop_JK:inst1
+Q <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst7.IN0
+Clock => inst6.IN1
+K => inst9.IN1
+J => inst8.IN1
+
+
+|calculadoraBinaria|divisorDeFrequencia:inst18|Flip-flop_JK:inst
+Q <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst7.IN0
+Clock => inst6.IN1
+K => inst9.IN1
+J => inst8.IN1
+
+
+|calculadoraBinaria|divisorDeFrequencia:inst18|Flip-flop_JK:inst5
+Q <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+Clock => inst7.IN0
+Clock => inst6.IN1
+K => inst9.IN1
+J => inst8.IN1
+
+
+|calculadoraBinaria|demultiplexador:inst17
+D0 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+S1 => inst6.IN0
+S1 => inst10.IN0
+S1 => inst11.IN0
+S0 => inst7.IN0
+S0 => inst2.IN1
+S0 => inst11.IN1
+D => inst1.IN2
+D => inst2.IN2
+D => inst10.IN2
+D => inst11.IN2
+D1 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+D2 <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+D3 <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+
+
