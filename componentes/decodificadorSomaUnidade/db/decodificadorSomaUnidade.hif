@@ -1,0 +1,62 @@
+Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+2
+51
+OFF
+OFF
+OFF
+ON
+ON
+OFF
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+decodificadorSomaUnidade
+# storage
+db|decodificadorSomaUnidade.(0).cnf
+db|decodificadorSomaUnidade.(0).cnf
+# case_insensitive
+# source_file
+decodificadorSomaUnidade.bdf
+2cb2b8bc4ebd69b3603f32fe6fdabe
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+decodificadorSomaUnidadeSaidaA
+# storage
+db|decodificadorSomaUnidade.(1).cnf
+db|decodificadorSomaUnidade.(1).cnf
+# case_insensitive
+# source_file
+..|decodificadorSomaUnidadeSaidaA|decodificadorSomaUnidadeSaidaA.bdf
+2d7a532733b6b84482599db217bf1a
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+decodificadorSomaUnidadeSaidaA:inst1
+}
+# macro_sequence
+
+# end
+# complete
+

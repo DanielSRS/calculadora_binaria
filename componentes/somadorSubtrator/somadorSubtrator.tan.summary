@@ -5,8 +5,8 @@ Timing Analyzer Summary
 Type           : Worst-case tpd
 Slack          : N/A
 Required Time  : None
-Actual Time    : 23.000 ns
-From           : valorC2
+Actual Time    : 21.500 ns
+From           : LSB1
 To             : somaMSB
 From Clock     : --
 To Clock       : --

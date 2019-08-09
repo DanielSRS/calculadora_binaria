@@ -1,0 +1,17 @@
+|decodificadorSomaDezenaSinal
+sB <= inst19.DB_MAX_OUTPUT_PORT_TYPE
+MSB2 => inst.IN0
+E2b => inst.IN1
+E3b => inst.IN2
+LSB2 => inst.IN3
+MSB => inst11.IN0
+MSB => inst14.IN1
+E2a => inst10.IN0
+E2a => inst16.IN1
+E3a => inst9.IN0
+E3a => inst16.IN2
+LSB => inst16.IN3
+sC <= inst19.DB_MAX_OUTPUT_PORT_TYPE
+sG <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+
+

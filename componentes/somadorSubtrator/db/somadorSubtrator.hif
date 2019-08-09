@@ -19,26 +19,6 @@ VHSM_ON
 -- Start VHDL Libraries --
 -- End VHDL Libraries --
 # entity
-somadorSubtrator
-# storage
-db|somadorSubtrator.(0).cnf
-db|somadorSubtrator.(0).cnf
-# case_insensitive
-# source_file
-somadorSubtrator.bdf
-8d502799bae3f8e9532377e141bf8496
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-|
-}
-# macro_sequence
-
-# end
-# entity
 somadorCompleto
 # storage
 db|somadorSubtrator.(1).cnf
@@ -57,6 +37,46 @@ somadorCompleto:inst4
 somadorCompleto:inst5
 somadorCompleto:inst6
 somadorCompleto:inst7
+}
+# macro_sequence
+
+# end
+# entity
+somadorSubtrator
+# storage
+db|somadorSubtrator.(0).cnf
+db|somadorSubtrator.(0).cnf
+# case_insensitive
+# source_file
+somadorSubtrator.bdf
+3b138acb47216155ded50193573cf39
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+XNOR3
+# storage
+db|somadorSubtrator.(2).cnf
+db|somadorSubtrator.(2).cnf
+# case_insensitive
+# source_file
+..|..|..|..|..|..|program files|quartus|quartus|libraries|others|maxplus2|XNOR3.bdf
+77bdd595f679fe273cb6a46ee1f2c80
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+XNOR3:inst8
 }
 # macro_sequence
 

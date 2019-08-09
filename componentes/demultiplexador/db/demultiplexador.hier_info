@@ -1,0 +1,17 @@
+|demultiplexador
+D0 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+S1 => inst6.IN0
+S1 => inst10.IN0
+S1 => inst11.IN0
+S0 => inst7.IN0
+S0 => inst2.IN1
+S0 => inst11.IN1
+D => inst1.IN2
+D => inst2.IN2
+D => inst10.IN2
+D => inst11.IN2
+D1 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+D2 <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+D3 <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+
+

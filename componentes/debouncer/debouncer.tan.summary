@@ -1,0 +1,56 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 2.100 ns
+From           : Botao
+To             : inst
+From Clock     : --
+To Clock       : CLK_25Mhz
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 12.000 ns
+From           : inst1
+To             : sV
+From Clock     : CLK_25Mhz
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : -0.500 ns
+From           : Botao
+To             : inst
+From Clock     : --
+To Clock       : CLK_25Mhz
+Failed Paths   : 0
+
+Type           : Clock Setup: 'CLK_25Mhz'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 18.28 MHz ( period = 54.700 ns )
+From           : contadorDeboucing:inst4|inst35
+To             : contadorDeboucing:inst4|inst
+From Clock     : CLK_25Mhz
+To Clock       : CLK_25Mhz
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

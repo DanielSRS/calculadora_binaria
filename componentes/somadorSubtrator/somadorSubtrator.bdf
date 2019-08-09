@@ -174,7 +174,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 984 408 1160 424)
+	(rect 1104 304 1280 320)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "carryOut" (rect 90 0 133 12)(font "Arial" ))
 	(pt 0 8)
@@ -564,6 +564,45 @@ applicable agreement for further details.
 		(rectangle (rect 16 16 128 80)(line_width 1))
 	)
 )
+(symbol
+	(rect 936 272 1040 352)
+	(text "XNOR3" (rect 29 -1 76 15)(font "Courier New" (font_size 10)(bold)))
+	(text "inst8" (rect 3 69 26 81)(font "Arial" ))
+	(port
+		(pt 0 56)
+		(input)
+		(text "IN3" (rect 20 52 37 64)(font "Courier New" (bold)))
+		(text "IN3" (rect 20 52 37 64)(font "Courier New" (bold)))
+		(line (pt 0 56)(pt 16 56)(line_width 1))
+	)
+	(port
+		(pt 0 40)
+		(input)
+		(text "IN2" (rect 20 36 37 48)(font "Courier New" (bold)))
+		(text "IN2" (rect 20 36 37 48)(font "Courier New" (bold)))
+		(line (pt 0 40)(pt 16 40)(line_width 1))
+	)
+	(port
+		(pt 0 24)
+		(input)
+		(text "IN1" (rect 20 20 37 32)(font "Courier New" (bold)))
+		(text "IN1" (rect 20 20 37 32)(font "Courier New" (bold)))
+		(line (pt 0 24)(pt 16 24)(line_width 1))
+	)
+	(port
+		(pt 104 40)
+		(output)
+		(text "OUT" (rect 71 36 88 48)(font "Courier New" (bold)))
+		(text "OUT" (rect 71 36 88 48)(font "Courier New" (bold)))
+		(line (pt 88 40)(pt 104 40)(line_width 1))
+	)
+	(drawing
+		(line (pt 16 64)(pt 88 64)(line_width 1))
+		(line (pt 16 16)(pt 88 16)(line_width 1))
+		(line (pt 16 64)(pt 16 16)(line_width 1))
+		(line (pt 88 64)(pt 88 16)(line_width 1))
+	)
+)
 (connector
 	(pt 280 200)
 	(pt 280 272)
@@ -657,10 +696,6 @@ applicable agreement for further details.
 	(pt 600 336)
 )
 (connector
-	(pt 600 400)
-	(pt 776 400)
-)
-(connector
 	(pt 760 528)
 	(pt 768 528)
 )
@@ -701,10 +736,6 @@ applicable agreement for further details.
 	(pt 568 152)
 )
 (connector
-	(pt 776 416)
-	(pt 568 416)
-)
-(connector
 	(pt 760 512)
 	(pt 824 512)
 )
@@ -715,14 +746,6 @@ applicable agreement for further details.
 (connector
 	(pt 440 736)
 	(pt 504 736)
-)
-(connector
-	(pt 920 400)
-	(pt 1048 400)
-)
-(connector
-	(pt 920 416)
-	(pt 984 416)
 )
 (connector
 	(pt 384 200)
@@ -744,7 +767,62 @@ applicable agreement for further details.
 	(pt 280 200)
 	(pt 384 200)
 )
+(connector
+	(pt 936 328)
+	(pt 928 328)
+)
+(connector
+	(pt 928 328)
+	(pt 928 400)
+)
+(connector
+	(pt 920 400)
+	(pt 928 400)
+)
+(connector
+	(pt 928 400)
+	(pt 1048 400)
+)
+(connector
+	(pt 936 312)
+	(pt 760 312)
+)
+(connector
+	(pt 760 312)
+	(pt 760 400)
+)
+(connector
+	(pt 600 400)
+	(pt 760 400)
+)
+(connector
+	(pt 760 400)
+	(pt 776 400)
+)
+(connector
+	(pt 936 296)
+	(pt 744 296)
+)
+(connector
+	(pt 744 296)
+	(pt 744 416)
+)
+(connector
+	(pt 776 416)
+	(pt 744 416)
+)
+(connector
+	(pt 744 416)
+	(pt 568 416)
+)
+(connector
+	(pt 1040 312)
+	(pt 1104 312)
+)
 (junction (pt 280 200))
 (junction (pt 384 200))
 (junction (pt 488 200))
 (junction (pt 184 200))
+(junction (pt 928 400))
+(junction (pt 760 400))
+(junction (pt 744 416))

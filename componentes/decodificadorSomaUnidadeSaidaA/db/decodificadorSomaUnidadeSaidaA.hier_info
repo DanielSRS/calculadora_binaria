@@ -1,0 +1,29 @@
+|decodificadorSomaUnidadeSaidaA
+A <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+E2a => inst10.IN0
+E2a => inst2.IN0
+E2a => inst4.IN0
+E2a => inst7.IN0
+E2a => inst6.IN0
+E2a => inst8.IN0
+MSB => inst11.IN0
+MSB => inst3.IN1
+MSB => inst4.IN1
+MSB => inst7.IN1
+MSB => inst8.IN1
+MSB2 => inst.IN0
+E2b => inst.IN1
+E3b => inst.IN2
+LSB2 => inst.IN3
+LSB => inst17.IN0
+LSB => inst1.IN3
+LSB => inst3.IN3
+LSB => inst6.IN3
+LSB => inst8.IN3
+E3a => inst9.IN0
+E3a => inst3.IN4
+E3a => inst4.IN4
+E3a => inst8.IN4
+E3a => inst5.IN4
+
+

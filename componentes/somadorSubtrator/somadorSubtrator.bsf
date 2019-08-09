@@ -89,15 +89,15 @@ applicable agreement for further details.
 	(port
 		(pt 168 32)
 		(output)
-		(text "somaMSB" (rect 0 0 56 14)(font "Arial" (font_size 8)))
-		(text "somaMSB" (rect 91 27 147 41)(font "Arial" (font_size 8)))
+		(text "carryOut" (rect 0 0 50 14)(font "Arial" (font_size 8)))
+		(text "carryOut" (rect 97 27 147 41)(font "Arial" (font_size 8)))
 		(line (pt 168 32)(pt 152 32)(line_width 1))
 	)
 	(port
 		(pt 168 48)
 		(output)
-		(text "carryOut" (rect 0 0 50 14)(font "Arial" (font_size 8)))
-		(text "carryOut" (rect 97 43 147 57)(font "Arial" (font_size 8)))
+		(text "somaMSB" (rect 0 0 56 14)(font "Arial" (font_size 8)))
+		(text "somaMSB" (rect 91 43 147 57)(font "Arial" (font_size 8)))
 		(line (pt 168 48)(pt 152 48)(line_width 1))
 	)
 	(port

@@ -1,0 +1,41 @@
+|contadorDeboucing
+sC <= inst35.DB_MAX_OUTPUT_PORT_TYPE
+CLK => inst.CLK
+SCLR => inst.ACLR
+SCLR => inst19.ACLR
+SCLR => inst20.ACLR
+SCLR => inst21.ACLR
+SCLR => inst22.ACLR
+SCLR => inst23.ACLR
+SCLR => inst27.ACLR
+SCLR => inst24.ACLR
+SCLR => inst25.ACLR
+SCLR => inst26.ACLR
+SCLR => inst28.ACLR
+SCLR => inst29.ACLR
+SCLR => inst30.ACLR
+SCLR => inst31.ACLR
+SCLR => inst32.ACLR
+SCLR => inst33.ACLR
+SCLR => inst34.ACLR
+SCLR => inst35.ACLR
+ENA => inst.ENA
+ENA => inst19.ENA
+ENA => inst20.ENA
+ENA => inst21.ENA
+ENA => inst22.ENA
+ENA => inst23.ENA
+ENA => inst27.ENA
+ENA => inst24.ENA
+ENA => inst25.ENA
+ENA => inst26.ENA
+ENA => inst28.ENA
+ENA => inst29.ENA
+ENA => inst30.ENA
+ENA => inst31.ENA
+ENA => inst32.ENA
+ENA => inst33.ENA
+ENA => inst34.ENA
+ENA => inst35.ENA
+
+
