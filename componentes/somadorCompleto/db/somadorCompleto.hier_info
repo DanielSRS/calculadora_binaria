@@ -1,0 +1,14 @@
+|somadorCompleto
+soma <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => inst3.IN0
+A => inst1.IN0
+A => inst2.IN0
+B => inst3.IN1
+B => inst2.IN1
+B => inst.IN0
+carryIn => inst4.IN1
+carryIn => inst1.IN1
+carryIn => inst.IN1
+carryOut <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,15 @@
+|registrador
+D0out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLK => inst.CLK
+CLK => inst4.CLK
+CLK => inst5.CLK
+CLK => inst6.CLK
+D0in => inst.DATAIN
+D1out <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+D1in => inst4.DATAIN
+D2out <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D2in => inst5.DATAIN
+D3out <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+D3in => inst6.DATAIN
+
+

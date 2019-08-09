@@ -1,0 +1,77 @@
+|somadorSubtrator
+carryOut <= somadorCompleto:inst4.carryOut
+MSB2 => inst.IN0
+operacao => inst.IN1
+operacao => inst1.IN1
+operacao => inst2.IN1
+operacao => inst3.IN1
+operacao => somadorCompleto:inst7.carryIn
+MSB1 => somadorCompleto:inst4.B
+valorB2 => inst1.IN0
+valorB1 => somadorCompleto:inst5.B
+valorC2 => inst2.IN0
+valorC1 => somadorCompleto:inst6.B
+LSB2 => inst3.IN0
+LSB1 => somadorCompleto:inst7.B
+somaLSB <= somadorCompleto:inst7.soma
+somaC <= somadorCompleto:inst6.soma
+somaB <= somadorCompleto:inst5.soma
+somaMSB <= somadorCompleto:inst4.soma
+
+
+|somadorSubtrator|somadorCompleto:inst4
+soma <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => inst3.IN0
+A => inst1.IN0
+A => inst2.IN0
+B => inst3.IN1
+B => inst2.IN1
+B => inst.IN0
+carryIn => inst4.IN1
+carryIn => inst1.IN1
+carryIn => inst.IN1
+carryOut <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somadorSubtrator|somadorCompleto:inst5
+soma <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => inst3.IN0
+A => inst1.IN0
+A => inst2.IN0
+B => inst3.IN1
+B => inst2.IN1
+B => inst.IN0
+carryIn => inst4.IN1
+carryIn => inst1.IN1
+carryIn => inst.IN1
+carryOut <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somadorSubtrator|somadorCompleto:inst6
+soma <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => inst3.IN0
+A => inst1.IN0
+A => inst2.IN0
+B => inst3.IN1
+B => inst2.IN1
+B => inst.IN0
+carryIn => inst4.IN1
+carryIn => inst1.IN1
+carryIn => inst.IN1
+carryOut <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somadorSubtrator|somadorCompleto:inst7
+soma <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => inst3.IN0
+A => inst1.IN0
+A => inst2.IN0
+B => inst3.IN1
+B => inst2.IN1
+B => inst.IN0
+carryIn => inst4.IN1
+carryIn => inst1.IN1
+carryIn => inst.IN1
+carryOut <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+

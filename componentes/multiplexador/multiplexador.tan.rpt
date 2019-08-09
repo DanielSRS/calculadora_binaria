@@ -1,0 +1,169 @@
+Classic Timing Analyzer report for multiplexador
+Fri Aug 09 04:29:54 2019
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Parallel Compilation
+  5. tpd
+  6. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                               ;
++------------------------------+-------+---------------+-------------+------+----+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time ; From ; To ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+-------------+------+----+------------+----------+--------------+
+; Worst-case tpd               ; N/A   ; None          ; 21.500 ns   ; Ee3  ; E  ; --         ; --       ; 0            ;
+; Total number of failed paths ;       ;               ;             ;      ;    ;            ;          ; 0            ;
++------------------------------+-------+---------------+-------------+------+----+------------+----------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                           ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                              ; Setting            ; From ; To ; Entity Name ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                         ; EP1K100QC208-3     ;      ;    ;             ;
+; Timing Models                                                       ; Final              ;      ;    ;             ;
+; Default hold multicycle                                             ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                           ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                              ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                      ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                    ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                               ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                             ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                    ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                       ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                   ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                   ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node               ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                               ; 10                 ;      ;    ;             ;
+; Number of paths to report                                           ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                        ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                              ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                          ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                        ; Off                ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis      ; Off                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                          ; Near End           ;      ;    ;             ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------+
+; tpd                                                     ;
++-------+-------------------+-----------------+------+----+
+; Slack ; Required P2P Time ; Actual P2P Time ; From ; To ;
++-------+-------------------+-----------------+------+----+
+; N/A   ; None              ; 21.500 ns       ; Ee3  ; E  ;
+; N/A   ; None              ; 21.300 ns       ; Ec3  ; C  ;
+; N/A   ; None              ; 21.000 ns       ; Eg4  ; G  ;
+; N/A   ; None              ; 20.700 ns       ; Ec4  ; C  ;
+; N/A   ; None              ; 20.600 ns       ; Ee4  ; E  ;
+; N/A   ; None              ; 20.600 ns       ; Ed3  ; D  ;
+; N/A   ; None              ; 20.300 ns       ; Eg3  ; G  ;
+; N/A   ; None              ; 20.100 ns       ; Eb4  ; B  ;
+; N/A   ; None              ; 20.000 ns       ; Eg1  ; G  ;
+; N/A   ; None              ; 20.000 ns       ; Ec1  ; C  ;
+; N/A   ; None              ; 19.800 ns       ; Eh4  ; DP ;
+; N/A   ; None              ; 19.600 ns       ; Ef3  ; F  ;
+; N/A   ; None              ; 19.600 ns       ; Ec2  ; C  ;
+; N/A   ; None              ; 19.400 ns       ; Ed1  ; D  ;
+; N/A   ; None              ; 19.000 ns       ; Ed2  ; D  ;
+; N/A   ; None              ; 18.800 ns       ; Eh3  ; DP ;
+; N/A   ; None              ; 18.700 ns       ; Eg2  ; G  ;
+; N/A   ; None              ; 18.700 ns       ; Eb2  ; B  ;
+; N/A   ; None              ; 18.600 ns       ; Ef1  ; F  ;
+; N/A   ; None              ; 18.400 ns       ; Ee1  ; E  ;
+; N/A   ; None              ; 18.300 ns       ; Ed4  ; D  ;
+; N/A   ; None              ; 18.200 ns       ; Ef2  ; F  ;
+; N/A   ; None              ; 17.800 ns       ; Eb3  ; B  ;
+; N/A   ; None              ; 17.700 ns       ; Ee2  ; E  ;
+; N/A   ; None              ; 17.500 ns       ; Eh1  ; DP ;
+; N/A   ; None              ; 17.500 ns       ; Eb1  ; B  ;
+; N/A   ; None              ; 17.400 ns       ; Ef4  ; F  ;
+; N/A   ; None              ; 16.600 ns       ; Eh2  ; DP ;
+; N/A   ; None              ; 16.600 ns       ; S0   ; C  ;
+; N/A   ; None              ; 16.100 ns       ; S0   ; E  ;
+; N/A   ; None              ; 16.100 ns       ; S1   ; C  ;
+; N/A   ; None              ; 15.600 ns       ; S1   ; E  ;
+; N/A   ; None              ; 15.300 ns       ; S0   ; G  ;
+; N/A   ; None              ; 15.300 ns       ; S0   ; D  ;
+; N/A   ; None              ; 15.200 ns       ; S0   ; B  ;
+; N/A   ; None              ; 15.100 ns       ; S0   ; DP ;
+; N/A   ; None              ; 15.100 ns       ; S0   ; F  ;
+; N/A   ; None              ; 14.800 ns       ; S1   ; G  ;
+; N/A   ; None              ; 14.800 ns       ; S1   ; D  ;
+; N/A   ; None              ; 14.800 ns       ; S0   ; A  ;
+; N/A   ; None              ; 14.700 ns       ; S1   ; B  ;
+; N/A   ; None              ; 14.600 ns       ; S1   ; DP ;
+; N/A   ; None              ; 14.600 ns       ; S1   ; F  ;
+; N/A   ; None              ; 14.500 ns       ; Ea3  ; A  ;
+; N/A   ; None              ; 14.400 ns       ; Ea4  ; A  ;
+; N/A   ; None              ; 14.300 ns       ; S1   ; A  ;
+; N/A   ; None              ; 13.200 ns       ; Ea1  ; A  ;
+; N/A   ; None              ; 13.000 ns       ; Ea2  ; A  ;
++-------+-------------------+-----------------+------+----+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Fri Aug 09 04:29:53 2019
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off multiplexador -c multiplexador
+Info: Started post-fitting delay annotation
+Info: Delay annotation completed successfully
+Info: Longest tpd from source pin "Ee3" to destination pin "E" is 21.500 ns
+    Info: 1: + IC(0.000 ns) + CELL(3.100 ns) = 3.100 ns; Loc. = PIN_92; Fanout = 1; PIN Node = 'Ee3'
+    Info: 2: + IC(4.700 ns) + CELL(1.300 ns) = 9.100 ns; Loc. = LC4_B26; Fanout = 1; COMB Node = 'inst28~9'
+    Info: 3: + IC(0.000 ns) + CELL(1.900 ns) = 11.000 ns; Loc. = LC5_B26; Fanout = 1; COMB Node = 'inst28~6'
+    Info: 4: + IC(2.000 ns) + CELL(8.500 ns) = 21.500 ns; Loc. = PIN_83; Fanout = 0; PIN Node = 'E'
+    Info: Total cell delay = 14.800 ns ( 68.84 % )
+    Info: Total interconnect delay = 6.700 ns ( 31.16 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 178 megabytes
+    Info: Processing ended: Fri Aug 09 04:29:54 2019
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+

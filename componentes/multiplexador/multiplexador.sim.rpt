@@ -1,0 +1,291 @@
+Simulator report for multiplexador
+Fri Aug 09 04:28:59 2019
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 82 nodes     ;
+; Simulation Coverage         ;      41.46 % ;
+; Total Number of Transitions ; 2739         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; ACEX1K       ;
++-----------------------------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                            ;
++--------------------------------------------------------------------------------------------+----------------------------------+---------------+
+; Option                                                                                     ; Setting                          ; Default Value ;
++--------------------------------------------------------------------------------------------+----------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                       ; Timing        ;
+; Start time                                                                                 ; 0 ns                             ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF                             ;               ;
+; Vector input source                                                                        ; testes/teste2(entradas_em_1).vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                               ; On            ;
+; Check outputs                                                                              ; Off                              ; Off           ;
+; Report simulation coverage                                                                 ; On                               ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                               ; On            ;
+; Display missing 1-value coverage report                                                    ; On                               ; On            ;
+; Display missing 0-value coverage report                                                    ; On                               ; On            ;
+; Detect setup and hold time violations                                                      ; Off                              ; Off           ;
+; Detect glitches                                                                            ; Off                              ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                              ; Off           ;
+; Generate Signal Activity File                                                              ; Off                              ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                              ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                              ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                               ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                       ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                              ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                              ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                             ; Auto          ;
++--------------------------------------------------------------------------------------------+----------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      41.46 % ;
+; Total nodes checked                                 ; 82           ;
+; Total output ports checked                          ; 82           ;
+; Total output ports with complete 1/0-value coverage ; 34           ;
+; Total output ports with no 1/0-value coverage       ; 48           ;
+; Total output ports with no 1-value coverage         ; 48           ;
+; Total output ports with no 0-value coverage         ; 48           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                      ;
++-----------------------+-----------------------+------------------+
+; Node Name             ; Output Port Name      ; Output Port Type ;
++-----------------------+-----------------------+------------------+
+; |multiplexador|inst   ; |multiplexador|inst   ; out0             ;
+; |multiplexador|S1     ; |multiplexador|S1     ; out              ;
+; |multiplexador|S0     ; |multiplexador|S0     ; out              ;
+; |multiplexador|inst4  ; |multiplexador|inst4  ; out0             ;
+; |multiplexador|inst5  ; |multiplexador|inst5  ; out0             ;
+; |multiplexador|inst3  ; |multiplexador|inst3  ; out0             ;
+; |multiplexador|inst14 ; |multiplexador|inst14 ; out0             ;
+; |multiplexador|inst8  ; |multiplexador|inst8  ; out0             ;
+; |multiplexador|inst9  ; |multiplexador|inst9  ; out0             ;
+; |multiplexador|inst7  ; |multiplexador|inst7  ; out0             ;
+; |multiplexador|inst15 ; |multiplexador|inst15 ; out0             ;
+; |multiplexador|inst16 ; |multiplexador|inst16 ; out0             ;
+; |multiplexador|inst17 ; |multiplexador|inst17 ; out0             ;
+; |multiplexador|inst11 ; |multiplexador|inst11 ; out0             ;
+; |multiplexador|inst19 ; |multiplexador|inst19 ; out0             ;
+; |multiplexador|inst21 ; |multiplexador|inst21 ; out0             ;
+; |multiplexador|inst22 ; |multiplexador|inst22 ; out0             ;
+; |multiplexador|inst20 ; |multiplexador|inst20 ; out0             ;
+; |multiplexador|inst24 ; |multiplexador|inst24 ; out0             ;
+; |multiplexador|inst26 ; |multiplexador|inst26 ; out0             ;
+; |multiplexador|inst27 ; |multiplexador|inst27 ; out0             ;
+; |multiplexador|inst25 ; |multiplexador|inst25 ; out0             ;
+; |multiplexador|inst29 ; |multiplexador|inst29 ; out0             ;
+; |multiplexador|inst31 ; |multiplexador|inst31 ; out0             ;
+; |multiplexador|inst32 ; |multiplexador|inst32 ; out0             ;
+; |multiplexador|inst30 ; |multiplexador|inst30 ; out0             ;
+; |multiplexador|inst34 ; |multiplexador|inst34 ; out0             ;
+; |multiplexador|inst36 ; |multiplexador|inst36 ; out0             ;
+; |multiplexador|inst37 ; |multiplexador|inst37 ; out0             ;
+; |multiplexador|inst35 ; |multiplexador|inst35 ; out0             ;
+; |multiplexador|inst39 ; |multiplexador|inst39 ; out0             ;
+; |multiplexador|inst41 ; |multiplexador|inst41 ; out0             ;
+; |multiplexador|inst42 ; |multiplexador|inst42 ; out0             ;
+; |multiplexador|inst40 ; |multiplexador|inst40 ; out0             ;
++-----------------------+-----------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------------+
+; Missing 1-Value Coverage                                         ;
++-----------------------+-----------------------+------------------+
+; Node Name             ; Output Port Name      ; Output Port Type ;
++-----------------------+-----------------------+------------------+
+; |multiplexador|A      ; |multiplexador|A      ; pin_out          ;
+; |multiplexador|inst6  ; |multiplexador|inst6  ; out0             ;
+; |multiplexador|Ea1    ; |multiplexador|Ea1    ; out              ;
+; |multiplexador|Ea3    ; |multiplexador|Ea3    ; out              ;
+; |multiplexador|Ea4    ; |multiplexador|Ea4    ; out              ;
+; |multiplexador|Ea2    ; |multiplexador|Ea2    ; out              ;
+; |multiplexador|B      ; |multiplexador|B      ; pin_out          ;
+; |multiplexador|inst10 ; |multiplexador|inst10 ; out0             ;
+; |multiplexador|Eb1    ; |multiplexador|Eb1    ; out              ;
+; |multiplexador|Eb3    ; |multiplexador|Eb3    ; out              ;
+; |multiplexador|Eb4    ; |multiplexador|Eb4    ; out              ;
+; |multiplexador|Eb2    ; |multiplexador|Eb2    ; out              ;
+; |multiplexador|C      ; |multiplexador|C      ; pin_out          ;
+; |multiplexador|inst18 ; |multiplexador|inst18 ; out0             ;
+; |multiplexador|Ec1    ; |multiplexador|Ec1    ; out              ;
+; |multiplexador|Ec3    ; |multiplexador|Ec3    ; out              ;
+; |multiplexador|Ec4    ; |multiplexador|Ec4    ; out              ;
+; |multiplexador|Ec2    ; |multiplexador|Ec2    ; out              ;
+; |multiplexador|D      ; |multiplexador|D      ; pin_out          ;
+; |multiplexador|inst23 ; |multiplexador|inst23 ; out0             ;
+; |multiplexador|Ed1    ; |multiplexador|Ed1    ; out              ;
+; |multiplexador|Ed3    ; |multiplexador|Ed3    ; out              ;
+; |multiplexador|Ed4    ; |multiplexador|Ed4    ; out              ;
+; |multiplexador|Ed2    ; |multiplexador|Ed2    ; out              ;
+; |multiplexador|E      ; |multiplexador|E      ; pin_out          ;
+; |multiplexador|inst28 ; |multiplexador|inst28 ; out0             ;
+; |multiplexador|Ee1    ; |multiplexador|Ee1    ; out              ;
+; |multiplexador|Ee3    ; |multiplexador|Ee3    ; out              ;
+; |multiplexador|Ee4    ; |multiplexador|Ee4    ; out              ;
+; |multiplexador|Ee2    ; |multiplexador|Ee2    ; out              ;
+; |multiplexador|F      ; |multiplexador|F      ; pin_out          ;
+; |multiplexador|inst33 ; |multiplexador|inst33 ; out0             ;
+; |multiplexador|Ef1    ; |multiplexador|Ef1    ; out              ;
+; |multiplexador|Ef3    ; |multiplexador|Ef3    ; out              ;
+; |multiplexador|Ef4    ; |multiplexador|Ef4    ; out              ;
+; |multiplexador|Ef2    ; |multiplexador|Ef2    ; out              ;
+; |multiplexador|G      ; |multiplexador|G      ; pin_out          ;
+; |multiplexador|inst38 ; |multiplexador|inst38 ; out0             ;
+; |multiplexador|Eg1    ; |multiplexador|Eg1    ; out              ;
+; |multiplexador|Eg3    ; |multiplexador|Eg3    ; out              ;
+; |multiplexador|Eg4    ; |multiplexador|Eg4    ; out              ;
+; |multiplexador|Eg2    ; |multiplexador|Eg2    ; out              ;
+; |multiplexador|DP     ; |multiplexador|DP     ; pin_out          ;
+; |multiplexador|inst43 ; |multiplexador|inst43 ; out0             ;
+; |multiplexador|Eh1    ; |multiplexador|Eh1    ; out              ;
+; |multiplexador|Eh3    ; |multiplexador|Eh3    ; out              ;
+; |multiplexador|Eh4    ; |multiplexador|Eh4    ; out              ;
+; |multiplexador|Eh2    ; |multiplexador|Eh2    ; out              ;
++-----------------------+-----------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------------------+
+; Missing 0-Value Coverage                                         ;
++-----------------------+-----------------------+------------------+
+; Node Name             ; Output Port Name      ; Output Port Type ;
++-----------------------+-----------------------+------------------+
+; |multiplexador|A      ; |multiplexador|A      ; pin_out          ;
+; |multiplexador|inst6  ; |multiplexador|inst6  ; out0             ;
+; |multiplexador|Ea1    ; |multiplexador|Ea1    ; out              ;
+; |multiplexador|Ea3    ; |multiplexador|Ea3    ; out              ;
+; |multiplexador|Ea4    ; |multiplexador|Ea4    ; out              ;
+; |multiplexador|Ea2    ; |multiplexador|Ea2    ; out              ;
+; |multiplexador|B      ; |multiplexador|B      ; pin_out          ;
+; |multiplexador|inst10 ; |multiplexador|inst10 ; out0             ;
+; |multiplexador|Eb1    ; |multiplexador|Eb1    ; out              ;
+; |multiplexador|Eb3    ; |multiplexador|Eb3    ; out              ;
+; |multiplexador|Eb4    ; |multiplexador|Eb4    ; out              ;
+; |multiplexador|Eb2    ; |multiplexador|Eb2    ; out              ;
+; |multiplexador|C      ; |multiplexador|C      ; pin_out          ;
+; |multiplexador|inst18 ; |multiplexador|inst18 ; out0             ;
+; |multiplexador|Ec1    ; |multiplexador|Ec1    ; out              ;
+; |multiplexador|Ec3    ; |multiplexador|Ec3    ; out              ;
+; |multiplexador|Ec4    ; |multiplexador|Ec4    ; out              ;
+; |multiplexador|Ec2    ; |multiplexador|Ec2    ; out              ;
+; |multiplexador|D      ; |multiplexador|D      ; pin_out          ;
+; |multiplexador|inst23 ; |multiplexador|inst23 ; out0             ;
+; |multiplexador|Ed1    ; |multiplexador|Ed1    ; out              ;
+; |multiplexador|Ed3    ; |multiplexador|Ed3    ; out              ;
+; |multiplexador|Ed4    ; |multiplexador|Ed4    ; out              ;
+; |multiplexador|Ed2    ; |multiplexador|Ed2    ; out              ;
+; |multiplexador|E      ; |multiplexador|E      ; pin_out          ;
+; |multiplexador|inst28 ; |multiplexador|inst28 ; out0             ;
+; |multiplexador|Ee1    ; |multiplexador|Ee1    ; out              ;
+; |multiplexador|Ee3    ; |multiplexador|Ee3    ; out              ;
+; |multiplexador|Ee4    ; |multiplexador|Ee4    ; out              ;
+; |multiplexador|Ee2    ; |multiplexador|Ee2    ; out              ;
+; |multiplexador|F      ; |multiplexador|F      ; pin_out          ;
+; |multiplexador|inst33 ; |multiplexador|inst33 ; out0             ;
+; |multiplexador|Ef1    ; |multiplexador|Ef1    ; out              ;
+; |multiplexador|Ef3    ; |multiplexador|Ef3    ; out              ;
+; |multiplexador|Ef4    ; |multiplexador|Ef4    ; out              ;
+; |multiplexador|Ef2    ; |multiplexador|Ef2    ; out              ;
+; |multiplexador|G      ; |multiplexador|G      ; pin_out          ;
+; |multiplexador|inst38 ; |multiplexador|inst38 ; out0             ;
+; |multiplexador|Eg1    ; |multiplexador|Eg1    ; out              ;
+; |multiplexador|Eg3    ; |multiplexador|Eg3    ; out              ;
+; |multiplexador|Eg4    ; |multiplexador|Eg4    ; out              ;
+; |multiplexador|Eg2    ; |multiplexador|Eg2    ; out              ;
+; |multiplexador|DP     ; |multiplexador|DP     ; pin_out          ;
+; |multiplexador|inst43 ; |multiplexador|inst43 ; out0             ;
+; |multiplexador|Eh1    ; |multiplexador|Eh1    ; out              ;
+; |multiplexador|Eh3    ; |multiplexador|Eh3    ; out              ;
+; |multiplexador|Eh4    ; |multiplexador|Eh4    ; out              ;
+; |multiplexador|Eh2    ; |multiplexador|Eh2    ; out              ;
++-----------------------+-----------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Fri Aug 09 04:28:58 2019
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off multiplexador -c multiplexador
+Info: Using vector source file "testes/teste2(entradas_em_1).vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      41.46 %
+Info: Number of transitions in simulation is 2739
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 146 megabytes
+    Info: Processing ended: Fri Aug 09 04:28:59 2019
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+

@@ -1,0 +1,65 @@
+Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+2
+51
+OFF
+OFF
+OFF
+ON
+ON
+OFF
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+somadorSubtrator
+# storage
+db|somadorSubtrator.(0).cnf
+db|somadorSubtrator.(0).cnf
+# case_insensitive
+# source_file
+somadorSubtrator.bdf
+8d502799bae3f8e9532377e141bf8496
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+somadorCompleto
+# storage
+db|somadorSubtrator.(1).cnf
+db|somadorSubtrator.(1).cnf
+# case_insensitive
+# source_file
+..|somadorCompleto|somadorCompleto.bdf
+8adff21df1e8356e8853a9794af83c1
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+somadorCompleto:inst4
+somadorCompleto:inst5
+somadorCompleto:inst6
+somadorCompleto:inst7
+}
+# macro_sequence
+
+# end
+# complete
+
