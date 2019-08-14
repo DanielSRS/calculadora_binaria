@@ -1522,7 +1522,7 @@ applicable agreement for further details.
 (symbol
 	(rect 352 352 488 448)
 	(text "debouncer" (rect 5 0 66 14)(font "Arial" (font_size 8)))
-	(text "inst18" (rect 8 80 37 92)(font "Arial" ))
+	(text "inst4" (rect 8 80 31 92)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)

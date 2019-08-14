@@ -1,5 +1,5 @@
 Analysis & Synthesis report for calculadora_binaria
-Wed Jul 31 15:59:14 2019
+Wed Aug 14 00:28:32 2019
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                               ;
 +-----------------------------+----------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Wed Jul 31 15:59:14 2019        ;
+; Analysis & Synthesis Status ; Successful - Wed Aug 14 00:28:32 2019        ;
 ; Quartus II Version          ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
 ; Revision Name               ; calculadora_binaria                          ;
 ; Top-level Entity Name       ; calculadora_binaria                          ;
@@ -114,24 +114,24 @@ applicable agreement for further details.
 +--------------------------------------------------------------+---------------------+---------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                            ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                            ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------+
-; calculadora_binaria.bdf          ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Pictures/calculadora_binaria/calculadora_binaria.bdf     ;
-; multiplexador.bdf                ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Pictures/calculadora_binaria/multiplexador.bdf           ;
-; divisor_de_clock.bdf             ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Pictures/calculadora_binaria/divisor_de_clock.bdf        ;
-; registrador.bdf                  ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Pictures/calculadora_binaria/registrador.bdf             ;
-; demultiplexador.bdf              ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Pictures/calculadora_binaria/demultiplexador.bdf         ;
-; decodificador_parcela.bdf        ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Pictures/calculadora_binaria/decodificador_parcela.bdf   ;
-; contador.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Pictures/calculadora_binaria/contador.bdf                ;
-; somador_completo.bdf             ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Pictures/calculadora_binaria/somador_completo.bdf        ;
-; soma_e_subtracao.bdf             ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Pictures/calculadora_binaria/soma_e_subtracao.bdf        ;
-; dec_result_dezena.bdf            ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Pictures/calculadora_binaria/dec_result_dezena.bdf       ;
-; debouncer.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Pictures/calculadora_binaria/debouncer.bdf               ;
-; contador_para_deboucing.bdf      ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Pictures/calculadora_binaria/contador_para_deboucing.bdf ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                             ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                             ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------+
+; calculadora_binaria.bdf          ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Documents/calculadora_binaria/calculadora_binaria.bdf     ;
+; multiplexador.bdf                ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Documents/calculadora_binaria/multiplexador.bdf           ;
+; divisor_de_clock.bdf             ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Documents/calculadora_binaria/divisor_de_clock.bdf        ;
+; registrador.bdf                  ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Documents/calculadora_binaria/registrador.bdf             ;
+; demultiplexador.bdf              ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Documents/calculadora_binaria/demultiplexador.bdf         ;
+; decodificador_parcela.bdf        ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Documents/calculadora_binaria/decodificador_parcela.bdf   ;
+; contador.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Documents/calculadora_binaria/contador.bdf                ;
+; somador_completo.bdf             ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Documents/calculadora_binaria/somador_completo.bdf        ;
+; soma_e_subtracao.bdf             ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Documents/calculadora_binaria/soma_e_subtracao.bdf        ;
+; dec_result_dezena.bdf            ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Documents/calculadora_binaria/dec_result_dezena.bdf       ;
+; debouncer.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Documents/calculadora_binaria/debouncer.bdf               ;
+; contador_para_deboucing.bdf      ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Documents/calculadora_binaria/contador_para_deboucing.bdf ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------+
@@ -212,7 +212,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Wed Jul 31 15:59:12 2019
+    Info: Processing started: Wed Aug 14 00:28:29 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off calculadora_binaria -c calculadora_binaria
 Info: Found 1 design units, including 1 entities, in source file calculadora_binaria.bdf
     Info: Found entity 1: calculadora_binaria
@@ -255,9 +255,9 @@ Info: Implemented 115 device resources after synthesis - the final resource coun
     Info: Implemented 12 output pins
     Info: Implemented 90 logic cells
 Info: Quartus II Analysis & Synthesis was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 212 megabytes
-    Info: Processing ended: Wed Jul 31 15:59:14 2019
-    Info: Elapsed time: 00:00:02
+    Info: Peak virtual memory: 216 megabytes
+    Info: Processing ended: Wed Aug 14 00:28:33 2019
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:02
 
 
