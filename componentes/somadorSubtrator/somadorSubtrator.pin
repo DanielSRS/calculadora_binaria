@@ -36,7 +36,7 @@
  ------------------------------------------------------------------------------
 
 
-File Generation Date & Time: Fri Aug 09 10:48:34 2019
+File Generation Date & Time: Wed Aug 14 00:56:05 2019
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 CHIP  "somadorSubtrator"  ASSIGNED TO AN: EP1K100QC208-3
 
@@ -87,7 +87,7 @@ VCC_IO                       : 42        : power  :                   : 3.3V    
 GND                          : 43        : gnd    :                   :         :           :                
 GND*                         : 44        :        :                   :         :           :                
 somaLSB                      : 45        : output : LVTTL/LVCMOS      :         :           : N              
-valorB2                      : 46        : input  : LVTTL/LVCMOS      :         :           : N              
+LSB2                         : 46        : input  : LVTTL/LVCMOS      :         :           : N              
 carryOut                     : 47        : output : LVTTL/LVCMOS      :         :           : N              
 VCC_INT                      : 48        : power  :                   : 2.5V    :           :                
 GND                          : 49        : gnd    :                   :         :           :                
@@ -119,9 +119,9 @@ GND*                         : 74        :        :                   :         
 GND*                         : 75        :        :                   :         :           :                
 GND                          : 76        : gnd    :                   :         :           :                
 VCC_CKLK                     : 77        : power  :                   : 2.5V    :           :                
-valorC1                      : 78        : input  : LVTTL/LVCMOS      :         :           : N              
-valorC2                      : 79        : input  : LVTTL/LVCMOS      :         :           : N              
-LSB1                         : 80        : input  : LVTTL/LVCMOS      :         :           : N              
+MSB1                         : 78        : input  : LVTTL/LVCMOS      :         :           : N              
+LSB1                         : 79        : input  : LVTTL/LVCMOS      :         :           : N              
+valorB1                      : 80        : input  : LVTTL/LVCMOS      :         :           : N              
 GND_CKLK                     : 81        : gnd    :                   :         :           :                
 GND                          : 82        : gnd    :                   :         :           :                
 GND*                         : 83        :        :                   :         :           :                
@@ -136,7 +136,7 @@ VCC_INT                      : 91        : power  :                   : 2.5V    
 GND*                         : 92        :        :                   :         :           :                
 GND*                         : 93        :        :                   :         :           :                
 GND*                         : 94        :        :                   :         :           :                
-MSB1                         : 95        : input  : LVTTL/LVCMOS      :         :           : N              
+valorB2                      : 95        : input  : LVTTL/LVCMOS      :         :           : N              
 GND*                         : 96        :        :                   :         :           :                
 GND*                         : 97        :        :                   :         :           :                
 VCC_IO                       : 98        : power  :                   : 3.3V    :           :                
@@ -198,7 +198,7 @@ TDI                          : 153       : input  :                   :         
 nCE                          : 154       : input  :                   :         :           :                
 DCLK                         : 155       : bidir  :                   :         :           :                
 DATA0                        : 156       : input  :                   :         :           :                
-MSB2                         : 157       : input  : LVTTL/LVCMOS      :         :           : N              
+valorC2                      : 157       : input  : LVTTL/LVCMOS      :         :           : N              
 GND*                         : 158       :        :                   :         :           :                
 GND*                         : 159       :        :                   :         :           :                
 GND*                         : 160       :        :                   :         :           :                
@@ -223,8 +223,8 @@ VCC_IO                       : 178       : power  :                   : 3.3V    
 GND*                         : 179       :        :                   :         :           :                
 GND*                         : 180       :        :                   :         :           :                
 GND                          : 181       : gnd    :                   :         :           :                
-valorB1                      : 182       : input  : LVTTL/LVCMOS      :         :           : N              
-LSB2                         : 183       : input  : LVTTL/LVCMOS      :         :           : N              
+MSB2                         : 182       : input  : LVTTL/LVCMOS      :         :           : N              
+valorC1                      : 183       : input  : LVTTL/LVCMOS      :         :           : N              
 operacao                     : 184       : input  : LVTTL/LVCMOS      :         :           : N              
 VCC_INT                      : 185       : power  :                   : 2.5V    :           :                
 GND*                         : 186       :        :                   :         :           :                

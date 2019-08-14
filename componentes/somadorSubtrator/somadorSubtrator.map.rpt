@@ -1,5 +1,5 @@
 Analysis & Synthesis report for somadorSubtrator
-Fri Aug 09 10:48:25 2019
+Wed Aug 14 00:55:57 2019
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -39,12 +39,12 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                               ;
 +-----------------------------+----------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Fri Aug 09 10:48:25 2019        ;
+; Analysis & Synthesis Status ; Successful - Wed Aug 14 00:55:57 2019        ;
 ; Quartus II Version          ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
 ; Revision Name               ; somadorSubtrator                             ;
 ; Top-level Entity Name       ; somadorSubtrator                             ;
 ; Family                      ; ACEX1K                                       ;
-; Total logic elements        ; 7                                            ;
+; Total logic elements        ; 8                                            ;
 ; Total pins                  ; 14                                           ;
 ; Total memory bits           ; 0                                            ;
 ; Total PLLs                  ; 0                                            ;
@@ -120,7 +120,6 @@ applicable agreement for further details.
 +----------------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------+
 ; ../somadorCompleto/somadorCompleto.bdf ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Documents/calculadora_binaria/componentes/somadorCompleto/somadorCompleto.bdf   ;
 ; somadorSubtrator.bdf                   ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Documents/calculadora_binaria/componentes/somadorSubtrator/somadorSubtrator.bdf ;
-; XNOR3.bdf                              ; yes             ; Megafunction                       ; c:/program files/quartus/quartus/libraries/others/maxplus2/XNOR3.bdf                           ;
 +----------------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------+
 
 
@@ -129,9 +128,9 @@ applicable agreement for further details.
 +--------------------------------+------------+
 ; Resource                       ; Usage      ;
 +--------------------------------+------------+
-; Total logic elements           ; 7          ;
-; Total combinational functions  ; 7          ;
-;     -- Total 4-input functions ; 5          ;
+; Total logic elements           ; 8          ;
+; Total combinational functions  ; 8          ;
+;     -- Total 4-input functions ; 6          ;
 ;     -- Total 3-input functions ; 1          ;
 ;     -- Total 2-input functions ; 1          ;
 ;     -- Total 1-input functions ; 0          ;
@@ -139,9 +138,9 @@ applicable agreement for further details.
 ; Total registers                ; 0          ;
 ; I/O pins                       ; 14         ;
 ; Maximum fan-out node           ; operacao   ;
-; Maximum fan-out                ; 6          ;
-; Total fan-out                  ; 30         ;
-; Average fan-out                ; 1.43       ;
+; Maximum fan-out                ; 7          ;
+; Total fan-out                  ; 34         ;
+; Average fan-out                ; 1.55       ;
 +--------------------------------+------------+
 
 
@@ -150,7 +149,7 @@ applicable agreement for further details.
 +----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------+--------------+
 ; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                     ; Library Name ;
 +----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------+--------------+
-; |somadorSubtrator          ; 7 (0)       ; 0            ; 0           ; 14   ; 7 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |somadorSubtrator                       ; work         ;
+; |somadorSubtrator          ; 8 (1)       ; 0            ; 0           ; 14   ; 8 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |somadorSubtrator                       ; work         ;
 ;    |somadorCompleto:inst4| ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |somadorSubtrator|somadorCompleto:inst4 ; work         ;
 ;    |somadorCompleto:inst5| ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |somadorSubtrator|somadorCompleto:inst5 ; work         ;
 ;    |somadorCompleto:inst6| ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |somadorSubtrator|somadorCompleto:inst6 ; work         ;
@@ -180,24 +179,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Fri Aug 09 10:48:23 2019
+    Info: Processing started: Wed Aug 14 00:55:56 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off somadorSubtrator -c somadorSubtrator
 Info: Found 1 design units, including 1 entities, in source file ../somadorCompleto/somadorCompleto.bdf
     Info: Found entity 1: somadorCompleto
 Info: Found 1 design units, including 1 entities, in source file somadorSubtrator.bdf
     Info: Found entity 1: somadorSubtrator
 Info: Elaborating entity "somadorSubtrator" for the top level hierarchy
-Info: Elaborating entity "XNOR3" for hierarchy "XNOR3:inst8"
-Info: Elaborated megafunction instantiation "XNOR3:inst8"
 Info: Elaborating entity "somadorCompleto" for hierarchy "somadorCompleto:inst4"
-Info: Implemented 21 device resources after synthesis - the final resource count might be different
+Info: Implemented 22 device resources after synthesis - the final resource count might be different
     Info: Implemented 9 input pins
     Info: Implemented 5 output pins
-    Info: Implemented 7 logic cells
+    Info: Implemented 8 logic cells
 Info: Quartus II Analysis & Synthesis was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 211 megabytes
-    Info: Processing ended: Fri Aug 09 10:48:25 2019
-    Info: Elapsed time: 00:00:02
+    Info: Processing ended: Wed Aug 14 00:55:57 2019
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 

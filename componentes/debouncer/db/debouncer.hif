@@ -19,26 +19,6 @@ VHSM_ON
 -- Start VHDL Libraries --
 -- End VHDL Libraries --
 # entity
-debouncer
-# storage
-db|debouncer.(0).cnf
-db|debouncer.(0).cnf
-# case_insensitive
-# source_file
-debouncer.bdf
-e83e3b293dbb2032885a44ab348be66a
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-|
-}
-# macro_sequence
-
-# end
-# entity
 contadorDeboucing
 # storage
 db|debouncer.(1).cnf
@@ -54,6 +34,26 @@ AUTO
 }
 # hierarchies {
 contadorDeboucing:inst4
+}
+# macro_sequence
+
+# end
+# entity
+debouncer
+# storage
+db|debouncer.(0).cnf
+db|debouncer.(0).cnf
+# case_insensitive
+# source_file
+debouncer.bdf
+ad993bb83ee345e3a7aa2b8dd7d5a4e
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
 }
 # macro_sequence
 

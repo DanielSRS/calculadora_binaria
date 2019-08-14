@@ -1,5 +1,5 @@
 |somadorSubtrator
-carryOut <= XNOR3:inst8.OUT
+carryOut <= inst12.DB_MAX_OUTPUT_PORT_TYPE
 MSB2 => inst.IN0
 operacao => inst.IN1
 operacao => inst1.IN1
@@ -7,7 +7,6 @@ operacao => inst2.IN1
 operacao => inst3.IN1
 operacao => somadorCompleto:inst7.carryIn
 MSB1 => somadorCompleto:inst4.B
-MSB1 => XNOR3:inst8.IN1
 valorB2 => inst1.IN0
 valorB1 => somadorCompleto:inst5.B
 valorC2 => inst2.IN0
@@ -18,13 +17,6 @@ somaLSB <= somadorCompleto:inst7.soma
 somaC <= somadorCompleto:inst6.soma
 somaB <= somadorCompleto:inst5.soma
 somaMSB <= somadorCompleto:inst4.soma
-
-
-|somadorSubtrator|XNOR3:inst8
-OUT <= 9.DB_MAX_OUTPUT_PORT_TYPE
-IN1 => 1.IN0
-IN2 => 3.IN0
-IN3 => 3.IN1
 
 
 |somadorSubtrator|somadorCompleto:inst4

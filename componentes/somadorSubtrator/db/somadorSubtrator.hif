@@ -42,26 +42,6 @@ somadorCompleto:inst7
 
 # end
 # entity
-somadorSubtrator
-# storage
-db|somadorSubtrator.(0).cnf
-db|somadorSubtrator.(0).cnf
-# case_insensitive
-# source_file
-somadorSubtrator.bdf
-3b138acb47216155ded50193573cf39
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-|
-}
-# macro_sequence
-
-# end
-# entity
 XNOR3
 # storage
 db|somadorSubtrator.(2).cnf
@@ -75,8 +55,25 @@ db|somadorSubtrator.(2).cnf
 BLOCK_DESIGN_NAMING
 AUTO
 }
+# macro_sequence
+
+# end
+# entity
+somadorSubtrator
+# storage
+db|somadorSubtrator.(0).cnf
+db|somadorSubtrator.(0).cnf
+# case_insensitive
+# source_file
+somadorSubtrator.bdf
+bad231cc2fd9623c56988254534bc96c
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
 # hierarchies {
-XNOR3:inst8
+|
 }
 # macro_sequence
 

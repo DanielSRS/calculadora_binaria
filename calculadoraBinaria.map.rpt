@@ -1,0 +1,175 @@
+Analysis & Synthesis report for calculadoraBinaria
+Wed Aug 14 00:50:25 2019
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                               ;
++-----------------------------+----------------------------------------------+
+; Analysis & Synthesis Status ; Failed - Wed Aug 14 00:50:24 2019            ;
+; Quartus II Version          ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
+; Revision Name               ; calculadoraBinaria                           ;
+; Top-level Entity Name       ; calculadoraBinaria                           ;
+; Family                      ; ACEX1K                                       ;
++-----------------------------+----------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                          ;
++--------------------------------------------------------------+--------------------+--------------------+
+; Option                                                       ; Setting            ; Default Value      ;
++--------------------------------------------------------------+--------------------+--------------------+
+; Device                                                       ; EP1K100QC208-3     ;                    ;
+; Top-level entity name                                        ; calculadoraBinaria ; calculadoraBinaria ;
+; Family name                                                  ; ACEX1K             ; Stratix II         ;
+; Use Generated Physical Constraints File                      ; Off                ;                    ;
+; Use smart compilation                                        ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                          ; Off                ; Off                ;
+; Preserve fewer node names                                    ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                    ; Off                ; Off                ;
+; Verilog Version                                              ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                 ; VHDL93             ; VHDL93             ;
+; State Machine Processing                                     ; Auto               ; Auto               ;
+; Safe State Machine                                           ; Off                ; Off                ;
+; Extract Verilog State Machines                               ; On                 ; On                 ;
+; Extract VHDL State Machines                                  ; On                 ; On                 ;
+; Ignore Verilog initial constructs                            ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                   ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops               ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                      ; On                 ; On                 ;
+; Parallel Synthesis                                           ; Off                ; Off                ;
+; NOT Gate Push-Back                                           ; On                 ; On                 ;
+; Power-Up Don't Care                                          ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                 ; Off                ; Off                ;
+; Remove Duplicate Registers                                   ; On                 ; On                 ;
+; Ignore CARRY Buffers                                         ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                       ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                    ; Off                ; Off                ;
+; Ignore LCELL Buffers                                         ; Off                ; Off                ;
+; Ignore SOFT Buffers                                          ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                               ; Off                ; Off                ;
+; Auto Implement in ROM                                        ; Off                ; Off                ;
+; Optimization Technique                                       ; Area               ; Area               ;
+; Carry Chain Length                                           ; 32                 ; 32                 ;
+; Cascade Chain Length                                         ; 2                  ; 2                  ;
+; Auto Carry Chains                                            ; On                 ; On                 ;
+; Auto Open-Drain Pins                                         ; On                 ; On                 ;
+; Auto ROM Replacement                                         ; On                 ; On                 ;
+; Auto RAM Replacement                                         ; On                 ; On                 ;
+; Auto Clock Enable Replacement                                ; On                 ; On                 ;
+; Strict RAM Replacement                                       ; Off                ; Off                ;
+; Auto Resource Sharing                                        ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                           ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                           ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing          ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives            ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report           ; On                 ; On                 ;
+; HDL message level                                            ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages              ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report     ; 100                ; 100                ;
+; Number of Inverted Registers Reported in Synthesis Report    ; 100                ; 100                ;
+; Block Design Naming                                          ; Auto               ; Auto               ;
+; Synthesis Effort                                             ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                           ; Medium             ; Medium             ;
++--------------------------------------------------------------+--------------------+--------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                        ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                        ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------+
+; calculadoraBinaria.bdf           ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Documents/calculadora_binaria/calculadoraBinaria.bdf ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Wed Aug 14 00:50:23 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off calculadoraBinaria -c calculadoraBinaria
+Info: Found 1 design units, including 1 entities, in source file componentes/decodificadorSomaUnidadeSaidaG/decodificadorSomaUnidadeSaidaG.bdf
+    Info: Found entity 1: decodificadorSomaUnidadeSaidaG
+Info: Found 1 design units, including 1 entities, in source file componentes/decodificadorSomaUnidadeSaidaF/decodificadorSomaUnidadeSaidaF.bdf
+    Info: Found entity 1: decodificadorSomaUnidadeSaidaF
+Info: Found 1 design units, including 1 entities, in source file componentes/decodificadorSomaUnidadeSaidaE/decodificadorSomaUnidadeSaidaE.bdf
+    Info: Found entity 1: decodificadorSomaUnidadeSaidaE
+Info: Found 1 design units, including 1 entities, in source file componentes/decodificadorSomaUnidadeSaidaD/decodificadorSomaUnidadeSaidaD.bdf
+    Info: Found entity 1: decodificadorSomaUnidadeSaidaD
+Info: Found 1 design units, including 1 entities, in source file componentes/decodificadorSomaUnidadeSaidaC/decodificadorSomaUnidadeSaidaC.bdf
+    Info: Found entity 1: decodificadorSomaUnidadeSaidaC
+Info: Found 1 design units, including 1 entities, in source file componentes/decodificadorSomaUnidadeSaidaB/decodificadorSomaUnidadeSaidaB.bdf
+    Info: Found entity 1: decodificadorSomaUnidadeSaidaB
+Info: Found 1 design units, including 1 entities, in source file componentes/decodificadorSomaUnidadeSaidaA/decodificadorSomaUnidadeSaidaA.bdf
+    Info: Found entity 1: decodificadorSomaUnidadeSaidaA
+Info: Found 1 design units, including 1 entities, in source file componentes/decodificadorSomaDezenaSinal/decodificadorSomaDezenaSinal.bdf
+    Info: Found entity 1: decodificadorSomaDezenaSinal
+Info: Found 1 design units, including 1 entities, in source file componentes/somadorSubtrator/somadorSubtrator.bdf
+    Info: Found entity 1: somadorSubtrator
+Info: Found 1 design units, including 1 entities, in source file componentes/somadorCompleto/somadorCompleto.bdf
+    Info: Found entity 1: somadorCompleto
+Info: Found 1 design units, including 1 entities, in source file componentes/registrador/registrador.bdf
+    Info: Found entity 1: registrador
+Info: Found 1 design units, including 1 entities, in source file componentes/multiplexador/multiplexador.bdf
+    Info: Found entity 1: multiplexador
+Info: Found 1 design units, including 1 entities, in source file componentes/divisorDeFrequencia/divisorDeFrequencia.bdf
+    Info: Found entity 1: divisorDeFrequencia
+Info: Found 1 design units, including 1 entities, in source file componentes/demultiplexador/demultiplexador.bdf
+    Info: Found entity 1: demultiplexador
+Info: Found 1 design units, including 1 entities, in source file componentes/decodificadorParcela/decodificadorParcela.bdf
+    Info: Found entity 1: decodificadorParcela
+Info: Found 1 design units, including 1 entities, in source file componentes/debouncer/debouncer.bdf
+    Info: Found entity 1: debouncer
+Info: Found 1 design units, including 1 entities, in source file componentes/contadorDeboucing/contadorDeboucing.bdf
+    Info: Found entity 1: contadorDeboucing
+Info: Found 1 design units, including 1 entities, in source file calculadoraBinaria.bdf
+    Info: Found entity 1: calculadoraBinaria
+Info: Elaborating entity "calculadoraBinaria" for the top level hierarchy
+Error: Port "operacao" of type somadorSubtrator of instance "inst4" is missing source signal
+Error: Port "S1" of type demultiplexador of instance "inst6" is missing source signal
+Error: Port "S0" of type demultiplexador of instance "inst6" is missing source signal
+Error: Port "S1" of type multiplexador of instance "inst8" is missing source signal
+Error: Port "S0" of type multiplexador of instance "inst8" is missing source signal
+Error: Can't elaborate top-level user hierarchy
+Error: Quartus II Analysis & Synthesis was unsuccessful. 6 errors, 0 warnings
+    Error: Peak virtual memory: 215 megabytes
+    Error: Processing ended: Wed Aug 14 00:50:25 2019
+    Error: Elapsed time: 00:00:02
+    Error: Total CPU time (on all processors): 00:00:01
+
+

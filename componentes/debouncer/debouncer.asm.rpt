@@ -1,5 +1,5 @@
 Assembler report for debouncer
-Fri Aug 09 11:20:36 2019
+Wed Aug 14 00:51:48 2019
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Fri Aug 09 11:20:36 2019 ;
+; Assembler Status      ; Successful - Wed Aug 14 00:51:48 2019 ;
 ; Revision Name         ; debouncer                             ;
 ; Top-level Entity Name ; debouncer                             ;
 ; Family                ; ACEX1K                                ;
@@ -105,7 +105,7 @@ applicable agreement for further details.
 +--------------------+---------------------------------------------------------------------------------------+
 ; Device             ; EPC2                                                                                  ;
 ; JTAG usercode      ; 0x00000000                                                                            ;
-; Checksum           ; 0x00BC7465                                                                            ;
+; Checksum           ; 0x00BC7479                                                                            ;
 ; Compression Ratio  ; 1                                                                                     ;
 +--------------------+---------------------------------------------------------------------------------------+
 
@@ -116,12 +116,12 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Assembler
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Fri Aug 09 11:20:35 2019
+    Info: Processing started: Wed Aug 14 00:51:47 2019
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off debouncer -c debouncer
 Info: Assembler is generating device programming files
 Info: Quartus II Assembler was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 199 megabytes
-    Info: Processing ended: Fri Aug 09 11:20:36 2019
+    Info: Processing ended: Wed Aug 14 00:51:48 2019
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
