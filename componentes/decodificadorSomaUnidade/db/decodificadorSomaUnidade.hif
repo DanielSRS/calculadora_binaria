@@ -58,5 +58,125 @@ decodificadorSomaUnidadeSaidaA:inst1
 # macro_sequence
 
 # end
+# entity
+decodificadorSomaUnidadeSaidaB
+# storage
+db|decodificadorSomaUnidade.(2).cnf
+db|decodificadorSomaUnidade.(2).cnf
+# case_insensitive
+# source_file
+..|decodificadorSomaUnidadeSaidaB|decodificadorSomaUnidadeSaidaB.bdf
+c3f69cb1ddb8f32951f965d2ee3dbf1b
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+decodificadorSomaUnidadeSaidaB:inst2
+}
+# macro_sequence
+
+# end
+# entity
+decodificadorSomaUnidadeSaidaC
+# storage
+db|decodificadorSomaUnidade.(3).cnf
+db|decodificadorSomaUnidade.(3).cnf
+# case_insensitive
+# source_file
+..|decodificadorSomaUnidadeSaidaC|decodificadorSomaUnidadeSaidaC.bdf
+ca83ac1ac649e537c3f91a44ebab43
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+decodificadorSomaUnidadeSaidaC:inst14
+}
+# macro_sequence
+
+# end
+# entity
+decodificadorSomaUnidadeSaidaD
+# storage
+db|decodificadorSomaUnidade.(4).cnf
+db|decodificadorSomaUnidade.(4).cnf
+# case_insensitive
+# source_file
+..|decodificadorSomaUnidadeSaidaD|decodificadorSomaUnidadeSaidaD.bdf
+3a64d9ddec5071fc8e9e43b2be6d3fb2
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+decodificadorSomaUnidadeSaidaD:inst4
+}
+# macro_sequence
+
+# end
+# entity
+decodificadorSomaUnidadeSaidaE
+# storage
+db|decodificadorSomaUnidade.(5).cnf
+db|decodificadorSomaUnidade.(5).cnf
+# case_insensitive
+# source_file
+..|decodificadorSomaUnidadeSaidaE|decodificadorSomaUnidadeSaidaE.bdf
+c8e7ee86c4eed4e54b4f4129c9b34d
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+decodificadorSomaUnidadeSaidaE:inst5
+}
+# macro_sequence
+
+# end
+# entity
+decodificadorSomaUnidadeSaidaF
+# storage
+db|decodificadorSomaUnidade.(6).cnf
+db|decodificadorSomaUnidade.(6).cnf
+# case_insensitive
+# source_file
+..|decodificadorSomaUnidadeSaidaF|decodificadorSomaUnidadeSaidaF.bdf
+55d430604df58a83df443c398cc7edee
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+decodificadorSomaUnidadeSaidaF:inst6
+}
+# macro_sequence
+
+# end
+# entity
+decodificadorSomaUnidadeSaidaG
+# storage
+db|decodificadorSomaUnidade.(7).cnf
+db|decodificadorSomaUnidade.(7).cnf
+# case_insensitive
+# source_file
+..|decodificadorSomaUnidadeSaidaG|decodificadorSomaUnidadeSaidaG.bdf
+3042ec249712cdfb4f2c88f9a71554a
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+decodificadorSomaUnidadeSaidaG:inst7
+}
+# macro_sequence
+
+# end
 # complete
 

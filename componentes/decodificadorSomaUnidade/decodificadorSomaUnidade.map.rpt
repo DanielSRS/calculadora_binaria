@@ -1,5 +1,5 @@
 Analysis & Synthesis report for decodificadorSomaUnidade
-Fri Aug 09 12:30:05 2019
+Sun Aug 11 10:43:27 2019
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -10,7 +10,10 @@ Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Analysis & Synthesis Source Files Read
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. General Register Statistics
+  8. Analysis & Synthesis Messages
 
 
 
@@ -36,11 +39,15 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                               ;
 +-----------------------------+----------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Fri Aug 09 12:30:05 2019            ;
+; Analysis & Synthesis Status ; Successful - Sun Aug 11 10:43:27 2019        ;
 ; Quartus II Version          ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
 ; Revision Name               ; decodificadorSomaUnidade                     ;
 ; Top-level Entity Name       ; decodificadorSomaUnidade                     ;
 ; Family                      ; ACEX1K                                       ;
+; Total logic elements        ; 23                                           ;
+; Total pins                  ; 15                                           ;
+; Total memory bits           ; 0                                            ;
+; Total PLLs                  ; 0                                            ;
 +-----------------------------+----------------------------------------------+
 
 
@@ -111,9 +118,67 @@ applicable agreement for further details.
 +----------------------------------------------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
 ; File Name with User-Entered Path                                     ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                               ;
 +----------------------------------------------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+; ../decodificadorSomaUnidadeSaidaG/decodificadorSomaUnidadeSaidaG.bdf ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Documents/calculadora_binaria/componentes/decodificadorSomaUnidadeSaidaG/decodificadorSomaUnidadeSaidaG.bdf ;
+; ../decodificadorSomaUnidadeSaidaF/decodificadorSomaUnidadeSaidaF.bdf ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Documents/calculadora_binaria/componentes/decodificadorSomaUnidadeSaidaF/decodificadorSomaUnidadeSaidaF.bdf ;
+; ../decodificadorSomaUnidadeSaidaE/decodificadorSomaUnidadeSaidaE.bdf ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Documents/calculadora_binaria/componentes/decodificadorSomaUnidadeSaidaE/decodificadorSomaUnidadeSaidaE.bdf ;
+; ../decodificadorSomaUnidadeSaidaD/decodificadorSomaUnidadeSaidaD.bdf ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Documents/calculadora_binaria/componentes/decodificadorSomaUnidadeSaidaD/decodificadorSomaUnidadeSaidaD.bdf ;
+; ../decodificadorSomaUnidadeSaidaC/decodificadorSomaUnidadeSaidaC.bdf ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Documents/calculadora_binaria/componentes/decodificadorSomaUnidadeSaidaC/decodificadorSomaUnidadeSaidaC.bdf ;
+; ../decodificadorSomaUnidadeSaidaB/decodificadorSomaUnidadeSaidaB.bdf ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Documents/calculadora_binaria/componentes/decodificadorSomaUnidadeSaidaB/decodificadorSomaUnidadeSaidaB.bdf ;
 ; ../decodificadorSomaUnidadeSaidaA/decodificadorSomaUnidadeSaidaA.bdf ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Documents/calculadora_binaria/componentes/decodificadorSomaUnidadeSaidaA/decodificadorSomaUnidadeSaidaA.bdf ;
 ; decodificadorSomaUnidade.bdf                                         ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Documents/calculadora_binaria/componentes/decodificadorSomaUnidade/decodificadorSomaUnidade.bdf             ;
 +----------------------------------------------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary ;
++--------------------------------+------------+
+; Resource                       ; Usage      ;
++--------------------------------+------------+
+; Total logic elements           ; 23         ;
+; Total combinational functions  ; 23         ;
+;     -- Total 4-input functions ; 15         ;
+;     -- Total 3-input functions ; 4          ;
+;     -- Total 2-input functions ; 4          ;
+;     -- Total 1-input functions ; 0          ;
+;     -- Total 0-input functions ; 0          ;
+; Total registers                ; 0          ;
+; I/O pins                       ; 15         ;
+; Maximum fan-out node           ; LSB        ;
+; Maximum fan-out                ; 13         ;
+; Total fan-out                  ; 88         ;
+; Average fan-out                ; 2.32       ;
++--------------------------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                ;
++--------------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                 ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                             ; Library Name ;
++--------------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------+--------------+
+; |decodificadorSomaUnidade                  ; 23 (1)      ; 0            ; 0           ; 15   ; 23 (1)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |decodificadorSomaUnidade                                       ; work         ;
+;    |decodificadorSomaUnidadeSaidaB:inst2|  ; 3 (3)       ; 0            ; 0           ; 0    ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |decodificadorSomaUnidade|decodificadorSomaUnidadeSaidaB:inst2  ; work         ;
+;    |decodificadorSomaUnidadeSaidaC:inst14| ; 3 (3)       ; 0            ; 0           ; 0    ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |decodificadorSomaUnidade|decodificadorSomaUnidadeSaidaC:inst14 ; work         ;
+;    |decodificadorSomaUnidadeSaidaD:inst4|  ; 4 (4)       ; 0            ; 0           ; 0    ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |decodificadorSomaUnidade|decodificadorSomaUnidadeSaidaD:inst4  ; work         ;
+;    |decodificadorSomaUnidadeSaidaE:inst5|  ; 3 (3)       ; 0            ; 0           ; 0    ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |decodificadorSomaUnidade|decodificadorSomaUnidadeSaidaE:inst5  ; work         ;
+;    |decodificadorSomaUnidadeSaidaF:inst6|  ; 6 (6)       ; 0            ; 0           ; 0    ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |decodificadorSomaUnidade|decodificadorSomaUnidadeSaidaF:inst6  ; work         ;
+;    |decodificadorSomaUnidadeSaidaG:inst7|  ; 3 (3)       ; 0            ; 0           ; 0    ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |decodificadorSomaUnidade|decodificadorSomaUnidadeSaidaG:inst7  ; work         ;
++--------------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
 
 
 +-------------------------------+
@@ -122,30 +187,42 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Fri Aug 09 12:30:03 2019
+    Info: Processing started: Sun Aug 11 10:43:25 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off decodificadorSomaUnidade -c decodificadorSomaUnidade
-Warning: Can't analyze file -- file C:/Users/danie/Documents/calculadora_binaria/componentes/decodificadorSomaUnidadeSaidaA/decodificadorSomaUnidadeSaidaG.bdf is missing
-Warning: Can't analyze file -- file C:/Users/danie/Documents/calculadora_binaria/componentes/decodificadorSomaUnidadeSaidaA/decodificadorSomaUnidadeSaidaF.bdf is missing
-Warning: Can't analyze file -- file C:/Users/danie/Documents/calculadora_binaria/componentes/decodificadorSomaUnidadeSaidaA/decodificadorSomaUnidadeSaidaE.bdf is missing
-Warning: Can't analyze file -- file C:/Users/danie/Documents/calculadora_binaria/componentes/decodificadorSomaUnidadeSaidaA/decodificadorSomaUnidadeSaidaD.bdf is missing
-Warning: Can't analyze file -- file C:/Users/danie/Documents/calculadora_binaria/componentes/decodificadorSomaUnidadeSaidaA/decodificadorSomaUnidadeSaidaC.bdf is missing
-Warning: Can't analyze file -- file C:/Users/danie/Documents/calculadora_binaria/componentes/decodificadorSomaUnidadeSaidaA/decodificadorSomaUnidadeSaidaB.bdf is missing
+Info: Found 1 design units, including 1 entities, in source file ../decodificadorSomaUnidadeSaidaG/decodificadorSomaUnidadeSaidaG.bdf
+    Info: Found entity 1: decodificadorSomaUnidadeSaidaG
+Info: Found 1 design units, including 1 entities, in source file ../decodificadorSomaUnidadeSaidaF/decodificadorSomaUnidadeSaidaF.bdf
+    Info: Found entity 1: decodificadorSomaUnidadeSaidaF
+Info: Found 1 design units, including 1 entities, in source file ../decodificadorSomaUnidadeSaidaE/decodificadorSomaUnidadeSaidaE.bdf
+    Info: Found entity 1: decodificadorSomaUnidadeSaidaE
+Info: Found 1 design units, including 1 entities, in source file ../decodificadorSomaUnidadeSaidaD/decodificadorSomaUnidadeSaidaD.bdf
+    Info: Found entity 1: decodificadorSomaUnidadeSaidaD
+Info: Found 1 design units, including 1 entities, in source file ../decodificadorSomaUnidadeSaidaC/decodificadorSomaUnidadeSaidaC.bdf
+    Info: Found entity 1: decodificadorSomaUnidadeSaidaC
+Info: Found 1 design units, including 1 entities, in source file ../decodificadorSomaUnidadeSaidaB/decodificadorSomaUnidadeSaidaB.bdf
+    Info: Found entity 1: decodificadorSomaUnidadeSaidaB
 Info: Found 1 design units, including 1 entities, in source file ../decodificadorSomaUnidadeSaidaA/decodificadorSomaUnidadeSaidaA.bdf
     Info: Found entity 1: decodificadorSomaUnidadeSaidaA
 Info: Found 1 design units, including 1 entities, in source file decodificadorSomaUnidade.bdf
     Info: Found entity 1: decodificadorSomaUnidade
 Info: Elaborating entity "decodificadorSomaUnidade" for the top level hierarchy
 Info: Elaborating entity "decodificadorSomaUnidadeSaidaA" for hierarchy "decodificadorSomaUnidadeSaidaA:inst1"
-Error: Node instance "inst2" instantiates undefined entity "decodificadorSomaUnidadeSaidaB"
-Error: Node instance "inst14" instantiates undefined entity "decodificadorSomaUnidadeSaidaC"
-Error: Node instance "inst4" instantiates undefined entity "decodificadorSomaUnidadeSaidaD"
-Error: Node instance "inst5" instantiates undefined entity "decodificadorSomaUnidadeSaidaE"
-Error: Node instance "inst6" instantiates undefined entity "decodificadorSomaUnidadeSaidaF"
-Error: Node instance "inst7" instantiates undefined entity "decodificadorSomaUnidadeSaidaG"
-Error: Quartus II Analysis & Synthesis was unsuccessful. 6 errors, 6 warnings
-    Error: Peak virtual memory: 211 megabytes
-    Error: Processing ended: Fri Aug 09 12:30:05 2019
-    Error: Elapsed time: 00:00:02
-    Error: Total CPU time (on all processors): 00:00:02
+Info: Elaborating entity "decodificadorSomaUnidadeSaidaB" for hierarchy "decodificadorSomaUnidadeSaidaB:inst2"
+Info: Elaborating entity "decodificadorSomaUnidadeSaidaC" for hierarchy "decodificadorSomaUnidadeSaidaC:inst14"
+Info: Elaborating entity "decodificadorSomaUnidadeSaidaD" for hierarchy "decodificadorSomaUnidadeSaidaD:inst4"
+Info: Elaborating entity "decodificadorSomaUnidadeSaidaE" for hierarchy "decodificadorSomaUnidadeSaidaE:inst5"
+Info: Elaborating entity "decodificadorSomaUnidadeSaidaF" for hierarchy "decodificadorSomaUnidadeSaidaF:inst6"
+Info: Elaborating entity "decodificadorSomaUnidadeSaidaG" for hierarchy "decodificadorSomaUnidadeSaidaG:inst7"
+Warning: Output pins are stuck at VCC or GND
+    Warning (13410): Pin "sA" is stuck at GND
+Info: Implemented 38 device resources after synthesis - the final resource count might be different
+    Info: Implemented 8 input pins
+    Info: Implemented 7 output pins
+    Info: Implemented 23 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 220 megabytes
+    Info: Processing ended: Sun Aug 11 10:43:27 2019
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
 
 
