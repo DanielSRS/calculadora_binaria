@@ -1,5 +1,5 @@
 Analysis & Synthesis report for calculadoraBinaria
-Wed Aug 14 00:50:25 2019
+Fri Aug 16 08:01:12 2019
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -10,7 +10,11 @@ Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Analysis & Synthesis Source Files Read
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. Registers Removed During Synthesis
+  8. General Register Statistics
+  9. Analysis & Synthesis Messages
 
 
 
@@ -36,11 +40,15 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                               ;
 +-----------------------------+----------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Wed Aug 14 00:50:24 2019            ;
+; Analysis & Synthesis Status ; Successful - Fri Aug 16 08:01:11 2019        ;
 ; Quartus II Version          ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
 ; Revision Name               ; calculadoraBinaria                           ;
 ; Top-level Entity Name       ; calculadoraBinaria                           ;
 ; Family                      ; ACEX1K                                       ;
+; Total logic elements        ; 118                                          ;
+; Total pins                  ; 25                                           ;
+; Total memory bits           ; 0                                            ;
+; Total PLLs                  ; 0                                            ;
 +-----------------------------+----------------------------------------------+
 
 
@@ -106,13 +114,109 @@ applicable agreement for further details.
 +--------------------------------------------------------------+--------------------+--------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                        ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                        ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------+
-; calculadoraBinaria.bdf           ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Documents/calculadora_binaria/calculadoraBinaria.bdf ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                            ;
++-------------------------------------------------------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+; File Name with User-Entered Path                                              ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                               ;
++-------------------------------------------------------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+; componentes/decodificadorSomaUnidadeSaidaG/decodificadorSomaUnidadeSaidaG.bdf ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Documents/calculadora_binaria/componentes/decodificadorSomaUnidadeSaidaG/decodificadorSomaUnidadeSaidaG.bdf ;
+; componentes/decodificadorSomaUnidadeSaidaF/decodificadorSomaUnidadeSaidaF.bdf ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Documents/calculadora_binaria/componentes/decodificadorSomaUnidadeSaidaF/decodificadorSomaUnidadeSaidaF.bdf ;
+; componentes/decodificadorSomaUnidadeSaidaE/decodificadorSomaUnidadeSaidaE.bdf ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Documents/calculadora_binaria/componentes/decodificadorSomaUnidadeSaidaE/decodificadorSomaUnidadeSaidaE.bdf ;
+; componentes/decodificadorSomaUnidadeSaidaD/decodificadorSomaUnidadeSaidaD.bdf ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Documents/calculadora_binaria/componentes/decodificadorSomaUnidadeSaidaD/decodificadorSomaUnidadeSaidaD.bdf ;
+; componentes/decodificadorSomaUnidadeSaidaC/decodificadorSomaUnidadeSaidaC.bdf ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Documents/calculadora_binaria/componentes/decodificadorSomaUnidadeSaidaC/decodificadorSomaUnidadeSaidaC.bdf ;
+; componentes/decodificadorSomaUnidadeSaidaB/decodificadorSomaUnidadeSaidaB.bdf ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Documents/calculadora_binaria/componentes/decodificadorSomaUnidadeSaidaB/decodificadorSomaUnidadeSaidaB.bdf ;
+; componentes/decodificadorSomaUnidadeSaidaA/decodificadorSomaUnidadeSaidaA.bdf ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Documents/calculadora_binaria/componentes/decodificadorSomaUnidadeSaidaA/decodificadorSomaUnidadeSaidaA.bdf ;
+; componentes/decodificadorSomaDezenaSinal/decodificadorSomaDezenaSinal.bdf     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Documents/calculadora_binaria/componentes/decodificadorSomaDezenaSinal/decodificadorSomaDezenaSinal.bdf     ;
+; componentes/somadorSubtrator/somadorSubtrator.bdf                             ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Documents/calculadora_binaria/componentes/somadorSubtrator/somadorSubtrator.bdf                             ;
+; componentes/somadorCompleto/somadorCompleto.bdf                               ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Documents/calculadora_binaria/componentes/somadorCompleto/somadorCompleto.bdf                               ;
+; componentes/registrador/registrador.bdf                                       ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Documents/calculadora_binaria/componentes/registrador/registrador.bdf                                       ;
+; componentes/multiplexador/multiplexador.bdf                                   ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Documents/calculadora_binaria/componentes/multiplexador/multiplexador.bdf                                   ;
+; componentes/divisorDeFrequencia/divisorDeFrequencia.bdf                       ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Documents/calculadora_binaria/componentes/divisorDeFrequencia/divisorDeFrequencia.bdf                       ;
+; componentes/demultiplexador/demultiplexador.bdf                               ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Documents/calculadora_binaria/componentes/demultiplexador/demultiplexador.bdf                               ;
+; componentes/decodificadorParcela/decodificadorParcela.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Documents/calculadora_binaria/componentes/decodificadorParcela/decodificadorParcela.bdf                     ;
+; componentes/debouncer/debouncer.bdf                                           ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Documents/calculadora_binaria/componentes/debouncer/debouncer.bdf                                           ;
+; componentes/contadorDeboucing/contadorDeboucing.bdf                           ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Documents/calculadora_binaria/componentes/contadorDeboucing/contadorDeboucing.bdf                           ;
+; calculadoraBinaria.bdf                                                        ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Documents/calculadora_binaria/calculadoraBinaria.bdf                                                        ;
+; componentes/contador/contador.bdf                                             ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Documents/calculadora_binaria/componentes/contador/contador.bdf                                             ;
+; componentes/decodificadorSomaUnidade/decodificadorSomaUnidade.bdf             ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Documents/calculadora_binaria/componentes/decodificadorSomaUnidade/decodificadorSomaUnidade.bdf             ;
++-------------------------------------------------------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary            ;
++--------------------------------+-----------------------+
+; Resource                       ; Usage                 ;
++--------------------------------+-----------------------+
+; Total logic elements           ; 118                   ;
+; Total combinational functions  ; 107                   ;
+;     -- Total 4-input functions ; 49                    ;
+;     -- Total 3-input functions ; 10                    ;
+;     -- Total 2-input functions ; 10                    ;
+;     -- Total 1-input functions ; 37                    ;
+;     -- Total 0-input functions ; 1                     ;
+; Total registers                ; 53                    ;
+; I/O pins                       ; 25                    ;
+; Maximum fan-out node           ; debouncer:inst7|inst3 ;
+; Maximum fan-out                ; 18                    ;
+; Total fan-out                  ; 399                   ;
+; Average fan-out                ; 2.79                  ;
++--------------------------------+-----------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                           ;
++----------------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                   ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                      ; Library Name ;
++----------------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------------------------+--------------+
+; |calculadoraBinaria                          ; 118 (0)     ; 53           ; 0           ; 25   ; 65 (0)       ; 11 (0)            ; 42 (0)           ; 0 (0)           ; 0 (0)      ; |calculadoraBinaria                                                                      ; work         ;
+;    |contador:inst13|                         ; 2 (2)       ; 2            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |calculadoraBinaria|contador:inst13                                                      ; work         ;
+;    |debouncer:inst7|                         ; 23 (4)      ; 21           ; 0           ; 0    ; 2 (1)        ; 3 (3)             ; 18 (0)           ; 0 (0)           ; 0 (0)      ; |calculadoraBinaria|debouncer:inst7                                                      ; work         ;
+;       |contadorDeboucing:inst4|              ; 19 (19)     ; 18           ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 18 (18)          ; 0 (0)           ; 0 (0)      ; |calculadoraBinaria|debouncer:inst7|contadorDeboucing:inst4                              ; work         ;
+;    |decodificadorParcela:inst10|             ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |calculadoraBinaria|decodificadorParcela:inst10                                          ; work         ;
+;    |decodificadorParcela:inst9|              ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |calculadoraBinaria|decodificadorParcela:inst9                                           ; work         ;
+;    |decodificadorSomaUnidade:inst12|         ; 10 (0)      ; 0            ; 0           ; 0    ; 10 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |calculadoraBinaria|decodificadorSomaUnidade:inst12                                      ; work         ;
+;       |decodificadorSomaUnidadeSaidaD:inst4| ; 5 (5)       ; 0            ; 0           ; 0    ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |calculadoraBinaria|decodificadorSomaUnidade:inst12|decodificadorSomaUnidadeSaidaD:inst4 ; work         ;
+;       |decodificadorSomaUnidadeSaidaF:inst6| ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |calculadoraBinaria|decodificadorSomaUnidade:inst12|decodificadorSomaUnidadeSaidaF:inst6 ; work         ;
+;       |decodificadorSomaUnidadeSaidaG:inst7| ; 4 (4)       ; 0            ; 0           ; 0    ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |calculadoraBinaria|decodificadorSomaUnidade:inst12|decodificadorSomaUnidadeSaidaG:inst7 ; work         ;
+;    |divisorDeFrequencia:inst5|               ; 17 (17)     ; 17           ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 17 (17)          ; 0 (0)           ; 0 (0)      ; |calculadoraBinaria|divisorDeFrequencia:inst5                                            ; work         ;
+;    |multiplexador:inst8|                     ; 48 (48)     ; 0            ; 0           ; 0    ; 48 (48)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |calculadoraBinaria|multiplexador:inst8                                                  ; work         ;
+;    |registrador:inst1|                       ; 4 (4)       ; 4            ; 0           ; 0    ; 0 (0)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |calculadoraBinaria|registrador:inst1                                                    ; work         ;
+;    |registrador:inst2|                       ; 4 (4)       ; 4            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |calculadoraBinaria|registrador:inst2                                                    ; work         ;
+;    |registrador:inst3|                       ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |calculadoraBinaria|registrador:inst3                                                    ; work         ;
+;    |registrador:inst|                        ; 4 (4)       ; 4            ; 0           ; 0    ; 0 (0)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |calculadoraBinaria|registrador:inst                                                     ; work         ;
+;    |somadorSubtrator:inst4|                  ; 3 (0)       ; 0            ; 0           ; 0    ; 3 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |calculadoraBinaria|somadorSubtrator:inst4                                               ; work         ;
+;       |somadorCompleto:inst5|                ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |calculadoraBinaria|somadorSubtrator:inst4|somadorCompleto:inst5                         ; work         ;
+;       |somadorCompleto:inst6|                ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |calculadoraBinaria|somadorSubtrator:inst4|somadorCompleto:inst6                         ; work         ;
+;       |somadorCompleto:inst7|                ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |calculadoraBinaria|somadorSubtrator:inst4|somadorCompleto:inst7                         ; work         ;
++----------------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                         ;
++---------------------------------------+------------------------------------+
+; Register name                         ; Reason for Removal                 ;
++---------------------------------------+------------------------------------+
+; registrador:inst3|inst4               ; Merged with registrador:inst3|inst ;
+; registrador:inst3|inst5               ; Merged with registrador:inst3|inst ;
+; registrador:inst3|inst6               ; Merged with registrador:inst3|inst ;
+; Total Number of Removed Registers = 3 ;                                    ;
++---------------------------------------+------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 53    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 18    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 19    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
 
 
 +-------------------------------+
@@ -121,7 +225,7 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Wed Aug 14 00:50:23 2019
+    Info: Processing started: Fri Aug 16 08:01:07 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off calculadoraBinaria -c calculadoraBinaria
 Info: Found 1 design units, including 1 entities, in source file componentes/decodificadorSomaUnidadeSaidaG/decodificadorSomaUnidadeSaidaG.bdf
     Info: Found entity 1: decodificadorSomaUnidadeSaidaG
@@ -159,17 +263,38 @@ Info: Found 1 design units, including 1 entities, in source file componentes/con
     Info: Found entity 1: contadorDeboucing
 Info: Found 1 design units, including 1 entities, in source file calculadoraBinaria.bdf
     Info: Found entity 1: calculadoraBinaria
+Info: Found 1 design units, including 1 entities, in source file componentes/contador/contador.bdf
+    Info: Found entity 1: contador
+Info: Found 1 design units, including 1 entities, in source file componentes/decodificadorSomaUnidade/decodificadorSomaUnidade.bdf
+    Info: Found entity 1: decodificadorSomaUnidade
 Info: Elaborating entity "calculadoraBinaria" for the top level hierarchy
-Error: Port "operacao" of type somadorSubtrator of instance "inst4" is missing source signal
-Error: Port "S1" of type demultiplexador of instance "inst6" is missing source signal
-Error: Port "S0" of type demultiplexador of instance "inst6" is missing source signal
-Error: Port "S1" of type multiplexador of instance "inst8" is missing source signal
-Error: Port "S0" of type multiplexador of instance "inst8" is missing source signal
-Error: Can't elaborate top-level user hierarchy
-Error: Quartus II Analysis & Synthesis was unsuccessful. 6 errors, 0 warnings
-    Error: Peak virtual memory: 215 megabytes
-    Error: Processing ended: Wed Aug 14 00:50:25 2019
-    Error: Elapsed time: 00:00:02
-    Error: Total CPU time (on all processors): 00:00:01
+Info: Elaborating entity "multiplexador" for hierarchy "multiplexador:inst8"
+Info: Elaborating entity "decodificadorParcela" for hierarchy "decodificadorParcela:inst9"
+Info: Elaborating entity "registrador" for hierarchy "registrador:inst"
+Info: Elaborating entity "decodificadorSomaDezenaSinal" for hierarchy "decodificadorSomaDezenaSinal:inst11"
+Info: Elaborating entity "somadorSubtrator" for hierarchy "somadorSubtrator:inst4"
+Info: Elaborating entity "somadorCompleto" for hierarchy "somadorSubtrator:inst4|somadorCompleto:inst4"
+Info: Elaborating entity "debouncer" for hierarchy "debouncer:inst7"
+Info: Elaborating entity "contadorDeboucing" for hierarchy "debouncer:inst7|contadorDeboucing:inst4"
+Info: Elaborating entity "decodificadorSomaUnidade" for hierarchy "decodificadorSomaUnidade:inst12"
+Info: Elaborating entity "decodificadorSomaUnidadeSaidaA" for hierarchy "decodificadorSomaUnidade:inst12|decodificadorSomaUnidadeSaidaA:inst1"
+Info: Elaborating entity "decodificadorSomaUnidadeSaidaB" for hierarchy "decodificadorSomaUnidade:inst12|decodificadorSomaUnidadeSaidaB:inst2"
+Info: Elaborating entity "decodificadorSomaUnidadeSaidaC" for hierarchy "decodificadorSomaUnidade:inst12|decodificadorSomaUnidadeSaidaC:inst14"
+Info: Elaborating entity "decodificadorSomaUnidadeSaidaD" for hierarchy "decodificadorSomaUnidade:inst12|decodificadorSomaUnidadeSaidaD:inst4"
+Info: Elaborating entity "decodificadorSomaUnidadeSaidaE" for hierarchy "decodificadorSomaUnidade:inst12|decodificadorSomaUnidadeSaidaE:inst5"
+Info: Elaborating entity "decodificadorSomaUnidadeSaidaF" for hierarchy "decodificadorSomaUnidade:inst12|decodificadorSomaUnidadeSaidaF:inst6"
+Info: Elaborating entity "decodificadorSomaUnidadeSaidaG" for hierarchy "decodificadorSomaUnidade:inst12|decodificadorSomaUnidadeSaidaG:inst7"
+Info: Elaborating entity "contador" for hierarchy "contador:inst13"
+Info: Elaborating entity "divisorDeFrequencia" for hierarchy "divisorDeFrequencia:inst5"
+Info: Elaborating entity "demultiplexador" for hierarchy "demultiplexador:inst6"
+Info: Implemented 143 device resources after synthesis - the final resource count might be different
+    Info: Implemented 13 input pins
+    Info: Implemented 12 output pins
+    Info: Implemented 118 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 216 megabytes
+    Info: Processing ended: Fri Aug 16 08:01:12 2019
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:03
 
 

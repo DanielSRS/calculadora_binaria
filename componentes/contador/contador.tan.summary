@@ -1,0 +1,36 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 16.200 ns
+From           : inst1
+To             : sCmsb
+From Clock     : CLKd
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Clock Setup: 'CLKd'
+Slack          : N/A
+Required Time  : None
+Actual Time    : Restricted to 200.00 MHz ( period = 5.000 ns )
+From           : inst
+To             : inst
+From Clock     : CLKd
+To Clock       : CLKd
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

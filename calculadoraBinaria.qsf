@@ -63,3 +63,5 @@ set_global_assignment -name BDF_FILE componentes/decodificadorParcela/decodifica
 set_global_assignment -name BDF_FILE componentes/debouncer/debouncer.bdf
 set_global_assignment -name BDF_FILE componentes/contadorDeboucing/contadorDeboucing.bdf
 set_global_assignment -name BDF_FILE calculadoraBinaria.bdf
+set_global_assignment -name BDF_FILE componentes/contador/contador.bdf
+set_global_assignment -name BDF_FILE componentes/decodificadorSomaUnidade/decodificadorSomaUnidade.bdf
