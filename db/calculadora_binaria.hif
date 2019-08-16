@@ -186,46 +186,6 @@ dec_result_dezena:inst2
 
 # end
 # entity
-debouncer
-# storage
-db|calculadora_binaria.(4).cnf
-db|calculadora_binaria.(4).cnf
-# case_insensitive
-# source_file
-debouncer.bdf
-acd6894a6ef7bea7f2512c26dcb28b26
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-debouncer:inst18
-}
-# macro_sequence
-
-# end
-# entity
-calculadora_binaria
-# storage
-db|calculadora_binaria.(0).cnf
-db|calculadora_binaria.(0).cnf
-# case_insensitive
-# source_file
-calculadora_binaria.bdf
-4ff14630f0dab36487281467bc5be57
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-|
-}
-# macro_sequence
-
-# end
-# entity
 contador_para_deboucing
 # storage
 db|calculadora_binaria.(10).cnf
@@ -240,7 +200,7 @@ BLOCK_DESIGN_NAMING
 AUTO
 }
 # hierarchies {
-debouncer:inst18|contador_para_deboucing:inst4
+debouncer:inst4|contador_para_deboucing:inst4
 }
 # macro_sequence
 
@@ -261,6 +221,46 @@ AUTO
 }
 # hierarchies {
 divisor_de_clock:inst13
+}
+# macro_sequence
+
+# end
+# entity
+calculadora_binaria
+# storage
+db|calculadora_binaria.(0).cnf
+db|calculadora_binaria.(0).cnf
+# case_insensitive
+# source_file
+calculadora_binaria.bdf
+e061c5d2987f7f8a22742f671994dc8
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+debouncer
+# storage
+db|calculadora_binaria.(4).cnf
+db|calculadora_binaria.(4).cnf
+# case_insensitive
+# source_file
+debouncer.bdf
+86d552234041552fd290a12b89be6d2
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+debouncer:inst4
 }
 # macro_sequence
 

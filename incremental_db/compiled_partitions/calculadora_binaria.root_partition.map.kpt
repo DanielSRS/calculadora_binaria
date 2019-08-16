@@ -25,9 +25,9 @@
       <kp_set type="reference">
         <kp_state index="0">
           <kp id="4" type="proxy"></kp>
+          <kp id="1" type="equiv"></kp>
           <kp id="2" type="equiv"></kp>
           <kp id="3" type="equiv"></kp>
-          <kp id="1" type="equiv"></kp>
         </kp_state>
       </kp_set>
       <kp_set type="transformed">

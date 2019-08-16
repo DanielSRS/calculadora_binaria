@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 7.700 ns
-From           : LSB
-To             : registrador:inst|inst6
+Actual Time    : 7.600 ns
+From           : pin_name6
+To             : registrador:inst10|inst5
 From Clock     : --
 To Clock       : BH1
 Failed Paths   : 0
@@ -15,7 +15,7 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 78.600 ns
+Actual Time    : 81.800 ns
 From           : contador:inst1|inst1
 To             : c
 From Clock     : CLOCK
@@ -25,7 +25,7 @@ Failed Paths   : 0
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : -0.100 ns
+Actual Time    : -0.200 ns
 From           : pin_name5
 To             : registrador:inst10|inst4
 From Clock     : --
@@ -35,9 +35,9 @@ Failed Paths   : 0
 Type           : Clock Setup: 'CLK25'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 21.69 MHz ( period = 46.100 ns )
-From           : debouncer:inst18|contador_para_deboucing:inst4|inst35
-To             : debouncer:inst18|inst1
+Actual Time    : 19.69 MHz ( period = 50.800 ns )
+From           : debouncer:inst4|contador_para_deboucing:inst4|inst35
+To             : debouncer:inst4|contador_para_deboucing:inst4|inst
 From Clock     : CLK25
 To Clock       : CLK25
 Failed Paths   : 0
@@ -52,16 +52,6 @@ From Clock     : CLOCK
 To Clock       : CLOCK
 Failed Paths   : 0
 
-Type           : Clock Hold: 'CLK25'
-Slack          : Not operational: Clock Skew > Data Delay
-Required Time  : None
-Actual Time    : N/A
-From           : debouncer:inst18|inst
-To             : debouncer:inst18|contador_para_deboucing:inst4|inst35
-From Clock     : CLK25
-To Clock       : CLK25
-Failed Paths   : 32
-
 Type           : Total number of failed paths
 Slack          : 
 Required Time  : 
@@ -70,7 +60,7 @@ From           :
 To             : 
 From Clock     : 
 To Clock       : 
-Failed Paths   : 32
+Failed Paths   : 0
 
 --------------------------------------------------------------------------------------
 

@@ -10,8 +10,8 @@ MSB2 => registrador:inst10.pin_name
 pin_name5 => registrador:inst10.pin_name1
 pin_name6 => registrador:inst10.pin_name2
 LSB2 => registrador:inst10.pin_name3
-Operacao => debouncer:inst18.Botao
-CLK25 => debouncer:inst18.CLK_25Mhz
+Operacao => debouncer:inst4.Botao
+CLK25 => debouncer:inst4.CLK_25Mhz
 BH2 => registrador:inst9.pin_name4
 BH2 => registrador:inst11.pin_name4
 CLOCK => divisor_de_clock:inst13.CLK
@@ -292,7 +292,7 @@ pin_name10 <= inst6.DB_MAX_OUTPUT_PORT_TYPE
 pin_name3 => inst6.DATAIN
 
 
-|calculadora_binaria|debouncer:inst18
+|calculadora_binaria|debouncer:inst4
 sV <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 CLK_25Mhz => inst2.CLK
 CLK_25Mhz => inst.CLK
@@ -301,7 +301,7 @@ CLK_25Mhz => contador_para_deboucing:inst4.CLK
 Botao => inst.DATAIN
 
 
-|calculadora_binaria|debouncer:inst18|contador_para_deboucing:inst4
+|calculadora_binaria|debouncer:inst4|contador_para_deboucing:inst4
 sC <= inst35.DB_MAX_OUTPUT_PORT_TYPE
 CLK => inst.CLK
 SCLR => inst.ACLR

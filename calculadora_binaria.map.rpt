@@ -1,5 +1,5 @@
 Analysis & Synthesis report for calculadora_binaria
-Wed Aug 14 00:28:32 2019
+Fri Aug 16 07:47:24 2019
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -40,12 +40,12 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                               ;
 +-----------------------------+----------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Wed Aug 14 00:28:32 2019        ;
+; Analysis & Synthesis Status ; Successful - Fri Aug 16 07:47:24 2019        ;
 ; Quartus II Version          ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
 ; Revision Name               ; calculadora_binaria                          ;
 ; Top-level Entity Name       ; calculadora_binaria                          ;
 ; Family                      ; ACEX1K                                       ;
-; Total logic elements        ; 90                                           ;
+; Total logic elements        ; 92                                           ;
 ; Total pins                  ; 25                                           ;
 ; Total memory bits           ; 0                                            ;
 ; Total PLLs                  ; 0                                            ;
@@ -134,25 +134,25 @@ applicable agreement for further details.
 +----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                            ;
-+--------------------------------+-------------------------------------------------------+
-; Resource                       ; Usage                                                 ;
-+--------------------------------+-------------------------------------------------------+
-; Total logic elements           ; 90                                                    ;
-; Total combinational functions  ; 79                                                    ;
-;     -- Total 4-input functions ; 31                                                    ;
-;     -- Total 3-input functions ; 4                                                     ;
-;     -- Total 2-input functions ; 6                                                     ;
-;     -- Total 1-input functions ; 37                                                    ;
-;     -- Total 0-input functions ; 1                                                     ;
-; Total registers                ; 54                                                    ;
-; I/O pins                       ; 25                                                    ;
-; Maximum fan-out node           ; debouncer:inst18|contador_para_deboucing:inst4|inst35 ;
-; Maximum fan-out                ; 19                                                    ;
-; Total fan-out                  ; 301                                                   ;
-; Average fan-out                ; 2.62                                                  ;
-+--------------------------------+-------------------------------------------------------+
++--------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary            ;
++--------------------------------+-----------------------+
+; Resource                       ; Usage                 ;
++--------------------------------+-----------------------+
+; Total logic elements           ; 92                    ;
+; Total combinational functions  ; 81                    ;
+;     -- Total 4-input functions ; 31                    ;
+;     -- Total 3-input functions ; 4                     ;
+;     -- Total 2-input functions ; 6                     ;
+;     -- Total 1-input functions ; 39                    ;
+;     -- Total 0-input functions ; 1                     ;
+; Total registers                ; 55                    ;
+; I/O pins                       ; 25                    ;
+; Maximum fan-out node           ; debouncer:inst4|inst3 ;
+; Maximum fan-out                ; 18                    ;
+; Total fan-out                  ; 304                   ;
+; Average fan-out                ; 2.60                  ;
++--------------------------------+-----------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -160,10 +160,10 @@ applicable agreement for further details.
 +---------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node            ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                  ; Library Name ;
 +---------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------------+--------------+
-; |calculadora_binaria                  ; 90 (0)      ; 54           ; 0           ; 25   ; 36 (0)       ; 11 (0)            ; 43 (0)           ; 0 (0)           ; 0 (0)      ; |calculadora_binaria                                                 ; work         ;
+; |calculadora_binaria                  ; 92 (1)      ; 55           ; 0           ; 25   ; 37 (0)       ; 11 (0)            ; 44 (1)           ; 0 (0)           ; 0 (0)      ; |calculadora_binaria                                                 ; work         ;
 ;    |contador:inst1|                   ; 2 (2)       ; 2            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |calculadora_binaria|contador:inst1                                  ; work         ;
-;    |debouncer:inst18|                 ; 22 (4)      ; 21           ; 0           ; 0    ; 1 (1)        ; 3 (3)             ; 18 (0)           ; 0 (0)           ; 0 (0)      ; |calculadora_binaria|debouncer:inst18                                ; work         ;
-;       |contador_para_deboucing:inst4| ; 18 (18)     ; 18           ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 18 (18)          ; 0 (0)           ; 0 (0)      ; |calculadora_binaria|debouncer:inst18|contador_para_deboucing:inst4  ; work         ;
+;    |debouncer:inst4|                  ; 23 (4)      ; 21           ; 0           ; 0    ; 2 (1)        ; 3 (3)             ; 18 (0)           ; 0 (0)           ; 0 (0)      ; |calculadora_binaria|debouncer:inst4                                 ; work         ;
+;       |contador_para_deboucing:inst4| ; 19 (19)     ; 18           ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 18 (18)          ; 0 (0)           ; 0 (0)      ; |calculadora_binaria|debouncer:inst4|contador_para_deboucing:inst4   ; work         ;
 ;    |demultiplexador:inst3|            ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |calculadora_binaria|demultiplexador:inst3                           ; work         ;
 ;    |divisor_de_clock:inst13|          ; 18 (18)     ; 18           ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 18 (18)          ; 0 (0)           ; 0 (0)      ; |calculadora_binaria|divisor_de_clock:inst13                         ; work         ;
 ;    |multiplexador:inst5|              ; 30 (30)     ; 0            ; 0           ; 0    ; 30 (30)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |calculadora_binaria|multiplexador:inst5                             ; work         ;
@@ -196,7 +196,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 54    ;
+; Total registers                              ; 55    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 18    ;
@@ -212,7 +212,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Wed Aug 14 00:28:29 2019
+    Info: Processing started: Fri Aug 16 07:47:17 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off calculadora_binaria -c calculadora_binaria
 Info: Found 1 design units, including 1 entities, in source file calculadora_binaria.bdf
     Info: Found entity 1: calculadora_binaria
@@ -245,19 +245,19 @@ Info: Elaborating entity "registrador" for hierarchy "registrador:inst"
 Info: Elaborating entity "dec_result_dezena" for hierarchy "dec_result_dezena:inst2"
 Info: Elaborating entity "soma_e_subtracao" for hierarchy "soma_e_subtracao:inst27"
 Info: Elaborating entity "somador_completo" for hierarchy "soma_e_subtracao:inst27|somador_completo:inst12"
-Info: Elaborating entity "debouncer" for hierarchy "debouncer:inst18"
-Info: Elaborating entity "contador_para_deboucing" for hierarchy "debouncer:inst18|contador_para_deboucing:inst4"
+Info: Elaborating entity "debouncer" for hierarchy "debouncer:inst4"
+Info: Elaborating entity "contador_para_deboucing" for hierarchy "debouncer:inst4|contador_para_deboucing:inst4"
 Info: Elaborating entity "contador" for hierarchy "contador:inst1"
 Info: Elaborating entity "divisor_de_clock" for hierarchy "divisor_de_clock:inst13"
 Info: Elaborating entity "demultiplexador" for hierarchy "demultiplexador:inst3"
-Info: Implemented 115 device resources after synthesis - the final resource count might be different
+Info: Implemented 117 device resources after synthesis - the final resource count might be different
     Info: Implemented 13 input pins
     Info: Implemented 12 output pins
-    Info: Implemented 90 logic cells
+    Info: Implemented 92 logic cells
 Info: Quartus II Analysis & Synthesis was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 216 megabytes
-    Info: Processing ended: Wed Aug 14 00:28:33 2019
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Peak virtual memory: 220 megabytes
+    Info: Processing ended: Fri Aug 16 07:47:24 2019
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:03
 
 
